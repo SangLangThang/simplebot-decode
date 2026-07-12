@@ -1,0 +1,4 @@
+bin/
+obj/
+tmp_item_icons/
+*.user

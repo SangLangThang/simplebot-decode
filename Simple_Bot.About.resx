@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="RichTextBox1.Text" xml:space="preserve"><value>========== v2.0.0.38 ==========
+- Thêm check 8 Quest Cự Thú
+- Bỏ qua bước menu nếu Q đã xong
+- Warp  được đến 55000, 58000
+- Hiển thị điểm trạng thái của Bản Mệnh Đăng
+
+========== v2.0.0.37 ==========
+- Sửa lỗi sai đồ hòm đồ sau khi làm Nhiệm Vụ, sử dụng đồ trong trận
+
+========== v2.0.0.36 ==========
+- Thêm bản đồ
+- Giảm CPU
+
+========== v2.0.0.26 ==========
+- Thêm 1 phần tiếng Thái
+
+========== v2.0.0.22 ==========
+- Thêm Proxy cho các server của NTS
+- Hiển thị Svip cho proxy NTS
+- Mặc đồ thời trang cho proxy NTS
+- Fix tháo đồ không hiện đồ trong túi
+- Fix lưu skill Quang Ám
+- Thêm hiển thị màu cho phần nhiệm vu
+- Fix lỗi đơ khi dùng proxy
+- Fix lỗi sử dụng skill khi dùng proxy(co thể tắt bảng setting)
+
+========== v2.0.0.17 ==========
+- Thêm proxy
+
+========== v2.0.0.15 ==========
+- Fix hiển thị thông tin
+- Fix hiển thị skill Quang-Ám
+
+========== v2.0.0.11 ==========
+- Fix lỗi send
+- Fix lỗi không nhận pet
+- Thêm full thùng sau 5 phút tự ngắt kết nối
+- Thêm thông tin võ tướng ngoài bảng chính
+- Thêm thông tin quái trong rừng
+
+========== v2.0.0.10 ==========
+- Fix lỗi send
+- Fix lỗi mất bảng bot
+
+========== v2.0.0.9 ==========
+- Fix lỗi làm nhiệm vụ, Warp trong trận đánh
+
+========== v2.0.0.8 ==========
+- Gộp ngọc nếu nhận được ngọc từ BDY
+- Fix lỗi bảng số 1
+- Thêm mật khẩu cho kênh(dành cho kênh riêng)
+- Fix lỗi làm nhiệm vụ, Warp trong trận đánh
+
+========== v2.0.0.6 ==========
+- Thêm phần nhiệm vụ
+- Thêm tăng điểm theo số
+
+========== v2.0.0.4 ==========
+- Fix chọn kỹ năng cho pet
+- Fix Không hiện lv pet 
+- Fix bán đồ nhanh, nhiều dis
+
+========== v2.0.0.3 ==========
+- Thêm thông tin ngoài
+- Fix exp/min
+- Fix dừng bot mất Q
+- Fix dừng bot không warp được
+- Thêm + điểm
+- Hiện thông tin đồ
+- Đăng nhập ngay sau khi load acc
+
+========== v2.0.0.2 ==========
+- Đăng nhập kênh 0
+
+========== v2.0.0.1 ==========
+- Thêm xóa acc bot
+- Fix exp/min
+- fix mở nhiều bản bot
+- Fix lỗi chưa đủ party đã lao vào đánh
+
+========== v1.0.0.58 ==========
+- Thêm mục chọn kênh
+- Fix xuất chiến/cất Pet
+- lỗi chỉnh skill
+- Save/Load nguyen Bot
+(tất cả các team đang bot và Quét đang bot)
+
+========== v1.0.0.52 ==========
+- FIx Di chuyển đồ túi đồ &lt;-&gt; túi đeo
+- Fix Lỗi hiển thị đồ trong túi đồ
+- Tự động gộp ngọc TG
+- Fix di chuyển đến chỗ quái, thời gian chờ
+
+========== v1.0.0.51 ==========
+- Fix Bán đồ
+- Giảm CPU khi mở cài đặt
+
+========== v1.0.0.50 ==========
+- Cách xử lý mới, giảm đáng kể CPU</value></data>
+  </root>
