@@ -21,51 +21,9 @@ using Simple_Bot.SPB;
 namespace Simple_Bot
 {
 	[DesignerGenerated]
-	public class frmClient : Form
+	public partial class frmClient : Form
 	{
-		public struct Trangbi_Info
-		{
-			public int _stt;
-
-			public int _id;
-
-			public int _doben;
-
-			public PictureBox _photo;
-		}
-
-		public struct Tuido_Info
-		{
-			public int _stt;
-
-			public int _id;
-
-			public int _count;
-
-			public Label _photo;
-		}
-
-		public struct Tuideo_Info
-		{
-			public int _stt;
-
-			public int _id;
-
-			public int _count;
-
-			public Label _photo;
-		}
-
-		public struct _QuestStep
-		{
-			public string _Func;
-
-			public int _id;
-
-			public int _index;
-		}
-
-		private IContainer m_a;
+		private IContainer components;
 
 		[AccessedThroughProperty("rtbsystem")]
 		[CompilerGenerated]
@@ -5626,51 +5584,6 @@ namespace Simple_Bot
 		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		[AccessedThroughProperty("PictureBox_avatar")]
 		private PictureBox aei;
-
-		public _ClientBot _bot;
-
-		public Bitmap _map;
-
-		public Dictionary<int, Trangbi_Info> Data_Trangbi_Char;
-
-		public Dictionary<int, Trangbi_Info> Data_Trangbi_Pet;
-
-		public Dictionary<int, Tuido_Info> Data_Tuido;
-
-		public Dictionary<int, Tuideo_Info> Data_Tuideo;
-
-		public Dictionary<int, ComboBoxItem> List_skill_char;
-
-		public Dictionary<int, ComboBoxItem> List_skill_pet;
-
-		private Label aej;
-
-		private Label aek;
-
-		private Label ael;
-
-		public int tooltip_check;
-
-		public int _Tuideo_slot_select;
-
-		public int _Homdo_slot_select;
-
-		public Label label_selected;
-
-		public int r_Id_rtbsystem;
-
-		public int r_Id_rtbChat;
-
-		public int r_Id_rtbQuest;
-
-		public int _petSelect;
-
-		public List<string> _list_Func;
-
-		private ArrayList aem;
-
-		private int aen;
-
 		internal virtual RichTextBox rtbsystem
 		{
 			[CompilerGenerated]
@@ -5712,7 +5625,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = this.m_d;
 				if (radioButton != null)
 				{
@@ -5738,7 +5651,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = this.m_e;
 				if (radioButton != null)
 				{
@@ -5764,7 +5677,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = this.m_f;
 				if (radioButton != null)
 				{
@@ -5790,7 +5703,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = this.m_g;
 				if (radioButton != null)
 				{
@@ -5816,8 +5729,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = this.m_h;
 				if (textBox != null)
 				{
@@ -5845,8 +5758,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = this.m_i;
 				if (textBox != null)
 				{
@@ -5874,8 +5787,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = this.m_j;
 				if (textBox != null)
 				{
@@ -5903,8 +5816,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = this.m_k;
 				if (textBox != null)
 				{
@@ -5932,7 +5845,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = br;
+				EventHandler value2 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = this.m_l;
 				if (textBox != null)
 				{
@@ -6048,7 +5961,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = a;
+				KeyPressEventHandler value2 = ComboBox_chat_KeyPress;
 				ComboBox comboBox = this.m_s;
 				if (comboBox != null)
 				{
@@ -6074,7 +5987,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = aw;
+				EventHandler value2 = ComboBox_nameprivate_TextChanged;
 				ComboBox comboBox = this.m_t;
 				if (comboBox != null)
 				{
@@ -6100,8 +6013,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
 				ComboBox comboBox = this.m_u;
 				if (comboBox != null)
 				{
@@ -6489,7 +6402,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = this.m_at;
 				if (radioButton != null)
 				{
@@ -6515,7 +6428,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = this.m_au;
 				if (radioButton != null)
 				{
@@ -6541,7 +6454,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = this.m_av;
 				if (radioButton != null)
 				{
@@ -6567,7 +6480,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = this.m_aw;
 				if (radioButton != null)
 				{
@@ -6818,8 +6731,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
 				ComboBox comboBox = this.m_bc;
 				if (comboBox != null)
 				{
@@ -6922,7 +6835,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = @as;
+				EventHandler value2 = Button_StartAutoQuest_Click;
 				Button button = this.m_bi;
 				if (button != null)
 				{
@@ -6948,10 +6861,10 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = ar;
-				EventHandler value5 = aq;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_Quest_DropDown;
+				EventHandler value5 = ComboBox_Quest_SelectedIndexChanged;
 				ComboBox comboBox = this.m_bj;
 				if (comboBox != null)
 				{
@@ -6983,7 +6896,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = f;
+				MouseEventHandler value2 = TreeView1_MouseDown;
 				TreeView treeView = this.m_bk;
 				if (treeView != null)
 				{
@@ -7009,7 +6922,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
 				TextBox textBox = this.m_bl;
 				if (textBox != null)
 				{
@@ -7035,7 +6948,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = au;
+				EventHandler value2 = Button_warp_Click;
 				Button button = this.m_bm;
 				if (button != null)
 				{
@@ -7061,7 +6974,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bn;
+				EventHandler value2 = Timer_100_Tick;
 				System.Windows.Forms.Timer timer = this.m_bn;
 				if (timer != null)
 				{
@@ -7087,7 +7000,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = a0;
+				EventHandler value2 = Vs2010TabControl_Main_SelectedIndexChanged;
 				System.Windows.Forms.Timer timer = this.m_bo;
 				if (timer != null)
 				{
@@ -7113,7 +7026,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ap;
+				EventHandler value2 = Timer_QuestDelay_Tick;
 				System.Windows.Forms.Timer timer = this.m_bp;
 				if (timer != null)
 				{
@@ -7154,7 +7067,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = at;
+				EventHandler value2 = Button_WarpFromTree_Click;
 				ToolStripMenuItem toolStripMenuItem = this.m_br;
 				if (toolStripMenuItem != null)
 				{
@@ -7180,7 +7093,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bf;
+				EventHandler value2 = Button_bot_Click;
 				Button button = this.m_bs;
 				if (button != null)
 				{
@@ -7206,10 +7119,10 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = bp;
-				EventHandler value5 = bo;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_botname_DropDown_RefreshList;
+				EventHandler value5 = ComboBox_botname_SelectedIndexChanged_LoadScript;
 				ComboBox comboBox = this.m_bt;
 				if (comboBox != null)
 				{
@@ -7241,7 +7154,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = av;
+				EventHandler value2 = Button_walk_Click;
 				Button button = bu;
 				if (button != null)
 				{
@@ -7267,7 +7180,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
 				TextBox textBox = bv;
 				if (textBox != null)
 				{
@@ -7293,7 +7206,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
 				TextBox textBox = bw;
 				if (textBox != null)
 				{
@@ -7679,7 +7592,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
 				TextBox textBox = cl;
 				if (textBox != null)
 				{
@@ -7705,7 +7618,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = a1;
+				EventHandler value2 = Button_warp2_Click;
 				Button button = cm;
 				if (button != null)
 				{
@@ -7761,7 +7674,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bl;
+				EventHandler value2 = Button_InviteParty_Click;
 				Button button = cp;
 				if (button != null)
 				{
@@ -9167,7 +9080,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bm;
+				EventHandler value2 = Button_RequestParty_Click;
 				Button button = fb;
 				if (button != null)
 				{
@@ -11128,7 +11041,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bs;
+				EventHandler value2 = btnLogin_Click;
 				Button button = iy;
 				if (button != null)
 				{
@@ -11154,7 +11067,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bq;
+				EventHandler value2 = TextBox_PasswordOrClickMOD_TextChanged;
 				TextBox textBox = iz;
 				if (textBox != null)
 				{
@@ -11180,8 +11093,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = i0;
 				if (textBox != null)
 				{
@@ -11209,10 +11122,10 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = bi;
-				EventHandler value5 = bh;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_Server_SelectedIndexChanged;
+				EventHandler value5 = ComboBox_Server_DropDown;
 				ComboBox comboBox = i1;
 				if (comboBox != null)
 				{
@@ -11409,7 +11322,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				CancelEventHandler value2 = a;
+				CancelEventHandler value2 = SaveFileDialog_setting_FileOk;
 				SaveFileDialog saveFileDialog = jd;
 				if (saveFileDialog != null)
 				{
@@ -11495,7 +11408,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = ji;
 				if (checkBox != null)
 				{
@@ -11521,7 +11434,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = jj;
 				if (checkBox != null)
 				{
@@ -11547,7 +11460,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = jk;
 				if (checkBox != null)
 				{
@@ -11573,7 +11486,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = jl;
 				if (radioButton != null)
 				{
@@ -11599,7 +11512,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = jm;
 				if (radioButton != null)
 				{
@@ -11625,7 +11538,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = jn;
 				if (checkBox != null)
 				{
@@ -11651,7 +11564,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = jo;
 				if (radioButton != null)
 				{
@@ -11677,7 +11590,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = jp;
 				if (radioButton != null)
 				{
@@ -11823,8 +11736,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = jy;
 				if (textBox != null)
 				{
@@ -11867,8 +11780,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = j0;
 				if (textBox != null)
 				{
@@ -11926,7 +11839,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = j3;
 				if (checkBox != null)
 				{
@@ -11952,7 +11865,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = j4;
 				if (checkBox != null)
 				{
@@ -11978,7 +11891,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = j5;
 				if (checkBox != null)
 				{
@@ -12004,7 +11917,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = j6;
 				if (checkBox != null)
 				{
@@ -12030,7 +11943,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = j7;
 				if (checkBox != null)
 				{
@@ -12086,7 +11999,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = ka;
 				if (checkBox != null)
 				{
@@ -12112,7 +12025,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = kb;
 				if (checkBox != null)
 				{
@@ -12228,7 +12141,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = br;
+				EventHandler value2 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = ki;
 				if (textBox != null)
 				{
@@ -12284,7 +12197,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = br;
+				EventHandler value2 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = kl;
 				if (textBox != null)
 				{
@@ -12340,8 +12253,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = ko;
 				if (textBox != null)
 				{
@@ -12384,8 +12297,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = kq;
 				if (textBox != null)
 				{
@@ -12443,7 +12356,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = kt;
 				if (radioButton != null)
 				{
@@ -12469,7 +12382,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				RadioButton radioButton = ku;
 				if (radioButton != null)
 				{
@@ -12495,9 +12408,9 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = bd;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_CharLocation_SelectedIndexChanged;
 				ComboBox comboBox = kv;
 				if (comboBox != null)
 				{
@@ -12557,9 +12470,9 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = bb;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_PetLocation_SelectedIndexChanged;
 				ComboBox comboBox = ky;
 				if (comboBox != null)
 				{
@@ -12709,7 +12622,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = q;
+				EventHandler value2 = MenuItem_HomdoAction_Click;
 				ToolStripMenuItem toolStripMenuItem = k7;
 				if (toolStripMenuItem != null)
 				{
@@ -12750,7 +12663,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = w;
+				EventHandler value2 = MenuItem_TuideoAction_Click;
 				ToolStripMenuItem toolStripMenuItem = k9;
 				if (toolStripMenuItem != null)
 				{
@@ -12776,7 +12689,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = br;
+				EventHandler value2 = TextBox_NumericValue_TextChanged;
 				NumericUpDown numericUpDown = la;
 				if (numericUpDown != null)
 				{
@@ -12802,7 +12715,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = lb;
 				if (checkBox != null)
 				{
@@ -12903,7 +12816,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ba;
+				EventHandler value2 = Button_CharTurn_Click;
 				Button button = lh;
 				if (button != null)
 				{
@@ -12929,7 +12842,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ba;
+				EventHandler value2 = Button_CharTurn_Click;
 				Button button = li;
 				if (button != null)
 				{
@@ -13570,9 +13483,9 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = a9;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_CharTurnSetting_SelectedIndexChanged;
 				ComboBox comboBox = mo;
 				if (comboBox != null)
 				{
@@ -13602,9 +13515,9 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = a7;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_PetTurnSetting_SelectedIndexChanged;
 				ComboBox comboBox = mp;
 				if (comboBox != null)
 				{
@@ -13679,7 +13592,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = a8;
+				EventHandler value2 = Button_PetTurn_Click;
 				Button button = mt;
 				if (button != null)
 				{
@@ -13705,7 +13618,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = a8;
+				EventHandler value2 = Button_PetTurn_Click;
 				Button button = mu;
 				if (button != null)
 				{
@@ -14001,8 +13914,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = nd;
 				if (textBox != null)
 				{
@@ -14045,8 +13958,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = nf;
 				if (textBox != null)
 				{
@@ -14074,7 +13987,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = ng;
 				if (checkBox != null)
 				{
@@ -14100,7 +14013,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = nh;
 				if (checkBox != null)
 				{
@@ -14126,7 +14039,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = ni;
 				if (checkBox != null)
 				{
@@ -14152,7 +14065,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = a6;
+				EventHandler value2 = Button_AddIdDrop_Click;
 				Button button = nj;
 				if (button != null)
 				{
@@ -14178,7 +14091,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
 				TextBox textBox = nk;
 				if (textBox != null)
 				{
@@ -14204,7 +14117,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = nl;
 				if (checkBox != null)
 				{
@@ -14230,7 +14143,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = nm;
 				if (checkBox != null)
 				{
@@ -14256,7 +14169,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = nn;
 				if (checkBox != null)
 				{
@@ -14297,8 +14210,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = np;
 				if (textBox != null)
 				{
@@ -14341,8 +14254,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = nr;
 				if (textBox != null)
 				{
@@ -14370,7 +14283,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = a5;
+				EventHandler value2 = Button_AddIdContribute_Click;
 				Button button = ns;
 				if (button != null)
 				{
@@ -14396,7 +14309,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
 				TextBox textBox = nt;
 				if (textBox != null)
 				{
@@ -14422,7 +14335,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = a4;
+				EventHandler value2 = Button_AddIdSend_Click;
 				Button button = nu;
 				if (button != null)
 				{
@@ -14448,7 +14361,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
 				TextBox textBox = nv;
 				if (textBox != null)
 				{
@@ -14474,7 +14387,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = nw;
 				if (checkBox != null)
 				{
@@ -14500,7 +14413,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = nx;
 				if (checkBox != null)
 				{
@@ -14526,7 +14439,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = ny;
 				if (checkBox != null)
 				{
@@ -14567,8 +14480,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = n0;
 				if (textBox != null)
 				{
@@ -14611,8 +14524,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = n2;
 				if (textBox != null)
 				{
@@ -14655,7 +14568,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = p;
+				EventHandler value2 = MenuItem_HomdoAddDrop_Click;
 				ToolStripMenuItem toolStripMenuItem = n4;
 				if (toolStripMenuItem != null)
 				{
@@ -14681,7 +14594,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = o;
+				EventHandler value2 = MenuItem_HomdoAddContribute_Click;
 				ToolStripMenuItem toolStripMenuItem = n5;
 				if (toolStripMenuItem != null)
 				{
@@ -14707,7 +14620,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = n;
+				EventHandler value2 = MenuItem_HomdoAddSend_Click;
 				ToolStripMenuItem toolStripMenuItem = n6;
 				if (toolStripMenuItem != null)
 				{
@@ -14748,7 +14661,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = v;
+				EventHandler value2 = MenuItem_TuideoAddDrop_Click;
 				ToolStripMenuItem toolStripMenuItem = n8;
 				if (toolStripMenuItem != null)
 				{
@@ -14774,7 +14687,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = u;
+				EventHandler value2 = MenuItem_TuideoAddContribute_Click;
 				ToolStripMenuItem toolStripMenuItem = n9;
 				if (toolStripMenuItem != null)
 				{
@@ -14800,7 +14713,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = MenuItem_TuideoAddSend_Click;
 				ToolStripMenuItem toolStripMenuItem = oa;
 				if (toolStripMenuItem != null)
 				{
@@ -14826,8 +14739,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = b;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = TextBox_DelayBot_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = ob;
 				if (textBox != null)
 				{
@@ -17570,7 +17483,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = td;
 				if (checkBox != null)
 				{
@@ -17596,7 +17509,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = te;
 				if (checkBox != null)
 				{
@@ -17622,7 +17535,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = tf;
 				if (checkBox != null)
 				{
@@ -17648,7 +17561,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = tg;
 				if (checkBox != null)
 				{
@@ -18349,7 +18262,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = br;
+				EventHandler value2 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = uq;
 				if (textBox != null)
 				{
@@ -18375,7 +18288,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = ur;
 				if (checkBox != null)
 				{
@@ -18401,7 +18314,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = us;
 				if (checkBox != null)
 				{
@@ -18457,8 +18370,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = uv;
 				if (textBox != null)
 				{
@@ -18606,7 +18519,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = u4;
 				if (checkBox != null)
 				{
@@ -18752,7 +18665,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = vd;
 				if (checkBox != null)
 				{
@@ -18778,8 +18691,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = bq;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_PasswordOrClickMOD_TextChanged;
 				TextBox textBox = ve;
 				if (textBox != null)
 				{
@@ -18807,7 +18720,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = vf;
 				if (checkBox != null)
 				{
@@ -18848,7 +18761,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = vh;
 				if (checkBox != null)
 				{
@@ -18949,7 +18862,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = vn;
 				if (checkBox != null)
 				{
@@ -18975,7 +18888,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = vo;
 				if (checkBox != null)
 				{
@@ -19121,7 +19034,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = vx;
 				if (checkBox != null)
 				{
@@ -19402,7 +19315,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = wf;
 				if (checkBox != null)
 				{
@@ -19428,7 +19341,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = a3;
+				EventHandler value2 = Button_AddIdSell_Click;
 				Button button = wg;
 				if (button != null)
 				{
@@ -19469,7 +19382,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = wi;
 				if (checkBox != null)
 				{
@@ -19495,7 +19408,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = wj;
 				if (checkBox != null)
 				{
@@ -19521,7 +19434,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = wk;
 				if (checkBox != null)
 				{
@@ -19562,7 +19475,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = br;
+				EventHandler value2 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = wm;
 				if (textBox != null)
 				{
@@ -19603,7 +19516,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = br;
+				EventHandler value2 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = wo;
 				if (textBox != null)
 				{
@@ -19629,7 +19542,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = MenuItem_TuideoAddSell_Click;
 				ToolStripMenuItem toolStripMenuItem = wp;
 				if (toolStripMenuItem != null)
 				{
@@ -19655,7 +19568,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = m;
+				EventHandler value2 = MenuItem_HomdoAddSell_Click;
 				ToolStripMenuItem toolStripMenuItem = wq;
 				if (toolStripMenuItem != null)
 				{
@@ -19726,7 +19639,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = wu;
 				if (checkBox != null)
 				{
@@ -19752,7 +19665,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = wv;
 				if (checkBox != null)
 				{
@@ -19808,7 +19721,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = wy;
 				if (checkBox != null)
 				{
@@ -19879,7 +19792,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = w2;
 				if (checkBox != null)
 				{
@@ -19905,7 +19818,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = w3;
 				if (checkBox != null)
 				{
@@ -20021,8 +19934,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = xa;
 				if (textBox != null)
 				{
@@ -20065,8 +19978,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = xc;
 				if (textBox != null)
 				{
@@ -20139,8 +20052,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = xg;
 				if (textBox != null)
 				{
@@ -20183,8 +20096,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = xi;
 				if (textBox != null)
 				{
@@ -20842,7 +20755,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = yp;
 				if (checkBox != null)
 				{
@@ -20868,7 +20781,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = yq;
 				if (checkBox != null)
 				{
@@ -20924,7 +20837,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bk;
+				EventHandler value2 = Button_OutParty_Click;
 				Button button = yt;
 				if (button != null)
 				{
@@ -21265,7 +21178,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = az;
+				EventHandler value2 = Button_BattleInfo_Click;
 				Button button = zf;
 				if (button != null)
 				{
@@ -21306,7 +21219,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = g;
+				MouseEventHandler value2 = Button_AutoSort_Click;
 				ListView listView = zh;
 				if (listView != null)
 				{
@@ -21362,7 +21275,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = g;
+				MouseEventHandler value2 = Button_AutoSort_Click;
 				ListView listView = zk;
 				if (listView != null)
 				{
@@ -21418,7 +21331,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = g;
+				MouseEventHandler value2 = Button_AutoSort_Click;
 				ListView listView = zn;
 				if (listView != null)
 				{
@@ -21474,7 +21387,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = g;
+				MouseEventHandler value2 = Button_AutoSort_Click;
 				ListView listView = zq;
 				if (listView != null)
 				{
@@ -21530,7 +21443,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = zt;
 				if (checkBox != null)
 				{
@@ -21571,8 +21484,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = zv;
 				if (textBox != null)
 				{
@@ -21600,9 +21513,9 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = ay;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_Port_SelectedIndexChanged;
 				ComboBox comboBox = zw;
 				if (comboBox != null)
 				{
@@ -21647,7 +21560,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bg;
+				EventHandler value2 = Settings_CheckedChanged;
 				CheckBox checkBox = zy;
 				if (checkBox != null)
 				{
@@ -21913,8 +21826,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = aaf;
 				if (textBox != null)
 				{
@@ -21942,8 +21855,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				TextBox textBox = aag;
 				if (textBox != null)
 				{
@@ -21971,7 +21884,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ak;
+				EventHandler value2 = Button_Shop_Start_Click;
 				Button button = aah;
 				if (button != null)
 				{
@@ -21997,7 +21910,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = g;
+				MouseEventHandler value2 = Button_AutoSort_Click;
 				ListView listView = aai;
 				if (listView != null)
 				{
@@ -22068,7 +21981,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = al;
+				EventHandler value2 = Button_ShopAddItem_Click;
 				Button button = aam;
 				if (button != null)
 				{
@@ -22094,7 +22007,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = aj;
+				EventHandler value2 = MenuItem_AddToShop_Click;
 				ToolStripMenuItem toolStripMenuItem = aan;
 				if (toolStripMenuItem != null)
 				{
@@ -22195,7 +22108,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ag;
+				EventHandler value2 = Timer_QC_Tick;
 				System.Windows.Forms.Timer timer = aat;
 				if (timer != null)
 				{
@@ -22221,7 +22134,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = e;
+				MouseEventHandler value2 = PictureBox1_MouseDown;
 				PictureBox pictureBox = aau;
 				if (pictureBox != null)
 				{
@@ -22262,7 +22175,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ae;
+				EventHandler value2 = ComboBox_Mini_Warp_SelectedIndexChanged;
 				Button button = aaw;
 				if (button != null)
 				{
@@ -22288,7 +22201,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = af;
+				EventHandler value2 = ComboBox_Mini_Warp_Populate;
 				ComboBox comboBox = aax;
 				if (comboBox != null)
 				{
@@ -22314,7 +22227,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ad;
+				EventHandler value2 = Button_QuestScriptHelp_Click;
 				Button button = aay;
 				if (button != null)
 				{
@@ -22370,7 +22283,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ac;
+				EventHandler value2 = Button_RefreshQuestList_Click;
 				Button button = aa1;
 				if (button != null)
 				{
@@ -22396,7 +22309,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ab;
+				EventHandler value2 = Button_CheckSpecificQuests_Click;
 				Button button = aa2;
 				if (button != null)
 				{
@@ -23172,7 +23085,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ax;
+				EventHandler value2 = Timer_UpdateTabs_Tick;
 				Vs2010TabControl vs2010TabControl = ach;
 				if (vs2010TabControl != null)
 				{
@@ -23258,7 +23171,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = bj;
+				EventHandler value2 = Button_SaveConfig_Click;
 				ToolStripSplitButton toolStripSplitButton = acm;
 				if (toolStripSplitButton != null)
 				{
@@ -23299,7 +23212,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ao;
+				EventHandler value2 = ToolStripTextBox_KenhPassword_TextChanged;
 				ToolStripTextBox toolStripTextBox = aco;
 				if (toolStripTextBox != null)
 				{
@@ -23595,11 +23508,11 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = aa;
-				MouseEventHandler value3 = d;
-				MouseEventHandler value4 = c;
-				EventHandler value5 = z;
-				MouseEventHandler value6 = b;
+				EventHandler value2 = Button_TogglePetBattle_Click;
+				MouseEventHandler value3 = PictureBox_MouseMove_ShowCropPreview;
+				MouseEventHandler value4 = PictureBox_MouseDown_ShowCropPreview;
+				EventHandler value5 = PictureBox_MouseLeave_ClearImage;
+				MouseEventHandler value6 = PictureBox_MouseUp_ClearImage;
 				PictureBox pictureBox = ac7;
 				if (pictureBox != null)
 				{
@@ -23948,11 +23861,11 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = d;
-				MouseEventHandler value3 = c;
-				EventHandler value4 = z;
-				MouseEventHandler value5 = b;
-				EventHandler value6 = x;
+				MouseEventHandler value2 = PictureBox_MouseMove_ShowCropPreview;
+				MouseEventHandler value3 = PictureBox_MouseDown_ShowCropPreview;
+				EventHandler value4 = PictureBox_MouseLeave_ClearImage;
+				MouseEventHandler value5 = PictureBox_MouseUp_ClearImage;
+				EventHandler value6 = Button_PetSelectNext_Click;
 				PictureBox pictureBox = adt;
 				if (pictureBox != null)
 				{
@@ -23986,11 +23899,11 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = d;
-				MouseEventHandler value3 = c;
-				EventHandler value4 = z;
-				MouseEventHandler value5 = b;
-				EventHandler value6 = y;
+				MouseEventHandler value2 = PictureBox_MouseMove_ShowCropPreview;
+				MouseEventHandler value3 = PictureBox_MouseDown_ShowCropPreview;
+				EventHandler value4 = PictureBox_MouseLeave_ClearImage;
+				MouseEventHandler value5 = PictureBox_MouseUp_ClearImage;
+				EventHandler value6 = Button_PetSelectPrev_Click;
 				PictureBox pictureBox = adu;
 				if (pictureBox != null)
 				{
@@ -24024,7 +23937,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = l;
+				EventHandler value2 = MenuItem_CharEquip_Click;
 				ToolStripMenuItem toolStripMenuItem = adv;
 				if (toolStripMenuItem != null)
 				{
@@ -24065,7 +23978,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = k;
+				EventHandler value2 = MenuItem_PetEquip_Click;
 				ToolStripMenuItem toolStripMenuItem = adx;
 				if (toolStripMenuItem != null)
 				{
@@ -24136,7 +24049,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = r;
+				EventHandler value2 = MenuItem_SendToBDYPet_Click;
 				ToolStripMenuItem toolStripMenuItem = ad1;
 				if (toolStripMenuItem != null)
 				{
@@ -24162,8 +24075,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = c;
-				EventHandler value3 = br;
+				KeyPressEventHandler value2 = NumericTextBox_KeyPress;
+				EventHandler value3 = TextBox_NumericValue_TextChanged;
 				ToolStripTextBox toolStripTextBox = ad2;
 				if (toolStripTextBox != null)
 				{
@@ -24206,15 +24119,15 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = d;
-				MouseEventHandler value3 = c;
-				EventHandler value4 = z;
-				MouseEventHandler value5 = b;
-				EventHandler value6 = [SpecialName] [DebuggerHidden] (object A_0, EventArgs A_1) =>
+				MouseEventHandler value2 = PictureBox_MouseMove_ShowCropPreview;
+				MouseEventHandler value3 = PictureBox_MouseDown_ShowCropPreview;
+				EventHandler value4 = PictureBox_MouseLeave_ClearImage;
+				MouseEventHandler value5 = PictureBox_MouseUp_ClearImage;
+				EventHandler value6 = [SpecialName] [DebuggerHidden] (object sender, EventArgs e) =>
 				{
-					a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
+					PictureBox_CharStat_MouseClick(RuntimeHelpers.GetObjectValue(sender), (MouseEventArgs)e);
 				};
-				EventHandler value7 = h;
+				EventHandler value7 = NoOpClickHandler;
 				PictureBox pictureBox = ad4;
 				if (pictureBox != null)
 				{
@@ -24250,15 +24163,15 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = d;
-				MouseEventHandler value3 = c;
-				EventHandler value4 = z;
-				MouseEventHandler value5 = b;
-				EventHandler value6 = [SpecialName] [DebuggerHidden] (object A_0, EventArgs A_1) =>
+				MouseEventHandler value2 = PictureBox_MouseMove_ShowCropPreview;
+				MouseEventHandler value3 = PictureBox_MouseDown_ShowCropPreview;
+				EventHandler value4 = PictureBox_MouseLeave_ClearImage;
+				MouseEventHandler value5 = PictureBox_MouseUp_ClearImage;
+				EventHandler value6 = [SpecialName] [DebuggerHidden] (object sender, EventArgs e) =>
 				{
-					a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
+					PictureBox_CharStat_MouseClick(RuntimeHelpers.GetObjectValue(sender), (MouseEventArgs)e);
 				};
-				EventHandler value7 = h;
+				EventHandler value7 = NoOpClickHandler;
 				PictureBox pictureBox = ad5;
 				if (pictureBox != null)
 				{
@@ -24294,15 +24207,15 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = d;
-				MouseEventHandler value3 = c;
-				EventHandler value4 = z;
-				MouseEventHandler value5 = b;
-				EventHandler value6 = [SpecialName] [DebuggerHidden] (object A_0, EventArgs A_1) =>
+				MouseEventHandler value2 = PictureBox_MouseMove_ShowCropPreview;
+				MouseEventHandler value3 = PictureBox_MouseDown_ShowCropPreview;
+				EventHandler value4 = PictureBox_MouseLeave_ClearImage;
+				MouseEventHandler value5 = PictureBox_MouseUp_ClearImage;
+				EventHandler value6 = [SpecialName] [DebuggerHidden] (object sender, EventArgs e) =>
 				{
-					a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
+					PictureBox_CharStat_MouseClick(RuntimeHelpers.GetObjectValue(sender), (MouseEventArgs)e);
 				};
-				EventHandler value7 = h;
+				EventHandler value7 = NoOpClickHandler;
 				PictureBox pictureBox = ad6;
 				if (pictureBox != null)
 				{
@@ -24338,15 +24251,15 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = d;
-				MouseEventHandler value3 = c;
-				EventHandler value4 = z;
-				MouseEventHandler value5 = b;
-				EventHandler value6 = [SpecialName] [DebuggerHidden] (object A_0, EventArgs A_1) =>
+				MouseEventHandler value2 = PictureBox_MouseMove_ShowCropPreview;
+				MouseEventHandler value3 = PictureBox_MouseDown_ShowCropPreview;
+				EventHandler value4 = PictureBox_MouseLeave_ClearImage;
+				MouseEventHandler value5 = PictureBox_MouseUp_ClearImage;
+				EventHandler value6 = [SpecialName] [DebuggerHidden] (object sender, EventArgs e) =>
 				{
-					a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
+					PictureBox_CharStat_MouseClick(RuntimeHelpers.GetObjectValue(sender), (MouseEventArgs)e);
 				};
-				EventHandler value7 = h;
+				EventHandler value7 = NoOpClickHandler;
 				PictureBox pictureBox = ad7;
 				if (pictureBox != null)
 				{
@@ -24382,15 +24295,15 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = d;
-				MouseEventHandler value3 = c;
-				EventHandler value4 = z;
-				MouseEventHandler value5 = b;
-				EventHandler value6 = [SpecialName] [DebuggerHidden] (object A_0, EventArgs A_1) =>
+				MouseEventHandler value2 = PictureBox_MouseMove_ShowCropPreview;
+				MouseEventHandler value3 = PictureBox_MouseDown_ShowCropPreview;
+				EventHandler value4 = PictureBox_MouseLeave_ClearImage;
+				MouseEventHandler value5 = PictureBox_MouseUp_ClearImage;
+				EventHandler value6 = [SpecialName] [DebuggerHidden] (object sender, EventArgs e) =>
 				{
-					a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
+					PictureBox_CharStat_MouseClick(RuntimeHelpers.GetObjectValue(sender), (MouseEventArgs)e);
 				};
-				EventHandler value7 = h;
+				EventHandler value7 = NoOpClickHandler;
 				PictureBox pictureBox = ad8;
 				if (pictureBox != null)
 				{
@@ -24426,15 +24339,15 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = d;
-				MouseEventHandler value3 = c;
-				EventHandler value4 = z;
-				MouseEventHandler value5 = b;
-				EventHandler value6 = [SpecialName] [DebuggerHidden] (object A_0, EventArgs A_1) =>
+				MouseEventHandler value2 = PictureBox_MouseMove_ShowCropPreview;
+				MouseEventHandler value3 = PictureBox_MouseDown_ShowCropPreview;
+				EventHandler value4 = PictureBox_MouseLeave_ClearImage;
+				MouseEventHandler value5 = PictureBox_MouseUp_ClearImage;
+				EventHandler value6 = [SpecialName] [DebuggerHidden] (object sender, EventArgs e) =>
 				{
-					a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
+					PictureBox_CharStat_MouseClick(RuntimeHelpers.GetObjectValue(sender), (MouseEventArgs)e);
 				};
-				EventHandler value7 = h;
+				EventHandler value7 = NoOpClickHandler;
 				PictureBox pictureBox = ad9;
 				if (pictureBox != null)
 				{
@@ -24485,9 +24398,9 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = be;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_CharSkill_SelectedIndexChanged;
 				ComboBoxIcon comboBoxIcon = aeb;
 				if (comboBoxIcon != null)
 				{
@@ -24517,9 +24430,9 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				KeyPressEventHandler value2 = d;
-				MouseEventHandler value3 = h;
-				EventHandler value4 = bc;
+				KeyPressEventHandler value2 = ComboBox_KeyPress_BlockInput;
+				MouseEventHandler value3 = NoOpClickHandler;
+				EventHandler value4 = ComboBox_PetSkill_SelectedIndexChanged;
 				ComboBoxIcon comboBoxIcon = aec;
 				if (comboBoxIcon != null)
 				{
@@ -24549,7 +24462,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = j;
+				EventHandler value2 = MenuItem_HomdoDrop_Click;
 				ToolStripMenuItem toolStripMenuItem = aed;
 				if (toolStripMenuItem != null)
 				{
@@ -24575,7 +24488,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = i;
+				EventHandler value2 = MenuItem_HomdoContribute_Click;
 				ToolStripMenuItem toolStripMenuItem = aee;
 				if (toolStripMenuItem != null)
 				{
@@ -24631,7 +24544,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = g;
+				EventHandler value2 = Button_AutoSort_Click;
 				ToolStripMenuItem toolStripMenuItem = aeh;
 				if (toolStripMenuItem != null)
 				{
@@ -24661,31 +24574,15 @@ namespace Simple_Bot
 			}
 		}
 
-		public _ClientBot _Botting
-		{
-			get
-			{
-				if (_bot != null)
-				{
-					return _bot;
-				}
-				_ClientBot result = default(_ClientBot);
-				return result;
-			}
-			set
-			{
-				_bot = value;
-			}
-		}
 
 		[DebuggerNonUserCode]
 		protected override void Dispose(bool disposing)
 		{
 			try
 			{
-				if (disposing && this.m_a != null)
+				if (disposing && this.components != null)
 				{
-					this.m_a.Dispose();
+					this.components.Dispose();
 				}
 			}
 			finally
@@ -24695,9 +24592,9 @@ namespace Simple_Bot
 		}
 
 		[DebuggerStepThrough]
-		private void f()
+		private void InitializeComponent()
 		{
-			this.m_a = new Container();
+			this.components = new Container();
 			ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(frmClient));
 			Vs2010TabControlRenderer vs2010TabControlRenderer = new Vs2010TabControlRenderer();
 			Vs2010DefaultTabControlColorTable colorTable = new Vs2010DefaultTabControlColorTable();
@@ -25327,16 +25224,16 @@ namespace Simple_Bot
 			DataTable41 = new DataTable();
 			DataColumn512 = new DataColumn();
 			DataColumn513 = new DataColumn();
-			ContextMenuStrip_saveas = new ContextMenuStrip(this.m_a);
+			ContextMenuStrip_saveas = new ContextMenuStrip(this.components);
 			ToolStripSplitButton_save = new ToolStripSplitButton();
-			ContextMenuStrip_ToTuideo = new ContextMenuStrip(this.m_a);
+			ContextMenuStrip_ToTuideo = new ContextMenuStrip(this.components);
 			ToolStripMenuItem_ToTuiDo = new ToolStripMenuItem();
 			ToolStripSeparator2 = new ToolStripSeparator();
 			ToolStripMenuItem_TuideoAddtoDrop = new ToolStripMenuItem();
 			ToolStripMenuItem_TuideoAddtoContribute = new ToolStripMenuItem();
 			ToolStripMenuItem_TuideoAddtoSend = new ToolStripMenuItem();
 			ToolStripMenuItem_TuideoAddtoSell = new ToolStripMenuItem();
-			ContextMenuStrip_ToTuido = new ContextMenuStrip(this.m_a);
+			ContextMenuStrip_ToTuido = new ContextMenuStrip(this.components);
 			ToolStripMenuItem_ToTuiDeo = new ToolStripMenuItem();
 			ToolStripSeparator1 = new ToolStripSeparator();
 			ToolStripMenuItem_CharUse = new ToolStripMenuItem();
@@ -25357,12 +25254,12 @@ namespace Simple_Bot
 			ToolStripMenuItem_AddToShop = new ToolStripMenuItem();
 			ToolStripSeparator6 = new ToolStripSeparator();
 			ToolStripMenuItem_Tuido_Sort = new ToolStripMenuItem();
-			ContextMenuStrip_Warp = new ContextMenuStrip(this.m_a);
+			ContextMenuStrip_Warp = new ContextMenuStrip(this.components);
 			ToolStripMenuItem_Warp = new ToolStripMenuItem();
-			Timer_100 = new System.Windows.Forms.Timer(this.m_a);
-			Timer_autoquest = new System.Windows.Forms.Timer(this.m_a);
-			Timer_delay = new System.Windows.Forms.Timer(this.m_a);
-			ToolTip_info = new ToolTip(this.m_a);
+			Timer_100 = new System.Windows.Forms.Timer(this.components);
+			Timer_autoquest = new System.Windows.Forms.Timer(this.components);
+			Timer_delay = new System.Windows.Forms.Timer(this.components);
+			ToolTip_info = new ToolTip(this.components);
 			TextBox_ClickMOD = new TextBox();
 			ListView_Quest = new ListView();
 			ColumnHeader19 = new ColumnHeader();
@@ -25388,8 +25285,8 @@ namespace Simple_Bot
 			PictureBox1 = new PictureBox();
 			OpenFileDialog_setting = new OpenFileDialog();
 			SaveFileDialog_setting = new SaveFileDialog();
-			Timer_QC = new System.Windows.Forms.Timer(this.m_a);
-			ImageList1 = new ImageList(this.m_a);
+			Timer_QC = new System.Windows.Forms.Timer(this.components);
+			ImageList1 = new ImageList(this.components);
 			Vs2010TabControl_Main = new Vs2010TabControl();
 			TabPage_Main = new TabPage();
 			PictureBox_mini = new PictureBox();
@@ -32107,5736 +32004,6 @@ namespace Simple_Bot
 			TabPage_Shop.PerformLayout();
 			TabPage_Map.ResumeLayout(false);
 			ResumeLayout(false);
-		}
-
-		public void SkillSelected(int _idskill, ComboBoxIcon sender)
-		{
-			string name = sender.Name;
-			if (Operators.CompareString(name, ComboBox_CharSkill.Name, false) == 0)
-			{
-				if (List_skill_char.ContainsKey(_idskill))
-				{
-					sender.SelectedItem = List_skill_char[_idskill];
-				}
-				else
-				{
-					sender.SelectedItem = List_skill_char[10000];
-				}
-			}
-			else if (Operators.CompareString(name, ComboBox_PetSkill.Name, false) == 0)
-			{
-				if (List_skill_pet.ContainsKey(_idskill))
-				{
-					sender.SelectedItem = List_skill_pet[_idskill];
-				}
-				else
-				{
-					sender.SelectedItem = List_skill_pet[10000];
-				}
-			}
-		}
-
-		public void Char_AddSkillToList(int id)
-		{
-			if (Skills.Data_Skills.ContainsKey(id))
-			{
-				Skills._Skill skill = Skills.Data_Skills[id];
-				ComboBoxItem comboBoxItem = new ComboBoxItem
-				{
-					Text = skill._Name,
-					Value = skill._Id,
-					ImageKey = skill._Id.ToString()
-				};
-				ComboBox_CharSkill.Items.Add(comboBoxItem);
-				List_skill_char.Add(skill._Id, comboBoxItem);
-			}
-			else
-			{
-				ComboBoxItem value = new ComboBoxItem
-				{
-					Text = "",
-					Value = 0,
-					ImageKey = "0"
-				};
-				List_skill_char.Add(id, value);
-			}
-		}
-
-		public void Pet_AddSkillToList(int id)
-		{
-			if (Skills.Data_Skills.ContainsKey(id))
-			{
-				Skills._Skill skill = Skills.Data_Skills[id];
-				ComboBoxItem comboBoxItem = new ComboBoxItem
-				{
-					Text = skill._Name,
-					Value = skill._Id,
-					ImageKey = skill._Id.ToString()
-				};
-				ComboBox_PetSkill.Items.Add(comboBoxItem);
-				List_skill_pet.Add(skill._Id, comboBoxItem);
-			}
-			else
-			{
-				ComboBoxItem value = new ComboBoxItem
-				{
-					Text = "",
-					Value = 0,
-					ImageKey = "0"
-				};
-				List_skill_pet.Add(id, value);
-			}
-		}
-
-		public frmClient(_ClientBot _b)
-		{
-			base.Load += bt;
-			base.FormClosing += a;
-			Data_Trangbi_Char = new Dictionary<int, Trangbi_Info>();
-			Data_Trangbi_Pet = new Dictionary<int, Trangbi_Info>();
-			Data_Tuido = new Dictionary<int, Tuido_Info>();
-			Data_Tuideo = new Dictionary<int, Tuideo_Info>();
-			List_skill_char = new Dictionary<int, ComboBoxItem>();
-			List_skill_pet = new Dictionary<int, ComboBoxItem>();
-			tooltip_check = 0;
-			_Tuideo_slot_select = 0;
-			_Homdo_slot_select = 0;
-			label_selected = new Label();
-			r_Id_rtbsystem = 0;
-			r_Id_rtbChat = 0;
-			r_Id_rtbQuest = 0;
-			_petSelect = 0;
-			_list_Func = new List<string>(new string[9] { "warp", "warpid", "click", "menu", "end", "battle", "next", "catpet", "xuatchien" });
-			aem = new ArrayList();
-			aen = 0;
-			f();
-			_bot = _b;
-			foreach (Skills._Skill value5 in Skills.Data_Skills.Values)
-			{
-				Bitmap image = GetPicture._GetPhoto_Skill(value5._Id);
-				ImageList1.Images.Add(value5._Id.ToString(), image);
-			}
-			int country = API.Country;
-			if (country == 1)
-			{
-				ComboBox_CharSkill.Items.Clear();
-				List_skill_char.Clear();
-				ComboBox_PetSkill.Items.Clear();
-				List_skill_pet.Clear();
-				foreach (Skills._Skill value6 in Skills.Data_Skills.Values)
-				{
-					ComboBox_CharSkill.Items.Add(value6._Name);
-					ComboBox_PetSkill.Items.Add(value6._Name);
-				}
-				API.Language_Path = MyProject.Application.Info.DirectoryPath + "\\Country\\THAI.ini";
-				LoadLanguage();
-			}
-			else
-			{
-				ComboBox_CharSkill.Items.Clear();
-				List_skill_char.Clear();
-				ComboBox_PetSkill.Items.Clear();
-				List_skill_pet.Clear();
-				foreach (Skills._Skill value7 in Skills.Data_Skills.Values)
-				{
-					Char_AddSkillToList(value7._Id);
-					Pet_AddSkillToList(value7._Id);
-				}
-			}
-			NewLateBinding.LateCall(TreeView1.Nodes, null, "Add", new object[1] { MyProject.Forms.MainForm.treeview1.Nodes[0].Clone() }, null, null, null, true);
-			TreeView1.Refresh();
-			TreeView1.Nodes[0].Expand();
-			DataSet1.Tables["Table_Setting"].Rows.Add();
-			int num = 1;
-			checked
-			{
-				do
-				{
-					DataSet1.Tables["Table_Battle" + num].Rows.Add();
-					num++;
-				}
-				while (num <= 20);
-				int num2 = 1;
-				do
-				{
-					DataSet1.Tables["Table_Tuido"].Rows.Add(num2);
-					DataSet1.Tables["Table_Tuideo"].Rows.Add(num2);
-					num2++;
-				}
-				while (num2 <= 25);
-				int num3 = 1;
-				do
-				{
-					DataSet1.Tables["Table_ItemOnMap"].Rows.Add();
-					num3++;
-				}
-				while (num3 <= 255);
-				DataSet1.Tables["Table_database"].Rows.Add(0);
-				DataSet1.Tables["Table_databasepet"].Rows.Add(0);
-				DataSet1.Tables["Table_CharEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_CharEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_CharEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_CharEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_CharEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_CharEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_PetEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_PetEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_PetEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_PetEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_PetEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_PetEquit"].Rows.Add(0);
-				DataSet1.Tables["Table_pet1"].Rows.Add(0);
-				DataSet1.Tables["Table_pet2"].Rows.Add(0);
-				DataSet1.Tables["Table_pet3"].Rows.Add(0);
-				DataSet1.Tables["Table_pet4"].Rows.Add(0);
-				DataSet1.Tables["Table_petbattle"].Rows.Add(0);
-				ListView_monster.ListViewItemSorter = new clsListviewSorter(4, SortOrder.Ascending);
-				ComboBox_Server.Items.Clear();
-				string text = "server.ini";
-				if (File.Exists(text))
-				{
-					string[] array = MyProject.Computer.FileSystem.ReadAllText(text).Split('\r');
-					foreach (string text2 in array)
-					{
-						string[] array2 = text2.Split('*');
-						ComboBox_Server.Items.Add(array2[0]);
-					}
-				}
-				else
-				{
-					Interaction.MsgBox("File server.ini không tồn tại");
-				}
-				foreach (int key in Ground.Data_Warps.Keys)
-				{
-					ComboBox_Mini_Warp.Items.Add(Conversions.ToString(Ground.Data_Warps[key]) + "  " + MapNames.Data_MapNames[Ground.Data_Warps[key]]);
-				}
-				int num4 = 0;
-				do
-				{
-					Trangbi_Info value = new Trangbi_Info
-					{
-						_stt = num4,
-						_id = 0
-					};
-					switch (num4)
-					{
-					case 0:
-						value._photo = PictureBox_char1;
-						break;
-					case 1:
-						value._photo = PictureBox_char2;
-						break;
-					case 2:
-						value._photo = PictureBox_char3;
-						break;
-					case 3:
-						value._photo = PictureBox_char4;
-						break;
-					case 4:
-						value._photo = PictureBox_char5;
-						break;
-					case 5:
-						value._photo = PictureBox_char6;
-						break;
-					}
-					value._photo.Tag = num4;
-					value._photo.MouseMove += q;
-					value._photo.MouseLeave += Label_MouseLeave;
-					value._photo.MouseClick += s;
-					Data_Trangbi_Char.Add(num4, value);
-					num4++;
-				}
-				while (num4 <= 5);
-				int num5 = 0;
-				do
-				{
-					Trangbi_Info value2 = new Trangbi_Info
-					{
-						_stt = num5,
-						_id = 0
-					};
-					switch (num5)
-					{
-					case 0:
-						value2._photo = PictureBox_Pet1;
-						break;
-					case 1:
-						value2._photo = PictureBox_Pet2;
-						break;
-					case 2:
-						value2._photo = PictureBox_Pet3;
-						break;
-					case 3:
-						value2._photo = PictureBox_Pet4;
-						break;
-					case 4:
-						value2._photo = PictureBox_Pet5;
-						break;
-					case 5:
-						value2._photo = PictureBox_Pet6;
-						break;
-					}
-					value2._photo.Tag = num5;
-					value2._photo.MouseMove += p;
-					value2._photo.MouseLeave += Label_MouseLeave;
-					value2._photo.MouseClick += r;
-					Data_Trangbi_Pet.Add(num5, value2);
-					num5++;
-				}
-				while (num5 <= 5);
-				int num6 = 1;
-				do
-				{
-					Tuido_Info value3 = new Tuido_Info
-					{
-						_stt = num6,
-						_id = 0,
-						_count = 0
-					};
-					switch (num6)
-					{
-					case 1:
-						value3._photo = Lb_tuido1;
-						break;
-					case 2:
-						value3._photo = Lb_tuido2;
-						break;
-					case 3:
-						value3._photo = Lb_tuido3;
-						break;
-					case 4:
-						value3._photo = Lb_tuido4;
-						break;
-					case 5:
-						value3._photo = Lb_tuido5;
-						break;
-					case 6:
-						value3._photo = Lb_tuido6;
-						break;
-					case 7:
-						value3._photo = Lb_tuido7;
-						break;
-					case 8:
-						value3._photo = Lb_tuido8;
-						break;
-					case 9:
-						value3._photo = Lb_tuido9;
-						break;
-					case 10:
-						value3._photo = Lb_tuido10;
-						break;
-					case 11:
-						value3._photo = Lb_tuido11;
-						break;
-					case 12:
-						value3._photo = Lb_tuido12;
-						break;
-					case 13:
-						value3._photo = Lb_tuido13;
-						break;
-					case 14:
-						value3._photo = Lb_tuido14;
-						break;
-					case 15:
-						value3._photo = Lb_tuido15;
-						break;
-					case 16:
-						value3._photo = Lb_tuido16;
-						break;
-					case 17:
-						value3._photo = Lb_tuido17;
-						break;
-					case 18:
-						value3._photo = Lb_tuido18;
-						break;
-					case 19:
-						value3._photo = Lb_tuido19;
-						break;
-					case 20:
-						value3._photo = Lb_tuido20;
-						break;
-					case 21:
-						value3._photo = Lb_tuido21;
-						break;
-					case 22:
-						value3._photo = Lb_tuido22;
-						break;
-					case 23:
-						value3._photo = Lb_tuido23;
-						break;
-					case 24:
-						value3._photo = Lb_tuido24;
-						break;
-					case 25:
-						value3._photo = Lb_tuido25;
-						break;
-					}
-					value3._photo.Tag = num6;
-					value3._photo.Size = new Size(35, 35);
-					value3._photo.Location = new Point(value3._photo.Location.X - 2, value3._photo.Location.Y);
-					value3._photo.ImageAlign = ContentAlignment.BottomLeft;
-					value3._photo.Text = "";
-					value3._photo.MouseClick += l;
-					value3._photo.MouseMove += this.i;
-					value3._photo.MouseLeave += Label_MouseLeave;
-					value3._photo.MouseDown += k;
-					value3._photo.MouseUp += j;
-					value3._photo.DragDrop += b;
-					value3._photo.DragEnter += a;
-					value3._photo.GiveFeedback += a;
-					Data_Tuido.Add(num6, value3);
-					num6++;
-				}
-				while (num6 <= 25);
-				int num7 = 1;
-				do
-				{
-					Tuideo_Info value4 = new Tuideo_Info
-					{
-						_stt = num7,
-						_id = 0,
-						_count = 0
-					};
-					switch (num7)
-					{
-					case 1:
-						value4._photo = Lb_tuideo1;
-						break;
-					case 2:
-						value4._photo = Lb_tuideo2;
-						break;
-					case 3:
-						value4._photo = Lb_tuideo3;
-						break;
-					case 4:
-						value4._photo = Lb_tuideo4;
-						break;
-					case 5:
-						value4._photo = Lb_tuideo5;
-						break;
-					case 6:
-						value4._photo = Lb_tuideo6;
-						break;
-					case 7:
-						value4._photo = Lb_tuideo7;
-						break;
-					case 8:
-						value4._photo = Lb_tuideo8;
-						break;
-					case 9:
-						value4._photo = Lb_tuideo9;
-						break;
-					case 10:
-						value4._photo = Lb_tuideo10;
-						break;
-					case 11:
-						value4._photo = Lb_tuideo11;
-						break;
-					case 12:
-						value4._photo = Lb_tuideo12;
-						break;
-					case 13:
-						value4._photo = Lb_tuideo13;
-						break;
-					case 14:
-						value4._photo = Lb_tuideo14;
-						break;
-					case 15:
-						value4._photo = Lb_tuideo15;
-						break;
-					case 16:
-						value4._photo = Lb_tuideo16;
-						break;
-					case 17:
-						value4._photo = Lb_tuideo17;
-						break;
-					case 18:
-						value4._photo = Lb_tuideo18;
-						break;
-					case 19:
-						value4._photo = Lb_tuideo19;
-						break;
-					case 20:
-						value4._photo = Lb_tuideo20;
-						break;
-					case 21:
-						value4._photo = Lb_tuideo21;
-						break;
-					case 22:
-						value4._photo = Lb_tuideo22;
-						break;
-					case 23:
-						value4._photo = Lb_tuideo23;
-						break;
-					case 24:
-						value4._photo = Lb_tuideo24;
-						break;
-					case 25:
-						value4._photo = Lb_tuideo25;
-						break;
-					}
-					value4._photo.Tag = num7;
-					value4._photo.Size = new Size(35, 35);
-					value4._photo.Location = new Point(value4._photo.Location.X - 2, value4._photo.Location.Y);
-					value4._photo.ImageAlign = ContentAlignment.BottomLeft;
-					value4._photo.Text = "";
-					value4._photo.MouseDoubleClick += o;
-					value4._photo.MouseMove += m;
-					value4._photo.MouseLeave += Label_MouseLeave;
-					value4._photo.MouseDown += n;
-					value4._photo.MouseUp += j;
-					Data_Tuideo.Add(num7, value4);
-					num7++;
-				}
-				while (num7 <= 25);
-				Bitmap bitmap = Resources.Arrow_L2;
-				bitmap.MakeTransparent(Color.FromArgb(65280));
-				PictureBox_Pet_back.BackgroundImage = bitmap;
-				bitmap = Resources.Arrow_R2;
-				bitmap.MakeTransparent(Color.FromArgb(65280));
-				PictureBox_pet_next.BackgroundImage = bitmap;
-				bitmap = Resources.arrow_upBig1;
-				bitmap.MakeTransparent(Color.FromArgb(65280));
-				PictureBox_char_add_int.BackgroundImage = bitmap;
-				PictureBox_char_add_atk.BackgroundImage = bitmap;
-				PictureBox_char_add_def.BackgroundImage = bitmap;
-				PictureBox_char_add_hpx.BackgroundImage = bitmap;
-				PictureBox_char_add_spx.BackgroundImage = bitmap;
-				PictureBox_char_add_agi.BackgroundImage = bitmap;
-			}
-		}
-
-		private void s(object A_0, MouseEventArgs A_1)
-		{
-			if (A_1.Button == MouseButtons.Right)
-			{
-				int slot = Conversions.ToInteger(NewLateBinding.LateGet(A_0, null, "Tag", new object[0], null, null, null));
-				_bot.CharRemoveEquit(slot);
-			}
-		}
-
-		private void r(object A_0, MouseEventArgs A_1)
-		{
-			if (A_1.Button == MouseButtons.Right)
-			{
-				int slotitem = Conversions.ToInteger(NewLateBinding.LateGet(A_0, null, "Tag", new object[0], null, null, null));
-				_bot.PetRemoveEquit(_petSelect, slotitem);
-			}
-		}
-
-		private void q(object A_0, MouseEventArgs A_1)
-		{
-		}
-
-		private void p(object A_0, MouseEventArgs A_1)
-		{
-		}
-
-		private void o(object A_0, MouseEventArgs A_1)
-		{
-			if (A_1.Button == MouseButtons.Right)
-			{
-				int key = Conversions.ToInteger(NewLateBinding.LateGet(A_0, null, "Tag", new object[0], null, null, null));
-				if (_bot.Data_Tuideo[key]._Id > 0)
-				{
-					_bot.SendPacket(API.hexstringtobyte("F44403001725" + key.ToString("X2")));
-				}
-			}
-		}
-
-		private void n(object A_0, MouseEventArgs A_1)
-		{
-			if (Conversions.ToBoolean(Operators.AndObject(A_1.Button == MouseButtons.Right, Operators.CompareObjectNotEqual(NewLateBinding.LateGet(A_0, null, "Text", new object[0], null, null, null), "", false))))
-			{
-				label_selected.BackColor = Color.Transparent;
-				label_selected.ForeColor = Color.Black;
-				label_selected = (Label)A_0;
-				NewLateBinding.LateSet(A_0, null, "ForeColor", new object[1] { Color.Red }, null, null);
-				NewLateBinding.LateSet(A_0, null, "BackColor", new object[1] { Color.FromArgb(169, 251, 170) }, null, null);
-				_Tuideo_slot_select = Conversions.ToInteger(NewLateBinding.LateGet(A_0, null, "Tag", new object[0], null, null, null));
-			}
-			else
-			{
-				label_selected.ForeColor = Color.Black;
-				label_selected.BackColor = Color.Transparent;
-				label_selected = new Label();
-				_Tuideo_slot_select = 0;
-				_Homdo_slot_select = 0;
-			}
-		}
-
-		private void m(object A_0, MouseEventArgs A_1)
-		{
-		}
-
-		private void l(object A_0, MouseEventArgs A_1)
-		{
-			switch (A_1.Button)
-			{
-			}
-		}
-
-		private void k(object A_0, MouseEventArgs A_1)
-		{
-			if (Operators.ConditionalCompareObjectNotEqual(NewLateBinding.LateGet(A_0, null, "Text", new object[0], null, null, null), "", false))
-			{
-				switch (A_1.Button)
-				{
-				case MouseButtons.Left:
-				{
-					label_selected.ForeColor = Color.Black;
-					label_selected.BackColor = Color.Transparent;
-					label_selected = (Label)A_0;
-					NewLateBinding.LateSet(A_0, null, "ForeColor", new object[1] { Color.Red }, null, null);
-					NewLateBinding.LateSet(A_0, null, "BackColor", new object[1] { Color.FromArgb(169, 251, 170) }, null, null);
-					int key = Conversions.ToInteger(NewLateBinding.LateGet(A_0, null, "Tag", new object[0], null, null, null));
-					if (_bot.Data_Tuido[key]._Id > 0)
-					{
-						DataObject dataObject = new DataObject();
-						dataObject.SetImage((Image)NewLateBinding.LateGet(NewLateBinding.LateGet(A_0, null, "Image", new object[0], null, null, null), null, "Clone", new object[0], null, null, null));
-						aej = (Label)A_0;
-						object[] obj = new object[2]
-						{
-							dataObject,
-							DragDropEffects.Copy
-						};
-						object[] array = obj;
-						bool[] obj2 = new bool[2] { true, false };
-						bool[] array2 = obj2;
-						NewLateBinding.LateCall(A_0, null, "DoDragDrop", obj, null, null, obj2, true);
-						if (array2[0])
-						{
-							dataObject = (DataObject)Conversions.ChangeType(RuntimeHelpers.GetObjectValue(array[0]), typeof(DataObject));
-						}
-					}
-					break;
-				}
-				case MouseButtons.Right:
-					label_selected.ForeColor = Color.Black;
-					label_selected.BackColor = Color.Transparent;
-					label_selected = (Label)A_0;
-					NewLateBinding.LateSet(A_0, null, "ForeColor", new object[1] { Color.Red }, null, null);
-					NewLateBinding.LateSet(A_0, null, "BackColor", new object[1] { Color.FromArgb(169, 251, 170) }, null, null);
-					_Homdo_slot_select = Conversions.ToInteger(NewLateBinding.LateGet(A_0, null, "Tag", new object[0], null, null, null));
-					break;
-				}
-			}
-			else
-			{
-				label_selected.ForeColor = Color.Black;
-				label_selected.BackColor = Color.Transparent;
-				label_selected = new Label();
-				_Tuideo_slot_select = 0;
-				_Homdo_slot_select = 0;
-			}
-		}
-
-		private void a(object A_0, GiveFeedbackEventArgs A_1)
-		{
-			A_1.UseDefaultCursors = false;
-			Bitmap bitmap = (Bitmap)aej.Image;
-			IntPtr hicon = bitmap.GetHicon();
-			Cursor current = new Cursor(hicon);
-			Cursor.Current = current;
-		}
-
-		private void j(object A_0, MouseEventArgs A_1)
-		{
-			Cursor.Current = DefaultCursor;
-			switch (A_1.Button)
-			{
-			case MouseButtons.Left:
-				label_selected.BackColor = Color.Transparent;
-				break;
-			}
-		}
-
-		public void Label_MouseLeave(object sender, EventArgs e)
-		{
-		}
-
-		private void i(object A_0, MouseEventArgs A_1)
-		{
-		}
-
-		private void b(object A_0, DragEventArgs A_1)
-		{
-			int num = Conversions.ToInteger(aej.Tag);
-			int num2 = 1;
-			int num3 = Conversions.ToInteger(NewLateBinding.LateGet(A_0, null, "Tag", new object[0], null, null, null));
-			try
-			{
-				if (_bot.Data_Tuido[num]._Sl > 1)
-				{
-					try
-					{
-						num2 = Conversions.ToInteger(Interaction.InputBox("Nhập số lượng."));
-					}
-					catch (Exception ex)
-					{
-						ProjectData.SetProjectError(ex);
-						Exception ex2 = ex;
-						ProjectData.ClearProjectError();
-					}
-				}
-			}
-			catch (Exception projectError)
-			{
-				ProjectData.SetProjectError(projectError);
-				ProjectData.ClearProjectError();
-			}
-			if (Operators.ConditionalCompareObjectLess(_bot.get_DataTuido(num, _Data.Type_Tui._Sl), num2, false))
-			{
-				num2 = Conversions.ToInteger(_bot.get_DataTuido(num, _Data.Type_Tui._Sl));
-			}
-			if (Operators.ConditionalCompareObjectGreaterEqual(Operators.AddObject(num2, _bot.get_DataTuido(num3, _Data.Type_Tui._Sl)), 50, false))
-			{
-				num2 = Conversions.ToInteger(Operators.SubtractObject(50, _bot.get_DataTuido(num3, _Data.Type_Tui._Sl)));
-			}
-			_bot.Moveitem(num, num2, num3);
-			aej.BackColor = Color.Transparent;
-			NewLateBinding.LateSet(A_0, null, "BackColor", new object[1] { Color.Transparent }, null, null);
-			Cursor.Current = DefaultCursor;
-		}
-
-		private void a(object A_0, DragEventArgs A_1)
-		{
-			A_1.Effect = DragDropEffects.Copy;
-		}
-
-		public string MakeItemInfo(ushort id)
-		{
-			string text = "";
-			if (Items.Data_Items.ContainsKey(id))
-			{
-				Items.ItemInfo items = Items.Data_Items[id];
-				text += "[ ";
-				if (Items.Data_Items.ContainsKey(id))
-				{
-					text += Items.Data_Items[id]._Name;
-				}
-				text += " ]\r\n";
-				if (items._Lv > 0)
-				{
-					text = text + "Cấp: +" + Conversions.ToString(items._Lv) + "\r\n";
-				}
-				int value = items._Value1;
-				switch (items._Type_Value1)
-				{
-				case 207:
-					text = text + "HPX: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 208:
-					text = text + "SPX: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 212:
-					text = text + "INT: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 210:
-					text = text + "ATK: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 211:
-					text = text + "DEF: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 218:
-					text = text + "Hp Max: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 219:
-					text = text + "Sp Max: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 214:
-					text = text + "AGI: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 25:
-					text = text + "HP: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 26:
-					text = text + "SP: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 64:
-					text = text + "Fai: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				}
-				value = items._Value2;
-				switch (items._Type_Value2)
-				{
-				case 207:
-					text = text + "HPX: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 208:
-					text = text + "SPX: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 212:
-					text = text + "INT: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 210:
-					text = text + "ATK: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 211:
-					text = text + "DEF: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 218:
-					text = text + "Hp Max: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 219:
-					text = text + "Sp Max: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 214:
-					text = text + "AGI: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 25:
-					text = text + "HP: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 26:
-					text = text + "SP: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				case 64:
-					text = text + "Fai: +" + Conversions.ToString(value) + "\r\n";
-					break;
-				}
-				if (items._Type == 42)
-				{
-					text = text + "Bạo kích: +" + Conversions.ToString(items._IdBua) + "%\r\n";
-				}
-				if (Items.Data_Items.ContainsKey(id))
-				{
-					text += Items.Data_Items[id]._Info;
-				}
-				text = text.Replace("+-", "-");
-			}
-			return text;
-		}
-
-		private void d(object A_0, KeyPressEventArgs A_1)
-		{
-			A_1.Handled = true;
-		}
-
-		private void h(object A_0, MouseEventArgs A_1)
-		{
-			Control control = A_0 as Control;
-			if (control != null)
-			{
-				control.ContextMenuStrip = new ContextMenuStrip();
-			}
-		}
-
-		private void bt(object A_0, EventArgs A_1)
-		{
-			checked
-			{
-				if (!_bot._Proxy)
-				{
-					try
-					{
-						ComboBox_Port.SelectedItem = "Kênh " + _bot.ComboBox_Port;
-					}
-					catch (Exception ex)
-					{
-						ProjectData.SetProjectError(ex);
-						Exception ex2 = ex;
-						ProjectData.ClearProjectError();
-					}
-					ToolStripTextBox_KenhPassword.Text = _bot.ToolStripTextBox_KenhPassword;
-					ComboBox_sex.SelectedIndex = 0;
-					ComboBox_kenh.SelectedIndex = 1;
-					Label_Mini.Text = "";
-					TBId.Text = _bot.idlogin.ToString();
-					TBPassword.Text = _bot.passlogin.ToString();
-					TextBox_DelayBot.Text = _bot.TextBox_DelayBot.ToString();
-					TextBox_IDmem1.Text = _bot.TextBox_IDmem1.ToString();
-					TextBox_IDmem2.Text = _bot.TextBox_IDmem2.ToString();
-					TextBox_IDmem3.Text = _bot.TextBox_IDmem3.ToString();
-					TextBox_IDmem4.Text = _bot.TextBox_IDmem4.ToString();
-					TextBox_IdLeader.Text = _bot.TextBox_IdLeader.ToString();
-					TextBox_Eat_char_hp_value.Text = _bot.TextBox_Eat_char_hp_value.ToString();
-					TextBox_Eat_char_sp_value.Text = _bot.TextBox_Eat_char_sp_value.ToString();
-					TextBox_Eat_pet_hp_value.Text = _bot.TextBox_Eat_Pet_hp_value.ToString();
-					TextBox_Eat_pet_sp_value.Text = _bot.TextBox_Eat_Pet_sp_value.ToString();
-					TextBox_TL_pet_hp_value.Text = _bot.TextBox_TL_pet_hp_value.ToString();
-					TextBox_TL_pet_sp_value.Text = _bot.TextBox_TL_pet_sp_value.ToString();
-					TextBox_AutoSend.Text = _bot.TextBox_AutoSend.ToString();
-					TextBox_Drop_HpValue.Text = _bot.TextBox_Drop_HpValue.ToString();
-					TextBox_Drop_SpValue.Text = _bot.TextBox_Drop_SpValue.ToString();
-					TextBox_Contribute_HpValue.Text = _bot.TextBox_Contribute_HpValue.ToString();
-					TextBox_Contribute_SpValue.Text = _bot.TextBox_Contribute_SpValue.ToString();
-					TextBox_Send_HpValue.Text = _bot.TextBox_Send_HpValue.ToString();
-					TextBox_Send_SpValue.Text = _bot.TextBox_Send_SpValue.ToString();
-					TextBox_Sell_HpValue.Text = _bot.TextBox_Sell_HpValue.ToString();
-					TextBox_Sell_SpValue.Text = _bot.TextBox_Sell_SpValue.ToString();
-					TextBox_OpenMachine_CharHp.Text = _bot.TextBox_OpenMachine_CharHp.ToString();
-					TextBox_OpenMachine_CharSp.Text = _bot.TextBox_OpenMachine_CharSp.ToString();
-					TextBox_OpenMachine_PetHp.Text = _bot.TextBox_OpenMachine_PetHp.ToString();
-					TextBox_OpenMachine_PetSp.Text = _bot.TextBox_OpenMachine_PetSp.ToString();
-					NumericUpDown_ItemCountPickup.Text = _bot.NumericUpDown_ItemCountPickup.ToString();
-					TextBox_ValueSPFlee.Text = _bot.TextBox_ValueSPFlee.ToString();
-					TextBox_ClickMOD.Text = _bot.TextBox_ClickMOD;
-					TextBox_ClickMOD_Delay.Text = _bot.TextBox_ClickMOD_delay.ToString();
-					if (_bot.Disconnected == 0)
-					{
-						btnLogin.Text = "Đăng xuất";
-						ComboBox_Server.Enabled = false;
-						ComboBox_Port.Enabled = false;
-						TBId.Enabled = false;
-						TBPassword.Enabled = false;
-					}
-					else
-					{
-						btnLogin.Text = "Đăng nhập";
-						ComboBox_Server.Enabled = true;
-						ComboBox_Port.Enabled = true;
-						TBId.Enabled = true;
-						TBPassword.Enabled = true;
-					}
-					if (_bot.bott == 1)
-					{
-						ComboBox_botname.Enabled = false;
-						Button_bot.Enabled = false;
-						Button_bot.Text = "Dừng";
-					}
-					else
-					{
-						ComboBox_botname.Enabled = true;
-						Button_bot.Enabled = true;
-						Button_bot.Text = "Bắt đầu";
-					}
-					CheckBox_Reconnect.Checked = _bot.C_CheckBox_Reconnect;
-					CheckBox_QuestProtect.Checked = _bot.C_CheckBox_QuestProtect;
-					CheckBox_autosell.Checked = _bot.C_CheckBox_autosell;
-					CheckBox_TuLenNgua.Checked = _bot.C_CheckBox_TuLenNgua;
-					CheckBox_Bee.Checked = _bot.C_CheckBox_Bee;
-					CheckBox_AutoRevival.Checked = _bot.C_CheckBox_AutoRevival;
-					CheckBox_LeaderDissNotEnough.Checked = _bot.C_CheckBox_LeaderDissNotEnough;
-					CheckBox_Char_ChangeTG.Checked = _bot.C_CheckBox_Char_ChangeTG;
-					CheckBox_AutoFlee_Sp.Checked = _bot.C_CheckBox_AutoFlee_Sp;
-					CheckBox_AutoFlee_Party.Checked = _bot.C_CheckBox_AutoFlee_Party;
-					CheckBox_Pet_ChangeTG.Checked = _bot.C_CheckBox_Pet_ChangeTG;
-					CheckBox_AutoClickNPC.Checked = _bot.C_CheckBox_AutoClickNPC;
-					CheckBox_AutoPickup.Checked = _bot.C_CheckBox_AutoPickup;
-					CheckBox_DropHp.Checked = _bot.C_CheckBox_DropHp;
-					CheckBox_DropSp.Checked = _bot.C_CheckBox_DropSp;
-					CheckBox_DropHpSp.Checked = _bot.C_CheckBox_DropHpSp;
-					CheckBox_DropMineWood.Checked = _bot.C_CheckBox_DropMineWood;
-					CheckBox_ContributeHp.Checked = _bot.C_CheckBox_ContributeHp;
-					CheckBox_ContributeSp.Checked = _bot.C_CheckBox_ContributeSp;
-					CheckBox_ContributeHpSp.Checked = _bot.C_CheckBox_ContributeHpSp;
-					CheckBox_ContributeMineWood.Checked = _bot.C_CheckBox_ContributeMineWood;
-					CheckBox_SendHp.Checked = _bot.C_CheckBox_SendHp;
-					CheckBox_SendSp.Checked = _bot.C_CheckBox_SendSp;
-					CheckBox_SendHpSp.Checked = _bot.C_CheckBox_SendHpSp;
-					CheckBox_SendMineWood.Checked = _bot.C_CheckBox_SendMineWood;
-					CheckBox_SellHp.Checked = _bot.C_CheckBox_SellHp;
-					CheckBox_SellSP.Checked = _bot.C_CheckBox_SellSP;
-					CheckBox_SellHpSp.Checked = _bot.C_CheckBox_SellHpSp;
-					CheckBox_SellMineWood.Checked = _bot.C_CheckBox_SellMineWood;
-					CheckBox_Pickup.Checked = _bot.C_CheckBox_Pickup;
-					RadioButton_QS1.Checked = _bot.C_RadioButton_QS1;
-					RadioButton_QS2.Checked = _bot.C_RadioButton_QS2;
-					RadioButton_QS3.Checked = _bot.C_RadioButton_QS3;
-					RadioButton_QS4.Checked = _bot.C_RadioButton_QS4;
-					CheckBox_CatPet.Checked = _bot.C_CheckBox_CatPet;
-					CheckBox_ClearGhost.Checked = _bot.C_CheckBox_ClearGhost;
-					CheckBox_AutoEquitExp.Checked = _bot.C_CheckBox_AutoEquitExp;
-					CheckBox_AutoUsePT.Checked = _bot.C_CheckBox_AutoUsePT;
-					RadioButton_LeaderRequestParty.Checked = _bot.C_RadioButton_LeaderRequestParty;
-					RadioButton_MemberRequestParty.Checked = _bot.C_RadioButton_MemberRequestParty;
-					RadioButton_PT_no.Checked = _bot.C_RadioButton_PT_no;
-					CheckBox_DCAfter1MinNoBattle.Checked = _bot.C_CheckBox_DCAfter1MinNoBattle;
-					CheckBox_DisExp.Checked = _bot.C_CheckBox_DisExp;
-					RadioButton_DCLeaderOut.Checked = _bot.C_RadioButton_DCLeaderOut;
-					RadioButton_DCmemout.Checked = _bot.C_RadioButton_DCmemout;
-					RadioButton_DC_no.Checked = _bot.C_RadioButton_DC_no;
-					CheckBox_AutoEat.Checked = _bot.C_CheckBox_AutoEat;
-					CheckBox_TL_mem1.Checked = _bot.C_CheckBox_TL_mem1;
-					CheckBox_TL_mem2.Checked = _bot.C_CheckBox_TL_mem2;
-					CheckBox_TL_mem3.Checked = _bot.C_CheckBox_TL_mem3;
-					CheckBox_TL_mem4.Checked = _bot.C_CheckBox_TL_mem4;
-					CheckBox_TL_pet1.Checked = _bot.C_CheckBox_TL_pet1;
-					CheckBox_TL_pet2.Checked = _bot.C_CheckBox_TL_pet2;
-					CheckBox_AutoCreatCharacter.Checked = _bot.C_CheckBox_AutoCreatCharacter;
-					CheckBox_OpenMachine.Checked = _bot.C_CheckBox_OpenMachine;
-					RadioButton_dia.Checked = _bot.C_RadioButton_dia;
-					RadioButton_thuy.Checked = _bot.C_RadioButton_thuy;
-					RadioButton_hoa.Checked = _bot.C_RadioButton_hoa;
-					RadioButton_phong.Checked = _bot.C_RadioButton_phong;
-					CheckBox_Autosort.Checked = _bot.C_CheckBox_Autosort;
-					CheckBox_DCFullHomDo.Checked = _bot.C_CheckBox_DCFullHomdo;
-					int leaderId = _bot.Data_Player._LeaderId;
-					if (leaderId == _bot.Data_Player._Id)
-					{
-						if ((_bot.TextBox_IDmem1 == _bot._IDmem1) & (_bot._IDmem1 > 0))
-						{
-							TextBox_IDmem1.BackColor = Color.LightGreen;
-						}
-						else
-						{
-							TextBox_IDmem1.BackColor = SystemColors.Window;
-						}
-						if ((_bot.TextBox_IDmem2 == _bot._IDmem2) & (_bot._IDmem2 > 0))
-						{
-							TextBox_IDmem2.BackColor = Color.LightGreen;
-						}
-						else
-						{
-							TextBox_IDmem2.BackColor = SystemColors.Window;
-						}
-						if ((_bot.TextBox_IDmem3 == _bot._IDmem3) & (_bot._IDmem3 > 0))
-						{
-							TextBox_IDmem3.BackColor = Color.LightGreen;
-						}
-						else
-						{
-							TextBox_IDmem3.BackColor = SystemColors.Window;
-						}
-						if ((_bot.TextBox_IDmem4 == _bot._IDmem4) & (_bot._IDmem4 > 0))
-						{
-							TextBox_IDmem4.BackColor = Color.LightGreen;
-						}
-						else
-						{
-							TextBox_IDmem4.BackColor = SystemColors.Window;
-						}
-					}
-					else if ((_bot.TextBox_IdLeader == _bot.Data_Player._LeaderId) & (_bot.Data_Player._LeaderId > 0))
-					{
-						TextBox_IdLeader.BackColor = Color.LightGreen;
-					}
-					else
-					{
-						TextBox_IdLeader.BackColor = SystemColors.Window;
-					}
-					if (_bot.Data_ListDrop.Count > 0)
-					{
-						int num = _bot.Data_ListDrop.Count - 1;
-						for (int i = 0; i <= num; i++)
-						{
-							int num2 = Conversions.ToInteger(_bot.Data_ListDrop[i]);
-							ListView_AutoDrop.Items.Add(Conversions.ToString(num2)).SubItems.Add(e(num2));
-						}
-					}
-					if (_bot.Data_ListContribute.Count > 0)
-					{
-						int num3 = _bot.Data_ListContribute.Count - 1;
-						for (int j = 0; j <= num3; j++)
-						{
-							int num4 = Conversions.ToInteger(_bot.Data_ListContribute[j]);
-							ListView_AutoContribute.Items.Add(Conversions.ToString(num4)).SubItems.Add(e(num4));
-						}
-					}
-					if (_bot.Data_ListSend.Count > 0)
-					{
-						int num5 = _bot.Data_ListSend.Count - 1;
-						for (int k = 0; k <= num5; k++)
-						{
-							int num6 = Conversions.ToInteger(_bot.Data_ListSend[k]);
-							ListView_AutoSend.Items.Add(Conversions.ToString(num6)).SubItems.Add(e(num6));
-						}
-					}
-					if (_bot.Data_ListSell.Count > 0)
-					{
-						int num7 = _bot.Data_ListSell.Count - 1;
-						for (int l = 0; l <= num7; l++)
-						{
-							int num8 = Conversions.ToInteger(_bot.Data_ListSell[l]);
-							ListView_AutoSell.Items.Add(Conversions.ToString(num8)).SubItems.Add(e(num8));
-						}
-					}
-					try
-					{
-						string text = "server.ini";
-						if (File.Exists(text))
-						{
-							string[] array = MyProject.Computer.FileSystem.ReadAllText(text).Split('\r');
-							foreach (string text2 in array)
-							{
-								string[] array2 = text2.Split('*');
-								if (Operators.CompareString(array2[1], _bot.ComboBox_Server, false) == 0)
-								{
-									if (!ComboBox_Server.Items.Contains(array2[0]))
-									{
-										ComboBox_Server.Items.Add(array2[0]);
-									}
-									ComboBox_Server.SelectedItem = array2[0];
-									break;
-								}
-							}
-						}
-						else
-						{
-							Interaction.MsgBox("File server.ini không tồn tại");
-						}
-					}
-					catch (Exception ex3)
-					{
-						ProjectData.SetProjectError(ex3);
-						Exception ex4 = ex3;
-						ProjectData.ClearProjectError();
-					}
-					ComboBox_CharTurnSetting.Items.Clear();
-					ComboBox_PetTurnSetting.Items.Clear();
-					int turnCount = _bot.Data_CharAttackSetting._TurnCount;
-					int num9 = turnCount;
-					for (int n = 1; n <= num9; n++)
-					{
-						ComboBox_CharTurnSetting.Items.Add(n);
-					}
-					int turnCount2 = _bot.Data_PetAttackSetting._TurnCount;
-					int num10 = turnCount2;
-					for (int num11 = 1; num11 <= num10; num11++)
-					{
-						ComboBox_PetTurnSetting.Items.Add(num11);
-					}
-					if (_bot.logined == 1)
-					{
-						if (ComboBox_CharSkill.Items.Count != _bot.Data_CharListSkill.Count)
-						{
-							ComboBox_CharSkill.Items.Clear();
-							List_skill_char.Clear();
-							int num12 = _bot.Data_CharListSkill.Count - 1;
-							for (int num13 = 0; num13 <= num12; num13++)
-							{
-								Char_AddSkillToList(Conversions.ToInteger(_bot.Data_CharListSkill[num13]));
-							}
-						}
-						if (ComboBox_PetSkill.Items.Count != _bot.Data_PetListSkill.Count)
-						{
-							ComboBox_PetSkill.Items.Clear();
-							List_skill_pet.Clear();
-							int num14 = _bot.Data_PetListSkill.Count - 1;
-							for (int num15 = 0; num15 <= num14; num15++)
-							{
-								Pet_AddSkillToList(Conversions.ToInteger(_bot.Data_PetListSkill[num15]));
-							}
-						}
-						if (ListView_Quest.Items.Count > 0)
-						{
-							ListView_Quest.Items.Clear();
-						}
-						try
-						{
-							if (_bot.listquest_Done.Count > 0)
-							{
-								int num16 = _bot.listquest_Done.Count - 1;
-								for (int num17 = 0; num17 <= num16; num17++)
-								{
-									int num18 = Conversions.ToInteger(_bot.listquest_Done[num17]);
-									switch (Ground.Data_Marks_Name.ContainsKey(num18))
-									{
-									case true:
-									{
-										ListViewItem listViewItem2 = ListView_Quest.Items.Add(Ground.Data_Marks_Name[num18]);
-										listViewItem2.UseItemStyleForSubItems = false;
-										break;
-									}
-									case false:
-									{
-										ListViewItem listViewItem = ListView_Quest.Items.Add(Conversions.ToString(num18));
-										listViewItem.UseItemStyleForSubItems = false;
-										break;
-									}
-									}
-								}
-							}
-						}
-						catch (Exception ex5)
-						{
-							ProjectData.SetProjectError(ex5);
-							Exception ex6 = ex5;
-							ProjectData.ClearProjectError();
-						}
-						try
-						{
-							if (_bot.listquest_Doing.Count > 0)
-							{
-								int num19 = _bot.listquest_Doing.Count - 1;
-								for (int num20 = 0; num20 <= num19; num20++)
-								{
-									int key = Conversions.ToInteger(_bot.listquest_Doing[num20]);
-									bool flag = Ground.Data_Marks_Name.ContainsKey(key);
-									if (flag)
-									{
-										ListViewItem listViewItem3 = ListView_Quest.Items.Add(Ground.Data_Marks_Name[key]);
-										listViewItem3.UseItemStyleForSubItems = false;
-										listViewItem3.SubItems[0].ForeColor = Color.RoyalBlue;
-									}
-								}
-							}
-						}
-						catch (Exception ex7)
-						{
-							ProjectData.SetProjectError(ex7);
-							Exception ex8 = ex7;
-							ProjectData.ClearProjectError();
-						}
-					}
-					ComboBox_CharTurnSetting.SelectedItem = 1;
-					int idskill = Conversions.ToInteger(_bot.get__CharAttackSetting("Char_Skill1"));
-					string selectedValue = _bot.get__CharAttackSetting("Char_Location1").ToString();
-					SkillSelected(idskill, ComboBox_CharSkill);
-					ComboBox_CharLocation.SelectedValue = selectedValue;
-					ComboBox_PetTurnSetting.SelectedItem = 1;
-					idskill = Conversions.ToInteger(_bot.get__PetAttackSetting("Pet_Skill1"));
-					selectedValue = _bot.get__PetAttackSetting("Pet_Location1").ToString();
-					SkillSelected(idskill, ComboBox_PetSkill);
-					ComboBox_PetLocation.Text = selectedValue;
-				}
-				else
-				{
-					Panel_Login.Enabled = false;
-					ToolStrip1.Enabled = false;
-					TabPage9.Enabled = false;
-					TabPage2.Enabled = false;
-					GroupBox_Bot.Enabled = false;
-					Label_Mini.Text = "";
-					TextBox_DelayBot.Text = _bot.TextBox_DelayBot.ToString();
-					TextBox_IDmem1.Text = _bot.TextBox_IDmem1.ToString();
-					TextBox_IDmem2.Text = _bot.TextBox_IDmem2.ToString();
-					TextBox_IDmem3.Text = _bot.TextBox_IDmem3.ToString();
-					TextBox_IDmem4.Text = _bot.TextBox_IDmem4.ToString();
-					TextBox_IdLeader.Text = _bot.TextBox_IdLeader.ToString();
-					TextBox_Eat_char_hp_value.Text = _bot.TextBox_Eat_char_hp_value.ToString();
-					TextBox_Eat_char_sp_value.Text = _bot.TextBox_Eat_char_sp_value.ToString();
-					TextBox_Eat_pet_hp_value.Text = _bot.TextBox_Eat_Pet_hp_value.ToString();
-					TextBox_Eat_pet_sp_value.Text = _bot.TextBox_Eat_Pet_sp_value.ToString();
-					TextBox_TL_pet_hp_value.Text = _bot.TextBox_TL_pet_hp_value.ToString();
-					TextBox_TL_pet_sp_value.Text = _bot.TextBox_TL_pet_sp_value.ToString();
-					TextBox_AutoSend.Text = _bot.TextBox_AutoSend.ToString();
-					TextBox_Drop_HpValue.Text = _bot.TextBox_Drop_HpValue.ToString();
-					TextBox_Drop_SpValue.Text = _bot.TextBox_Drop_SpValue.ToString();
-					TextBox_Contribute_HpValue.Text = _bot.TextBox_Contribute_HpValue.ToString();
-					TextBox_Contribute_SpValue.Text = _bot.TextBox_Contribute_SpValue.ToString();
-					TextBox_Send_HpValue.Text = _bot.TextBox_Send_HpValue.ToString();
-					TextBox_Send_SpValue.Text = _bot.TextBox_Send_SpValue.ToString();
-					TextBox_Sell_HpValue.Text = _bot.TextBox_Sell_HpValue.ToString();
-					TextBox_Sell_SpValue.Text = _bot.TextBox_Sell_SpValue.ToString();
-					TextBox_OpenMachine_CharHp.Text = _bot.TextBox_OpenMachine_CharHp.ToString();
-					TextBox_OpenMachine_CharSp.Text = _bot.TextBox_OpenMachine_CharSp.ToString();
-					TextBox_OpenMachine_PetHp.Text = _bot.TextBox_OpenMachine_PetHp.ToString();
-					TextBox_OpenMachine_PetSp.Text = _bot.TextBox_OpenMachine_PetSp.ToString();
-					NumericUpDown_ItemCountPickup.Text = _bot.NumericUpDown_ItemCountPickup.ToString();
-					TextBox_ValueSPFlee.Text = _bot.TextBox_ValueSPFlee.ToString();
-					TextBox_ClickMOD.Text = _bot.TextBox_ClickMOD;
-					TextBox_ClickMOD_Delay.Text = _bot.TextBox_ClickMOD_delay.ToString();
-					CheckBox_QuestProtect.Checked = _bot.C_CheckBox_QuestProtect;
-					CheckBox_autosell.Checked = _bot.C_CheckBox_autosell;
-					CheckBox_TuLenNgua.Checked = _bot.C_CheckBox_TuLenNgua;
-					CheckBox_Bee.Checked = _bot.C_CheckBox_Bee;
-					CheckBox_AutoRevival.Checked = _bot.C_CheckBox_AutoRevival;
-					CheckBox_LeaderDissNotEnough.Checked = _bot.C_CheckBox_LeaderDissNotEnough;
-					CheckBox_Char_ChangeTG.Checked = _bot.C_CheckBox_Char_ChangeTG;
-					CheckBox_AutoFlee_Sp.Checked = _bot.C_CheckBox_AutoFlee_Sp;
-					CheckBox_AutoFlee_Party.Checked = _bot.C_CheckBox_AutoFlee_Party;
-					CheckBox_Pet_ChangeTG.Checked = _bot.C_CheckBox_Pet_ChangeTG;
-					CheckBox_AutoClickNPC.Checked = _bot.C_CheckBox_AutoClickNPC;
-					CheckBox_AutoPickup.Checked = _bot.C_CheckBox_AutoPickup;
-					CheckBox_Pickup.Checked = _bot.C_CheckBox_Pickup;
-					RadioButton_QS1.Checked = _bot.C_RadioButton_QS1;
-					RadioButton_QS2.Checked = _bot.C_RadioButton_QS2;
-					RadioButton_QS3.Checked = _bot.C_RadioButton_QS3;
-					RadioButton_QS4.Checked = _bot.C_RadioButton_QS4;
-					CheckBox_CatPet.Checked = _bot.C_CheckBox_CatPet;
-					CheckBox_ClearGhost.Checked = _bot.C_CheckBox_ClearGhost;
-					CheckBox_AutoEquitExp.Checked = _bot.C_CheckBox_AutoEquitExp;
-					CheckBox_AutoUsePT.Checked = _bot.C_CheckBox_AutoUsePT;
-					RadioButton_LeaderRequestParty.Checked = _bot.C_RadioButton_LeaderRequestParty;
-					RadioButton_MemberRequestParty.Checked = _bot.C_RadioButton_MemberRequestParty;
-					RadioButton_PT_no.Checked = _bot.C_RadioButton_PT_no;
-					CheckBox_DCAfter1MinNoBattle.Checked = _bot.C_CheckBox_DCAfter1MinNoBattle;
-					CheckBox_DisExp.Checked = _bot.C_CheckBox_DisExp;
-					RadioButton_DCLeaderOut.Checked = _bot.C_RadioButton_DCLeaderOut;
-					RadioButton_DCmemout.Checked = _bot.C_RadioButton_DCmemout;
-					RadioButton_DC_no.Checked = _bot.C_RadioButton_DC_no;
-					CheckBox_AutoEat.Checked = _bot.C_CheckBox_AutoEat;
-					CheckBox_TL_mem1.Checked = _bot.C_CheckBox_TL_mem1;
-					CheckBox_TL_mem2.Checked = _bot.C_CheckBox_TL_mem2;
-					CheckBox_TL_mem3.Checked = _bot.C_CheckBox_TL_mem3;
-					CheckBox_TL_mem4.Checked = _bot.C_CheckBox_TL_mem4;
-					CheckBox_TL_pet1.Checked = _bot.C_CheckBox_TL_pet1;
-					CheckBox_TL_pet2.Checked = _bot.C_CheckBox_TL_pet2;
-					CheckBox_OpenMachine.Checked = _bot.C_CheckBox_OpenMachine;
-					CheckBox_Autosort.Checked = _bot.C_CheckBox_Autosort;
-					CheckBox_DCFullHomDo.Checked = _bot.C_CheckBox_DCFullHomdo;
-					int leaderId2 = _bot.Data_Player._LeaderId;
-					if (leaderId2 == _bot.Data_Player._Id)
-					{
-						if ((_bot.TextBox_IDmem1 == _bot._IDmem1) & (_bot._IDmem1 > 0))
-						{
-							TextBox_IDmem1.BackColor = Color.LightGreen;
-						}
-						else
-						{
-							TextBox_IDmem1.BackColor = SystemColors.Window;
-						}
-						if ((_bot.TextBox_IDmem2 == _bot._IDmem2) & (_bot._IDmem2 > 0))
-						{
-							TextBox_IDmem2.BackColor = Color.LightGreen;
-						}
-						else
-						{
-							TextBox_IDmem2.BackColor = SystemColors.Window;
-						}
-						if ((_bot.TextBox_IDmem3 == _bot._IDmem3) & (_bot._IDmem3 > 0))
-						{
-							TextBox_IDmem3.BackColor = Color.LightGreen;
-						}
-						else
-						{
-							TextBox_IDmem3.BackColor = SystemColors.Window;
-						}
-						if ((_bot.TextBox_IDmem4 == _bot._IDmem4) & (_bot._IDmem4 > 0))
-						{
-							TextBox_IDmem4.BackColor = Color.LightGreen;
-						}
-						else
-						{
-							TextBox_IDmem4.BackColor = SystemColors.Window;
-						}
-					}
-					else if ((_bot.TextBox_IdLeader == _bot.Data_Player._LeaderId) & (_bot.Data_Player._LeaderId > 0))
-					{
-						TextBox_IdLeader.BackColor = Color.LightGreen;
-					}
-					else
-					{
-						TextBox_IdLeader.BackColor = SystemColors.Window;
-					}
-					ComboBox_CharTurnSetting.Items.Clear();
-					ComboBox_PetTurnSetting.Items.Clear();
-					int turnCount3 = _bot.Data_CharAttackSetting._TurnCount;
-					int num21 = turnCount3;
-					for (int num22 = 1; num22 <= num21; num22++)
-					{
-						ComboBox_CharTurnSetting.Items.Add(num22);
-					}
-					int turnCount4 = _bot.Data_PetAttackSetting._TurnCount;
-					int num23 = turnCount4;
-					for (int num24 = 1; num24 <= num23; num24++)
-					{
-						ComboBox_PetTurnSetting.Items.Add(num24);
-					}
-					if (_bot.logined == 1)
-					{
-						if (ComboBox_CharSkill.Items.Count != _bot.Data_CharListSkill.Count)
-						{
-							ComboBox_CharSkill.Items.Clear();
-							List_skill_char.Clear();
-							int num25 = _bot.Data_CharListSkill.Count - 1;
-							for (int num26 = 0; num26 <= num25; num26++)
-							{
-								Char_AddSkillToList(Conversions.ToInteger(_bot.Data_CharListSkill[num26]));
-							}
-						}
-						if (ComboBox_PetSkill.Items.Count != _bot.Data_PetListSkill.Count)
-						{
-							ComboBox_PetSkill.Items.Clear();
-							List_skill_pet.Clear();
-							int num27 = _bot.Data_PetListSkill.Count - 1;
-							for (int num28 = 0; num28 <= num27; num28++)
-							{
-								Pet_AddSkillToList(Conversions.ToInteger(_bot.Data_PetListSkill[num28]));
-							}
-						}
-					}
-					if (_bot.Data_CharAttackSetting._TurnCount > 0)
-					{
-						ComboBox_CharTurnSetting.SelectedItem = 1;
-						int idskill2 = Conversions.ToInteger(_bot.get__CharAttackSetting("Char_Skill1"));
-						string selectedValue2 = _bot.get__CharAttackSetting("Char_Location1").ToString();
-						SkillSelected(idskill2, ComboBox_CharSkill);
-						ComboBox_CharLocation.SelectedValue = selectedValue2;
-					}
-					if (_bot.Data_PetAttackSetting._TurnCount > 0)
-					{
-						ComboBox_PetTurnSetting.SelectedItem = 1;
-						int idskill3 = Conversions.ToInteger(_bot.get__PetAttackSetting("Pet_Skill1"));
-						string text3 = _bot.get__PetAttackSetting("Pet_Location1").ToString();
-						SkillSelected(idskill3, ComboBox_PetSkill);
-						ComboBox_PetLocation.Text = text3;
-					}
-				}
-				if (_bot.PetBattle > 0)
-				{
-					_petSelect = _bot.PetBattle;
-					return;
-				}
-				Label_Petname.Text = "";
-				Label_petlv.Text = Conversions.ToString(0);
-				Label_Pet_int.Text = Conversions.ToString(0);
-				Label_Pet_atk.Text = Conversions.ToString(0);
-				Label_Pet_def.Text = Conversions.ToString(0);
-				Label_Pet_hpx.Text = Conversions.ToString(0);
-				Label_Pet_spx.Text = Conversions.ToString(0);
-				Label_Pet_agi.Text = Conversions.ToString(0);
-				Label_Pet_fai.Text = Conversions.ToString(0);
-				Bitmap bitmap = Resources.btn_AssignFight;
-				bitmap.MakeTransparent(Color.FromArgb(65280));
-				PictureBox_Pet_XuatChien.BackgroundImage = bitmap;
-				Label8.Visible = false;
-				Label_PetExpMin.Visible = false;
-			}
-		}
-
-		private void a(object A_0, FormClosingEventArgs A_1)
-		{
-			if (_bot != null)
-			{
-				_bot.Setting_show = 0;
-			}
-		}
-
-		private void bs(object A_0, EventArgs A_1)
-		{
-			if (_bot == null)
-			{
-				return;
-			}
-			if (Operators.CompareString(btnLogin.Text, "Thoát", false) == 0)
-			{
-				d();
-				if (CheckBox_Reconnect.Checked)
-				{
-					e();
-				}
-			}
-			else if (Operators.CompareString(btnLogin.Text, "Đăng nhập", false) == 0)
-			{
-				e();
-			}
-		}
-
-		private void c(object A_0, KeyPressEventArgs A_1)
-		{
-			object left = NewLateBinding.LateGet(A_0, null, "Name", new object[0], null, null, null);
-			if (Operators.ConditionalCompareObjectEqual(left, "TextBox_ClickMOD", false))
-			{
-				string text = "0123456789;\b";
-				if ((text.IndexOf(A_1.KeyChar) == -1) & (Strings.Asc(A_1.KeyChar) != 1) & (Strings.Asc(A_1.KeyChar) != 2) & (Strings.Asc(A_1.KeyChar) != 3) & (Strings.Asc(A_1.KeyChar) != 22) & (Strings.Asc(A_1.KeyChar) != 24) & (Strings.Asc(A_1.KeyChar) != 26))
-				{
-					A_1.Handled = true;
-				}
-			}
-			else
-			{
-				string text2 = "0123456789\b";
-				if ((text2.IndexOf(A_1.KeyChar) == -1) & (Strings.Asc(A_1.KeyChar) != 1) & (Strings.Asc(A_1.KeyChar) != 2) & (Strings.Asc(A_1.KeyChar) != 3) & (Strings.Asc(A_1.KeyChar) != 22) & (Strings.Asc(A_1.KeyChar) != 24) & (Strings.Asc(A_1.KeyChar) != 26))
-				{
-					A_1.Handled = true;
-				}
-			}
-		}
-
-		private void b(object A_0, KeyPressEventArgs A_1)
-		{
-			string text = "0123456789.\b";
-			if ((text.IndexOf(A_1.KeyChar) == -1) & (Strings.Asc(A_1.KeyChar) != 1) & (Strings.Asc(A_1.KeyChar) != 2) & (Strings.Asc(A_1.KeyChar) != 3) & (Strings.Asc(A_1.KeyChar) != 22) & (Strings.Asc(A_1.KeyChar) != 24) & (Strings.Asc(A_1.KeyChar) != 26))
-			{
-				A_1.Handled = true;
-			}
-		}
-
-		private void br(object A_0, EventArgs A_1)
-		{
-			if (Operators.ConditionalCompareObjectEqual(NewLateBinding.LateGet(NewLateBinding.LateGet(A_0, null, "text", new object[0], null, null, null), null, "Length", new object[0], null, null, null), 0, false))
-			{
-				NewLateBinding.LateSet(A_0, null, "text", new object[1] { "0" }, null, null);
-				NewLateBinding.LateCall(A_0, null, "SelectAll", new object[0], null, null, null, true);
-			}
-			if (Conversions.ToBoolean(Operators.AndObject(Operators.CompareObjectGreater(NewLateBinding.LateGet(NewLateBinding.LateGet(A_0, null, "text", new object[0], null, null, null), null, "Length", new object[0], null, null, null), 1, false), Operators.CompareObjectNotEqual(NewLateBinding.LateGet(A_0, null, "Name", new object[0], null, null, null), TextBox_DelayBot.Name, false))) && Operators.CompareString(NewLateBinding.LateGet(A_0, null, "text", new object[0], null, null, null).ToString().Substring(0, 1), "0", false) == 0)
-			{
-				NewLateBinding.LateSet(A_0, null, "text", new object[1] { NewLateBinding.LateGet(A_0, null, "text", new object[0], null, null, null).ToString().Substring(1) }, null, null);
-				NewLateBinding.LateSet(A_0, null, "SelectionStart", new object[1] { 1 }, null, null);
-			}
-			if (Conversions.ToBoolean(Operators.AndObject(Operators.CompareObjectGreater(NewLateBinding.LateGet(NewLateBinding.LateGet(A_0, null, "text", new object[0], null, null, null), null, "Length", new object[0], null, null, null), 1, false), Operators.CompareObjectEqual(NewLateBinding.LateGet(A_0, null, "Name", new object[0], null, null, null), TextBox_DelayBot.Name, false))) && Operators.CompareString(NewLateBinding.LateGet(A_0, null, "text", new object[0], null, null, null).ToString().Substring(0, 1), ".", false) == 0)
-			{
-				NewLateBinding.LateSet(A_0, null, "text", new object[1] { NewLateBinding.LateGet(A_0, null, "text", new object[0], null, null, null).ToString().Substring(1) }, null, null);
-				NewLateBinding.LateSet(A_0, null, "SelectionStart", new object[1] { 1 }, null, null);
-			}
-			try
-			{
-				if (_bot == null)
-				{
-					return;
-				}
-				if (Operators.ConditionalCompareObjectEqual(NewLateBinding.LateGet(A_0, null, "Name", new object[0], null, null, null), ToolStripTextBox_SendBDY_Id.Name, false))
-				{
-					int num = Conversions.ToInteger(ToolStripTextBox_SendBDY_Id.Text);
-					if (num <= 0)
-					{
-						ToolStripTextBox_SendBDY_Id.Text = Conversions.ToString(0);
-					}
-				}
-				object left = NewLateBinding.LateGet(A_0, null, "Name", new object[0], null, null, null);
-				if (Operators.ConditionalCompareObjectEqual(left, TBId.Name, false))
-				{
-					_bot.idlogin = Conversions.ToInteger(TBId.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_DelayBot.Name, false))
-				{
-					_bot.TextBox_DelayBot = Conversions.ToDouble(TextBox_DelayBot.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_IDmem1.Name, false))
-				{
-					_bot.TextBox_IDmem1 = Conversions.ToInteger(TextBox_IDmem1.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_IDmem2.Name, false))
-				{
-					_bot.TextBox_IDmem2 = Conversions.ToInteger(TextBox_IDmem2.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_IDmem3.Name, false))
-				{
-					_bot.TextBox_IDmem3 = Conversions.ToInteger(TextBox_IDmem3.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_IDmem4.Name, false))
-				{
-					_bot.TextBox_IDmem4 = Conversions.ToInteger(TextBox_IDmem4.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_IdLeader.Name, false))
-				{
-					_bot.TextBox_IdLeader = Conversions.ToInteger(TextBox_IdLeader.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_ValueSPFlee.Name, false))
-				{
-					_bot.TextBox_ValueSPFlee = Conversions.ToInteger(TextBox_ValueSPFlee.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Eat_char_hp_value.Name, false))
-				{
-					_bot.TextBox_Eat_char_hp_value = Conversions.ToInteger(TextBox_Eat_char_hp_value.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Eat_char_sp_value.Name, false))
-				{
-					_bot.TextBox_Eat_char_sp_value = Conversions.ToInteger(TextBox_Eat_char_sp_value.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Eat_pet_hp_value.Name, false))
-				{
-					_bot.TextBox_Eat_Pet_hp_value = Conversions.ToInteger(TextBox_Eat_pet_hp_value.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Eat_pet_sp_value.Name, false))
-				{
-					_bot.TextBox_Eat_Pet_sp_value = Conversions.ToInteger(TextBox_Eat_pet_sp_value.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_TL_pet_hp_value.Name, false))
-				{
-					_bot.TextBox_TL_pet_hp_value = Conversions.ToInteger(TextBox_TL_pet_hp_value.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_TL_pet_sp_value.Name, false))
-				{
-					_bot.TextBox_TL_pet_sp_value = Conversions.ToInteger(TextBox_TL_pet_sp_value.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, NumericUpDown_ItemCountPickup.Name, false))
-				{
-					_bot.NumericUpDown_ItemCountPickup = Conversions.ToInteger(NumericUpDown_ItemCountPickup.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Drop_HpValue.Name, false))
-				{
-					_bot.TextBox_Drop_HpValue = Conversions.ToInteger(TextBox_Drop_HpValue.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Drop_SpValue.Name, false))
-				{
-					_bot.TextBox_Drop_SpValue = Conversions.ToInteger(TextBox_Drop_SpValue.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Contribute_HpValue.Name, false))
-				{
-					_bot.TextBox_Contribute_HpValue = Conversions.ToInteger(TextBox_Contribute_HpValue.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Contribute_SpValue.Name, false))
-				{
-					_bot.TextBox_Contribute_SpValue = Conversions.ToInteger(TextBox_Contribute_SpValue.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_AutoSend.Name, false))
-				{
-					_bot.TextBox_AutoSend = Conversions.ToInteger(TextBox_AutoSend.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Send_HpValue.Name, false))
-				{
-					_bot.TextBox_Send_HpValue = Conversions.ToInteger(TextBox_Send_HpValue.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Send_SpValue.Name, false))
-				{
-					_bot.TextBox_Send_SpValue = Conversions.ToInteger(TextBox_Send_SpValue.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Sell_HpValue.Name, false))
-				{
-					_bot.TextBox_Sell_HpValue = Conversions.ToInteger(TextBox_Sell_HpValue.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_Sell_SpValue.Name, false))
-				{
-					_bot.TextBox_Sell_SpValue = Conversions.ToInteger(TextBox_Sell_SpValue.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_OpenMachine_CharHp.Name, false))
-				{
-					_bot.TextBox_OpenMachine_CharHp = Conversions.ToInteger(TextBox_OpenMachine_CharHp.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_OpenMachine_CharSp.Name, false))
-				{
-					_bot.TextBox_OpenMachine_CharSp = Conversions.ToInteger(TextBox_OpenMachine_CharSp.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_OpenMachine_PetHp.Name, false))
-				{
-					_bot.TextBox_OpenMachine_PetHp = Conversions.ToInteger(TextBox_OpenMachine_PetHp.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_OpenMachine_PetSp.Name, false))
-				{
-					_bot.TextBox_OpenMachine_PetSp = Conversions.ToInteger(TextBox_OpenMachine_PetSp.Text);
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_ClickMOD_Delay.Name, false))
-				{
-					_bot.TextBox_ClickMOD_delay = Conversions.ToInteger(TextBox_ClickMOD_Delay.Text);
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void bq(object A_0, EventArgs A_1)
-		{
-			if (_bot != null)
-			{
-				object left = NewLateBinding.LateGet(A_0, null, "Name", new object[0], null, null, null);
-				if (Operators.ConditionalCompareObjectEqual(left, TBPassword.Name, false))
-				{
-					_bot.passlogin = TBPassword.Text;
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, TextBox_ClickMOD.Name, false))
-				{
-					_bot.TextBox_ClickMOD = TextBox_ClickMOD.Text;
-				}
-			}
-		}
-
-		private void bp(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				string[] files = Directory.GetFiles(MyProject.Application.Info.DirectoryPath + "\\QuestBot", "*.ini");
-				ComboBox_botname.Items.Clear();
-				string[] array = files;
-				foreach (string text in array)
-				{
-					ComboBox_botname.Items.Add(text.Substring(checked(text.LastIndexOf("\\") + 1)).Replace(".ini", ""));
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void bo(object A_0, EventArgs A_1)
-		{
-			string text = "QuestBot\\" + ComboBox_botname.Text + ".ini";
-			if (!File.Exists(text) || _bot == null)
-			{
-				return;
-			}
-			_bot.packetbot = "";
-			_bot.idmapbot = 0;
-			string[] array = MyProject.Computer.FileSystem.ReadAllText(text).Split('\r');
-			checked
-			{
-				for (int i = 0; i < array.Length; i++)
-				{
-					string text2 = array[i];
-					text2 = text2.Replace("\n", "");
-					if (text2.StartsWith("warpid "))
-					{
-						int num = Conversions.ToInteger(text2.Substring(7));
-						_bot.packetbot = _bot.packetbot + "F44404001408" + num.ToString("X2") + "00";
-					}
-					else if (text2.StartsWith("[") & text2.EndsWith("]"))
-					{
-						_bot.idmapbot = Conversions.ToInteger(text2.Replace("]", "").Replace("[", ""));
-					}
-					else if (text2.StartsWith("walk "))
-					{
-						string text3 = text2.Substring(5);
-						int num2 = Conversions.ToInteger(text3.Substring(0, text3.IndexOf(",")));
-						int num3 = Conversions.ToInteger(text3.Substring(text3.IndexOf(",") + 1));
-						string text4 = API.bytestohexstring(new byte[2]
-						{
-							API.hexstringtobyte(num2.ToString("X4"))[1],
-							API.hexstringtobyte(num2.ToString("X4"))[0]
-						});
-						string text5 = API.bytestohexstring(new byte[2]
-						{
-							API.hexstringtobyte(num3.ToString("X4"))[1],
-							API.hexstringtobyte(num3.ToString("X4"))[0]
-						});
-						_bot.packetbot = _bot.packetbot + "F4440900060105" + text4 + text5 + "47EB";
-					}
-					else if (text2.StartsWith("click "))
-					{
-						int num4 = Conversions.ToInteger(text2.Substring(6));
-						string text6 = API.Int32ToHex2(num4);
-						_bot.packetbot = _bot.packetbot + "F44404001401" + text6;
-					}
-					else if (text2.StartsWith("menu "))
-					{
-						int num5 = Conversions.ToInteger(text2.Substring(5)) + 29;
-						_bot.packetbot = _bot.packetbot + "F44403001409" + num5.ToString("X2");
-					}
-					else if (text2.StartsWith("send "))
-					{
-						int num6 = Conversions.ToInteger(text2.Substring(5));
-						string text7 = "";
-						int num7 = num6;
-						for (int j = 1; j <= num7; j++)
-						{
-							text7 += "F44402001406";
-						}
-						_bot.packetbot += text7;
-					}
-					else if (text2.StartsWith("battle"))
-					{
-						break;
-					}
-				}
-				Button_bot.Enabled = true;
-			}
-		}
-
-		private void e()
-		{
-			try
-			{
-				if (_bot.ComboBox_Server.Length > 0)
-				{
-					ComboBox_Server.Enabled = false;
-					ComboBox_Port.Enabled = false;
-					TBId.Enabled = false;
-					TBPassword.Enabled = false;
-					Thread thread = new Thread(_bot._Connect);
-					thread.IsBackground = true;
-					thread.Start();
-					btnLogin.Text = "Thoát";
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				StackTrace stackTrace = new StackTrace(true);
-				stackTrace = new StackTrace(ex2, true);
-				API.SaveToLog("[" + MyProject.Computer.Clock.LocalTime.ToString("hh:mm:ss") + " - Connect] :" + ex2.Message + stackTrace.GetFrame(0).GetFileLineNumber() + "\r\n");
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void d()
-		{
-			if (_bot == null)
-			{
-				return;
-			}
-			try
-			{
-				if (Operators.CompareString(Text, "Chưa kết nối!", false) != 0)
-				{
-					Text = "Chưa kết nối!";
-				}
-				Label_Mini.Text = "";
-				ComboBox_botname.Enabled = true;
-				Button_bot.Enabled = true;
-				btnLogin.Text = "Đăng nhập";
-				ComboBox_Server.Enabled = true;
-				ComboBox_Port.Enabled = true;
-				TBId.Enabled = true;
-				TBPassword.Enabled = true;
-				_bot._Disconnect();
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				StackTrace stackTrace = new StackTrace(true);
-				stackTrace = new StackTrace(ex2, true);
-				API.SaveToLog("[" + MyProject.Computer.Clock.LocalTime.ToString("hh:mm:ss") + " - Disconnect] :" + ex2.Message + stackTrace.GetFrame(0).GetFileLineNumber() + "\r\n");
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		public void updatesystem()
-		{
-			if (r_Id_rtbsystem >= _bot._id_rtbsystem)
-			{
-				return;
-			}
-			checked
-			{
-				int num = r_Id_rtbsystem + 1;
-				int id_rtbsystem = _bot._id_rtbsystem;
-				for (int i = num; i <= id_rtbsystem; i++)
-				{
-					if (_bot.Rtbsystem.ContainsKey(i))
-					{
-						_Data._InfoText infoText = _bot.Rtbsystem[i];
-						API.AddColorText(rtbsystem, infoText._Text, infoText._Color);
-					}
-				}
-				r_Id_rtbsystem = _bot._id_rtbsystem;
-				rtbsystem.SelectionStart = rtbsystem.Text.Length;
-				rtbsystem.ScrollToCaret();
-			}
-		}
-
-		public void updateChat()
-		{
-			if (r_Id_rtbChat >= _bot._id_rtbChat)
-			{
-				return;
-			}
-			checked
-			{
-				int num = r_Id_rtbChat + 1;
-				int id_rtbChat = _bot._id_rtbChat;
-				for (int i = num; i <= id_rtbChat; i++)
-				{
-					if (_bot.Rtbchat.ContainsKey(i))
-					{
-						_Data._InfoText infoText = _bot.Rtbchat[i];
-						API.AddColorText(RtbChat, infoText._Text, infoText._Color);
-					}
-				}
-				r_Id_rtbChat = _bot._id_rtbChat;
-			}
-		}
-
-		public void updateQuest()
-		{
-			if (r_Id_rtbQuest >= _bot._id_rtbQuest)
-			{
-				return;
-			}
-			checked
-			{
-				int num = r_Id_rtbQuest + 1;
-				int id_rtbQuest = _bot._id_rtbQuest;
-				for (int i = num; i <= id_rtbQuest; i++)
-				{
-					if (_bot.RtbQuest.ContainsKey(i))
-					{
-						_Data._InfoText infoText = _bot.RtbQuest[i];
-						API.AddColorText(RtbQuest, infoText._Text, infoText._Color);
-					}
-				}
-				r_Id_rtbQuest = _bot._id_rtbQuest;
-			}
-		}
-
-		private DataRow c()
-		{
-			if (DataSet1.Tables["Table_database"].Rows.Count == 0)
-			{
-				DataSet1.Tables["Table_database"].Rows.Add(0);
-			}
-			return DataSet1.Tables["Table_database"].Rows[0];
-		}
-
-		private void bn(object A_0, EventArgs A_1)
-		{
-			_ClientBot bot = _bot;
-			try
-			{
-				if (_bot != null)
-				{
-					if ((_bot._Antibot_ask == 1) & (bot.logined == 0))
-					{
-						_bot._Antibot_ask = 0;
-						Form1 form = new Form1(_bot, base.Location);
-						form.ShowDialog();
-					}
-					if (_bot.Deleted == 1)
-					{
-						Close();
-					}
-					if (_bot.Disconnected == 0)
-					{
-						btnLogin.Text = "Thoát";
-						ComboBox_Server.Enabled = false;
-						ComboBox_Port.Enabled = false;
-						TBId.Enabled = false;
-						TBPassword.Enabled = false;
-					}
-					else
-					{
-						btnLogin.Text = "Đăng nhập";
-						ComboBox_Server.Enabled = true;
-						ComboBox_Port.Enabled = true;
-						TBId.Enabled = true;
-						TBPassword.Enabled = true;
-					}
-					if (_bot.bott == 1)
-					{
-						ComboBox_botname.Enabled = false;
-						Button_bot.Text = "Dừng";
-					}
-					else
-					{
-						ComboBox_botname.Enabled = true;
-						Button_bot.Text = "Bắt đầu";
-					}
-					if (_bot.Button_bot)
-					{
-						Button_bot.Enabled = true;
-					}
-					if (Operators.CompareString(Label_CharTurnCount.Text, _bot.Data_CharAttackSetting._TurnCount.ToString(), false) != 0)
-					{
-						Label_CharTurnCount.Text = _bot.Data_CharAttackSetting._TurnCount.ToString();
-					}
-					if (Operators.CompareString(Label_PetTurnCount.Text, _bot.Data_PetAttackSetting._TurnCount.ToString(), false) != 0)
-					{
-						Label_PetTurnCount.Text = _bot.Data_PetAttackSetting._TurnCount.ToString();
-					}
-					if (Operators.CompareString(StatusBarPanel_status.Text, bot.packetcount.ToString(), false) != 0)
-					{
-						StatusBarPanel_status.Text = bot.packetcount.ToString();
-					}
-					if (bot.logined == 1)
-					{
-						switch (_bot.List_Shopping)
-						{
-						case 0:
-							if (Operators.CompareString(Button_Shop_Start.Text, "Bày bán", false) != 0)
-							{
-								Button_Shop_Start.Text = "Bày bán";
-							}
-							break;
-						case 1:
-							if (Operators.CompareString(Button_Shop_Start.Text, "Dọn hàng", false) != 0)
-							{
-								Button_Shop_Start.Text = "Dọn hàng";
-							}
-							break;
-						}
-						StatusBarPanel_online.Text = API.Demthoigian(_bot.time_online);
-						switch (_bot._MiniRuning)
-						{
-						case 1:
-							if (Operators.CompareString(Label_Mini.Text, "Mini-Bật", false) != 0)
-							{
-								Label_Mini.Text = "Mini-Bật";
-								if (GetPicture.Mini_Photo.ContainsKey(bot.Data_Player._ThuocTinh))
-								{
-									PictureBox_mini.BackgroundImage = GetPicture.Mini_Photo[bot.Data_Player._ThuocTinh];
-								}
-							}
-							break;
-						case 0:
-							if (Operators.CompareString(Label_Mini.Text, "Mini-Tắt", false) != 0)
-							{
-								Label_Mini.Text = "Mini-Tắt";
-								PictureBox_mini.BackgroundImage = null;
-							}
-							break;
-						}
-						string text = bot.Data_Player._Int.ToString();
-						if (bot.Data_Player._Int2 != 0)
-						{
-							switch (bot.Data_Player._Int_Plus1)
-							{
-							case 1:
-								text = text + "+" + bot.Data_Player._Int2;
-								break;
-							case 0:
-								text = text + "-" + bot.Data_Player._Int2;
-								break;
-							}
-						}
-						checked
-						{
-							if (bot.Data_Player._Int3 + bot.Data_Player._Int4 != 0)
-							{
-								text = text + "+" + (bot.Data_Player._Int3 + bot.Data_Player._Int4);
-							}
-							if (Operators.CompareString(Label_Char_int.Text, text, false) != 0)
-							{
-								Label_Char_int.Text = text;
-								int idPic = 0;
-								switch (bot.Data_Player._Sex)
-								{
-								case 1:
-									idPic = 4000 + bot.Data_Player._Hair;
-									break;
-								case 2:
-									idPic = 5000 + bot.Data_Player._Hair;
-									break;
-								}
-								PictureBox_avatar.BackgroundImage = GetPicture._GetPhoto(idPic, bot.Data_Player._HairColor, bot.Data_Player._SkinColor);
-							}
-							string text2 = bot.Data_Player._Atk.ToString();
-							if (bot.Data_Player._Atk2 != 0)
-							{
-								switch (bot.Data_Player._Atk_Plus1)
-								{
-								case 1:
-									text2 = text2 + "+" + bot.Data_Player._Atk2;
-									break;
-								case 0:
-									text2 = text2 + "-" + bot.Data_Player._Atk2;
-									break;
-								}
-							}
-							if (bot.Data_Player._Atk3 + bot.Data_Player._Atk4 != 0)
-							{
-								text2 = text2 + "+" + (bot.Data_Player._Atk3 + bot.Data_Player._Atk4);
-							}
-							if (Operators.CompareString(Label_Char_atk.Text, text2, false) != 0)
-							{
-								Label_Char_atk.Text = text2;
-							}
-							string text3 = bot.Data_Player._Def.ToString();
-							if (bot.Data_Player._Def2 != 0)
-							{
-								switch (bot.Data_Player._Def_Plus1)
-								{
-								case 1:
-									text3 = text3 + "+" + bot.Data_Player._Def2;
-									break;
-								case 0:
-									text3 = text3 + "-" + bot.Data_Player._Def2;
-									break;
-								}
-							}
-							if (bot.Data_Player._Def3 + bot.Data_Player._Def4 != 0)
-							{
-								text3 = text3 + "+" + (bot.Data_Player._Def3 + bot.Data_Player._Def4);
-							}
-							if (Operators.CompareString(Label_Char_def.Text, text3, false) != 0)
-							{
-								Label_Char_def.Text = text3;
-							}
-							string text4 = bot.Data_Player._Hpx.ToString();
-							if (bot.Data_Player._Hpx2 != 0)
-							{
-								switch (bot.Data_Player._Hpx_Plus1)
-								{
-								case 1:
-									text4 = text4 + "+" + bot.Data_Player._Hpx2;
-									break;
-								case 0:
-									text4 = text4 + "-" + bot.Data_Player._Hpx2;
-									break;
-								}
-							}
-							if (bot.Data_Player._Hpx3 + bot.Data_Player._Hpx4 != 0)
-							{
-								text4 = text4 + "+" + (bot.Data_Player._Hpx3 + bot.Data_Player._Hpx4);
-							}
-							if (Operators.CompareString(Label_Char_hpx.Text, text4, false) != 0)
-							{
-								Label_Char_hpx.Text = text4;
-							}
-							string text5 = bot.Data_Player._Spx.ToString();
-							if (bot.Data_Player._Spx2 != 0)
-							{
-								switch (bot.Data_Player._Spx_Plus1)
-								{
-								case 1:
-									text5 = text5 + "+" + bot.Data_Player._Spx2;
-									break;
-								case 0:
-									text5 = text5 + "-" + bot.Data_Player._Spx2;
-									break;
-								}
-							}
-							if (bot.Data_Player._Spx3 + bot.Data_Player._Spx4 != 0)
-							{
-								text5 = text5 + "+" + (bot.Data_Player._Spx3 + bot.Data_Player._Spx4);
-							}
-							if (Operators.CompareString(Label_Char_spx.Text, text5, false) != 0)
-							{
-								Label_Char_spx.Text = text5;
-							}
-							string text6 = bot.Data_Player._Agi.ToString();
-							if (bot.Data_Player._Agi2 != 0)
-							{
-								switch (bot.Data_Player._Agi_Plus1)
-								{
-								case 1:
-									text6 = text6 + "+" + bot.Data_Player._Agi2;
-									break;
-								case 0:
-									text6 = text6 + "-" + bot.Data_Player._Agi2;
-									break;
-								}
-							}
-							if (bot.Data_Player._Agi4 != 0)
-							{
-								text6 = text6 + "+" + bot.Data_Player._Agi4;
-							}
-							if (Operators.CompareString(Label_Char_agi.Text, text6, false) != 0)
-							{
-								Label_Char_agi.Text = text6;
-							}
-							int num = 1;
-							do
-							{
-								_Data._Tuido tuido = _bot.Data_Tuido[num];
-								Tuido_Info value = Data_Tuido[num];
-								if (value._id != tuido._Id)
-								{
-									value._id = tuido._Id;
-									value._count = tuido._Sl;
-									Bitmap image = new Bitmap(1, 1);
-									if (tuido._Id > 0)
-									{
-										if (Items.Data_Items.ContainsKey(tuido._Id))
-										{
-											image = GetPicture._GetPhoto_Item(Items.Data_Items[tuido._Id]._idPic);
-										}
-										value._photo.Image = image;
-										value._photo.Text = Conversions.ToString(tuido._Sl);
-										ToolTip_info.SetToolTip(value._photo, MakeItemInfo((ushort)tuido._Id));
-									}
-									else
-									{
-										image = new Bitmap(32, 32);
-										value._photo.Image = image;
-										value._photo.Text = "";
-									}
-								}
-								else if (value._count != tuido._Sl)
-								{
-									value._count = tuido._Sl;
-									value._photo.Text = Conversions.ToString(tuido._Sl);
-								}
-								if ((value._id == 0) & (Operators.CompareString(value._photo.Text, "", false) != 0))
-								{
-									Bitmap image2 = new Bitmap(32, 32);
-									value._photo.Image = image2;
-									value._photo.Text = "";
-								}
-								Data_Tuido[num] = value;
-								num++;
-							}
-							while (num <= 25);
-							int num2 = 1;
-							do
-							{
-								_Data._Tuideo tuideo = _bot.Data_Tuideo[num2];
-								Tuideo_Info value2 = Data_Tuideo[num2];
-								if (value2._id != tuideo._Id)
-								{
-									value2._id = tuideo._Id;
-									value2._count = tuideo._Sl;
-									Bitmap image3 = new Bitmap(1, 1);
-									if (tuideo._Id > 0)
-									{
-										if (Items.Data_Items.ContainsKey(tuideo._Id))
-										{
-											image3 = GetPicture._GetPhoto_Item(Items.Data_Items[tuideo._Id]._idPic);
-										}
-										value2._photo.Image = image3;
-										value2._photo.Text = Conversions.ToString(tuideo._Sl);
-										ToolTip_info.SetToolTip(value2._photo, MakeItemInfo((ushort)tuideo._Id));
-									}
-									else
-									{
-										image3 = new Bitmap(32, 32);
-										value2._photo.Image = image3;
-										value2._photo.Text = "";
-									}
-								}
-								if ((value2._id == 0) & (Operators.CompareString(value2._photo.Text, "", false) != 0))
-								{
-									Bitmap image4 = new Bitmap(32, 32);
-									value2._photo.Image = image4;
-									value2._photo.Text = "";
-								}
-								Data_Tuideo[num2] = value2;
-								num2++;
-							}
-							while (num2 <= 25);
-							int num3 = 0;
-							do
-							{
-								_Data._CharEquit charEquit = _bot.Data_CharEquit[num3];
-								Trangbi_Info value3 = Data_Trangbi_Char[num3];
-								if (value3._id != charEquit._Id)
-								{
-									value3._id = charEquit._Id;
-									if (Items.Data_Items.ContainsKey(charEquit._Id))
-									{
-										value3._photo.Image = GetPicture._GetPhoto_Item(Items.Data_Items[charEquit._Id]._idPic);
-										ToolTip_info.SetToolTip(value3._photo, MakeItemInfo((ushort)value3._id));
-									}
-									else
-									{
-										value3._photo.Image = null;
-									}
-									Data_Trangbi_Char[num3] = value3;
-								}
-								num3++;
-							}
-							while (num3 <= 5);
-							if (_bot.PetBattle == 0)
-							{
-								if (_petSelect == 0)
-								{
-									int num4 = 1;
-									do
-									{
-										int num5 = Conversions.ToInteger(_bot.get_DataPets(num4, _Data.Type_Pets._Id));
-										if (num5 > 0)
-										{
-											_petSelect = num4;
-											break;
-										}
-										num4++;
-									}
-									while (num4 <= 4);
-								}
-							}
-							else if (_petSelect == 0)
-							{
-								_petSelect = _bot.PetBattle;
-							}
-							if (_petSelect > 0)
-							{
-								if (_petSelect == _bot.PetBattle)
-								{
-									if (!Label8.Visible | (PictureBox_Pet_XuatChien.BackgroundImage == null))
-									{
-										Bitmap bitmap = Resources.btn_AssignRest;
-										bitmap.MakeTransparent(Color.FromArgb(65280));
-										PictureBox_Pet_XuatChien.BackgroundImage = bitmap;
-										Label8.Visible = true;
-										Label_PetExpMin.Visible = true;
-									}
-								}
-								else if (Label8.Visible)
-								{
-									Bitmap bitmap2 = Resources.btn_AssignFight;
-									bitmap2.MakeTransparent(Color.FromArgb(65280));
-									PictureBox_Pet_XuatChien.BackgroundImage = bitmap2;
-									Label8.Visible = false;
-									Label_PetExpMin.Visible = false;
-								}
-								int petSelect = _petSelect;
-								int key = Conversions.ToInteger(_bot.get_DataPets(petSelect, _Data.Type_Pets._Id));
-								if (Npcs.Data_Npcs.ContainsKey(key))
-								{
-									Npcs.NpcInfo npc = Npcs.Data_Npcs[key];
-									_Data._Pets pets = _bot.Data_PetsInfo[petSelect];
-									if (Operators.ConditionalCompareObjectNotEqual(PictureBox_Pet_photo.Tag, pets._Id, false))
-									{
-										PictureBox_Pet_photo.Tag = pets._Id;
-										PictureBox_Pet_photo.Image = GetPicture._GetPhoto(npc);
-										switch (npc._Thuoctinh)
-										{
-										case 0:
-											PictureBox_Pet_Thuoctinh.BackgroundImage = new Bitmap(1, 1);
-											break;
-										case 1:
-											PictureBox_Pet_Thuoctinh.BackgroundImage = Resources.icon_01;
-											break;
-										case 2:
-											PictureBox_Pet_Thuoctinh.BackgroundImage = Resources.icon_02;
-											break;
-										case 3:
-											PictureBox_Pet_Thuoctinh.BackgroundImage = Resources.icon_03;
-											break;
-										case 4:
-											PictureBox_Pet_Thuoctinh.BackgroundImage = Resources.icon_04;
-											break;
-										case 5:
-											PictureBox_Pet_Thuoctinh.BackgroundImage = Resources.icon_05;
-											break;
-										case 7:
-											PictureBox_Pet_Thuoctinh.BackgroundImage = Resources.icon_07;
-											break;
-										case 8:
-											PictureBox_Pet_Thuoctinh.BackgroundImage = Resources.icon_08;
-											break;
-										}
-									}
-									if (Operators.CompareString(Label_Petname.Text, pets._Name, false) != 0)
-									{
-										Label_Petname.Text = pets._Name;
-									}
-									if (Conversions.ToDouble(Label_petlv.Text) != (double)pets._Lv)
-									{
-										Label_petlv.Text = Conversions.ToString(pets._Lv);
-									}
-									if (pets._HpMax >= pets._Hp)
-									{
-										if (ProgressBarEx_PetHp.Value != pets._Hp)
-										{
-											ProgressBarEx_PetHp.Value = pets._Hp;
-										}
-										if (ProgressBarEx_PetHp.Maximum != pets._HpMax)
-										{
-											ProgressBarEx_PetHp.Maximum = pets._HpMax;
-										}
-									}
-									if (pets._SpMax >= pets._Sp)
-									{
-										if (ProgressBarEx_PetSp.Value != pets._Sp)
-										{
-											ProgressBarEx_PetSp.Value = pets._Sp;
-										}
-										if (ProgressBarEx_PetSp.Maximum != pets._SpMax)
-										{
-											ProgressBarEx_PetSp.Maximum = pets._SpMax;
-										}
-									}
-									if (pets._ExpMax >= pets._Exp)
-									{
-										if (ProgressBarEx_PetExp.Value != pets._Exp)
-										{
-											ProgressBarEx_PetExp.Value = pets._Exp;
-										}
-										if (ProgressBarEx_PetExp.Maximum != pets._ExpMax)
-										{
-											ProgressBarEx_PetExp.Maximum = pets._ExpMax;
-										}
-									}
-									int num6 = 0;
-									do
-									{
-										int num7 = 0;
-										switch (num6)
-										{
-										case 0:
-											num7 = pets._Mu;
-											break;
-										case 1:
-											num7 = pets._Ao;
-											break;
-										case 2:
-											num7 = pets._vukhi;
-											break;
-										case 3:
-											num7 = pets._tay;
-											break;
-										case 4:
-											num7 = pets._chan;
-											break;
-										case 5:
-											num7 = pets._dacthu;
-											break;
-										}
-										Trangbi_Info value4 = Data_Trangbi_Pet[num6];
-										if (value4._id != num7)
-										{
-											value4._id = num7;
-											if (Items.Data_Items.ContainsKey(num7))
-											{
-												value4._photo.Image = GetPicture._GetPhoto_Item(Items.Data_Items[num7]._idPic);
-												ToolTip_info.SetToolTip(value4._photo, MakeItemInfo((ushort)value4._id));
-											}
-											else
-											{
-												value4._photo.Image = null;
-											}
-											Data_Trangbi_Pet[num6] = value4;
-										}
-										num6++;
-									}
-									while (num6 <= 5);
-									string text7 = Conversions.ToString(pets._Int);
-									if (pets._Int2 != 0)
-									{
-										text7 = ((pets._Int3 != 1) ? (text7 + "-" + pets._Int2) : (text7 + "+" + pets._Int2));
-									}
-									string text8 = Conversions.ToString(pets._Atk);
-									if (pets._Atk2 != 0)
-									{
-										text8 = ((pets._Atk3 != 1) ? (text8 + "-" + pets._Atk2) : (text8 + "+" + pets._Atk2));
-									}
-									string text9 = Conversions.ToString(pets._Def);
-									if (pets._Def2 != 0)
-									{
-										text9 = ((pets._Def3 != 1) ? (text9 + "-" + pets._Def2) : (text9 + "+" + pets._Def2));
-									}
-									string text10 = Conversions.ToString(pets._Hpx);
-									if (pets._Hpx2 != 0)
-									{
-										text10 = ((pets._Hpx3 != 1) ? (text10 + "-" + pets._Hpx2) : (text10 + "+" + pets._Hpx2));
-									}
-									string text11 = Conversions.ToString(pets._Spx);
-									if (pets._Spx2 != 0)
-									{
-										text11 = ((pets._Spx3 != 1) ? (text11 + "-" + pets._Spx2) : (text11 + "+" + pets._Spx2));
-									}
-									string text12 = Conversions.ToString(pets._Agi);
-									if (pets._Agi2 != 0)
-									{
-										text12 = ((pets._Agi3 != 1) ? (text12 + "-" + pets._Agi2) : (text12 + "+" + pets._Agi2));
-									}
-									string right = Conversions.ToString(pets._Fai);
-									if (Operators.CompareString(Label_Pet_int.Text, text7, false) != 0)
-									{
-										Label_Pet_int.Text = text7;
-									}
-									if (Operators.CompareString(Label_Pet_atk.Text, text8, false) != 0)
-									{
-										Label_Pet_atk.Text = text8;
-									}
-									if (Operators.CompareString(Label_Pet_def.Text, text9, false) != 0)
-									{
-										Label_Pet_def.Text = text9;
-									}
-									if (Operators.CompareString(Label_Pet_hpx.Text, text10, false) != 0)
-									{
-										Label_Pet_hpx.Text = text10;
-									}
-									if (Operators.CompareString(Label_Pet_spx.Text, text11, false) != 0)
-									{
-										Label_Pet_spx.Text = text11;
-									}
-									if (Operators.CompareString(Label_Pet_agi.Text, text12, false) != 0)
-									{
-										Label_Pet_agi.Text = text12;
-									}
-									if (Operators.CompareString(Label_Pet_fai.Text, right, false) != 0)
-									{
-										Label_Pet_fai.Text = right;
-									}
-								}
-							}
-							if (Operators.CompareString(Vs2010TabControl_Main.TabPages[Vs2010TabControl_Main.SelectedIndex].Name, "TabPage_Attack", false) == 0 && _bot.Data_NpcInMap.Count > 0)
-							{
-								try
-								{
-									foreach (_Data._NpcInMap value5 in _bot.Data_NpcInMap.Values)
-									{
-										NpcOnMap.Key_NpcOnMap key2 = new NpcOnMap.Key_NpcOnMap
-										{
-											_Idmap = _bot.Data_Player._MapId,
-											_id = value5._Id
-										};
-										if (!NpcOnMap.Data_NpcOnMap.ContainsKey(key2) || !Npcs.Data_Npcs.ContainsKey(NpcOnMap.Data_NpcOnMap[key2]._NPCId))
-										{
-											continue;
-										}
-										Npcs.NpcInfo npcs = Npcs.Data_Npcs[NpcOnMap.Data_NpcOnMap[key2]._NPCId];
-										if (ListView_monster.Items.Count > 0)
-										{
-											if (ListView_monster.FindItemWithText(value5._Id.ToString(), false, 0) != null)
-											{
-												ListViewItem listViewItem = ListView_monster.FindItemWithText(value5._Id.ToString(), false, 0);
-												if (listViewItem.BackColor != API.GetColor(npcs._Thuoctinh))
-												{
-													listViewItem.BackColor = API.GetColor(npcs._Thuoctinh);
-												}
-												if (Operators.CompareString(listViewItem.SubItems[4].Text, value5._MapX.ToString(), false) != 0)
-												{
-													listViewItem.SubItems[4].Text = value5._MapX.ToString();
-												}
-												if (Operators.CompareString(listViewItem.SubItems[5].Text, value5._MapY.ToString(), false) != 0)
-												{
-													listViewItem.SubItems[5].Text = value5._MapY.ToString();
-												}
-												if (Operators.CompareString(listViewItem.SubItems[6].Text, value5._Delay.ToString(), false) != 0)
-												{
-													listViewItem.SubItems[6].Text = value5._Delay.ToString();
-												}
-												if (Operators.CompareString(listViewItem.SubItems[7].Text, value5._KC.ToString(), false) != 0)
-												{
-													listViewItem.SubItems[7].Text = value5._KC.ToString();
-												}
-											}
-											else
-											{
-												ListViewItem listViewItem2 = ListView_monster.Items.Add(value5._Id.ToString());
-												listViewItem2.Text = value5._Id.ToString();
-												listViewItem2.SubItems.Add(npcs._Name);
-												listViewItem2.SubItems.Add(Conversions.ToString(npcs._Lv));
-												listViewItem2.SubItems.Add(Conversions.ToString(npcs._Agi));
-												listViewItem2.SubItems.Add(Conversions.ToString(value5._MapX));
-												listViewItem2.SubItems.Add(Conversions.ToString(value5._MapY));
-												listViewItem2.SubItems.Add(Conversions.ToString(value5._Delay));
-												listViewItem2.SubItems.Add(Conversions.ToString(value5._KC));
-												if (listViewItem2.BackColor != API.GetColor(npcs._Thuoctinh))
-												{
-													listViewItem2.BackColor = API.GetColor(npcs._Thuoctinh);
-												}
-											}
-										}
-										else
-										{
-											ListViewItem listViewItem3 = ListView_monster.Items.Add(value5._Id.ToString());
-											listViewItem3.Text = value5._Id.ToString();
-											listViewItem3.SubItems.Add(npcs._Name);
-											listViewItem3.SubItems.Add(Conversions.ToString(npcs._Lv));
-											listViewItem3.SubItems.Add(Conversions.ToString(npcs._Agi));
-											listViewItem3.SubItems.Add(Conversions.ToString(value5._MapX));
-											listViewItem3.SubItems.Add(Conversions.ToString(value5._MapY));
-											listViewItem3.SubItems.Add(Conversions.ToString(value5._Delay));
-											listViewItem3.SubItems.Add(Conversions.ToString(value5._KC));
-											if (listViewItem3.BackColor != API.GetColor(npcs._Thuoctinh))
-											{
-												listViewItem3.BackColor = API.GetColor(npcs._Thuoctinh);
-											}
-										}
-									}
-								}
-								catch (Exception ex)
-								{
-									ProjectData.SetProjectError(ex);
-									Exception ex2 = ex;
-									ProjectData.ClearProjectError();
-								}
-							}
-							if (Operators.ConditionalCompareObjectNotEqual(c()["Name"], bot.Data_Player._Name, false))
-							{
-								Label_CharName.ForeColor = API.GetColor(bot.Data_Player._ThuocTinh);
-								c()["Name"] = bot.Data_Player._Name;
-								Text = bot.Data_Player._Name;
-								switch (bot.Data_Player._ThuocTinh)
-								{
-								case 1:
-									PictureBox_Char_Thuoctinh.BackgroundImage = Resources.icon_01;
-									break;
-								case 2:
-									PictureBox_Char_Thuoctinh.BackgroundImage = Resources.icon_02;
-									break;
-								case 3:
-									PictureBox_Char_Thuoctinh.BackgroundImage = Resources.icon_03;
-									break;
-								case 4:
-									PictureBox_Char_Thuoctinh.BackgroundImage = Resources.icon_04;
-									break;
-								case 5:
-									PictureBox_Char_Thuoctinh.BackgroundImage = Resources.icon_05;
-									break;
-								case 7:
-									PictureBox_Char_Thuoctinh.BackgroundImage = Resources.icon_07;
-									break;
-								case 8:
-									PictureBox_Char_Thuoctinh.BackgroundImage = Resources.icon_08;
-									break;
-								}
-							}
-							if (Operators.CompareString(Vs2010TabControl_Main.TabPages[Vs2010TabControl_Main.SelectedIndex].Name, "TabPage_Attack", false) == 0)
-							{
-								if (List_skill_char.Count < _bot.Data_CharListSkill.Count)
-								{
-									ComboBox_CharSkill.Items.Clear();
-									List_skill_char.Clear();
-									int num8 = _bot.Data_CharListSkill.Count - 1;
-									for (int i = 0; i <= num8; i++)
-									{
-										Char_AddSkillToList(Conversions.ToInteger(bot.Data_CharListSkill[i]));
-									}
-									ComboBox_CharTurnSetting.SelectedItem = 1;
-									int idskill = Conversions.ToInteger(_bot.get__CharAttackSetting("Char_Skill1"));
-									string selectedValue = _bot.get__CharAttackSetting("Char_Location1").ToString();
-									SkillSelected(idskill, ComboBox_CharSkill);
-									ComboBox_CharLocation.SelectedValue = selectedValue;
-								}
-								if (List_skill_pet.Count < _bot.Data_PetListSkill.Count)
-								{
-									ComboBox_PetSkill.Items.Clear();
-									List_skill_pet.Clear();
-									int num9 = _bot.Data_PetListSkill.Count - 1;
-									for (int j = 0; j <= num9; j++)
-									{
-										Pet_AddSkillToList(Conversions.ToInteger(_bot.Data_PetListSkill[j]));
-									}
-									ComboBox_PetTurnSetting.SelectedItem = 1;
-									int idskill2 = Conversions.ToInteger(_bot.get__PetAttackSetting("Pet_Skill1"));
-									string text13 = _bot.get__PetAttackSetting("Pet_Location1").ToString();
-									SkillSelected(idskill2, ComboBox_PetSkill);
-									ComboBox_PetLocation.Text = text13;
-								}
-							}
-							if (Operators.ConditionalCompareObjectNotEqual(c()["Lv"], bot.Data_Player._Lv, false))
-							{
-								c()["Lv"] = bot.Data_Player._Lv;
-							}
-							if (Operators.ConditionalCompareObjectNotEqual(c()["Hp"], bot.Data_Player._Hp, false))
-							{
-								c()["Hp"] = bot.Data_Player._Hp;
-							}
-							if (Operators.ConditionalCompareObjectNotEqual(c()["MaxHp"], bot.Data_Player._HpMax, false))
-							{
-								c()["MaxHp"] = bot.Data_Player._HpMax;
-							}
-							if (Operators.ConditionalCompareObjectNotEqual(c()["Sp"], bot.Data_Player._Sp, false))
-							{
-								c()["Sp"] = bot.Data_Player._Sp;
-							}
-							if (Operators.ConditionalCompareObjectNotEqual(c()["MaxSp"], bot.Data_Player._SpMax, false))
-							{
-								c()["MaxSp"] = bot.Data_Player._SpMax;
-							}
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["MapId"], _bot.Data_Player._MapId, false))
-						{
-							c()["MapId"] = _bot.Data_Player._MapId;
-							try
-							{
-								_map = API.Bytes_to_Bitmap(_bot.Data_Player._MapId);
-								Bitmap bmp = (Bitmap)_map.Clone();
-								int num10 = _bot.Data_Player._MapX / 20;
-								int num11 = _bot.Data_Player._MapY / 20;
-								bmp = API.ResizeImage(bmp, num10, num11, Color.Red);
-								PictureBox1.Width = bmp.Width;
-								PictureBox1.Height = bmp.Height;
-								PictureBox1.Image = bmp;
-							}
-							catch (Exception ex3)
-							{
-								ProjectData.SetProjectError(ex3);
-								Exception ex4 = ex3;
-								ProjectData.ClearProjectError();
-							}
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["MapX"], bot.Data_Player._MapX, false))
-						{
-							c()["MapX"] = bot.Data_Player._MapX;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["MapY"], bot.Data_Player._MapY, false))
-						{
-							c()["MapY"] = bot.Data_Player._MapY;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Gold"], bot.Data_Player._Gold, false))
-						{
-							c()["Gold"] = bot.Data_Player._Gold;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["TotalExp"], bot.Data_Player._ExpTotal, false))
-						{
-							c()["TotalExp"] = bot.Data_Player._ExpTotal;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Exp"], bot.Data_Player._Exp, false))
-						{
-							c()["Exp"] = bot.Data_Player._Exp;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["MaxExp"], bot.Data_Player._ExpMax, false))
-						{
-							c()["MaxExp"] = bot.Data_Player._ExpMax;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["ExpMin"], bot.Data_Player._ExpMin, false))
-						{
-							c()["ExpMin"] = bot.Data_Player._ExpMin;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Int"], bot.Data_Player._Int, false))
-						{
-							c()["Int"] = bot.Data_Player._Int;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Atk"], bot.Data_Player._Atk, false))
-						{
-							c()["Atk"] = bot.Data_Player._Atk;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Def"], bot.Data_Player._Def, false))
-						{
-							c()["Def"] = bot.Data_Player._Def;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Hpx"], bot.Data_Player._Hpx, false))
-						{
-							c()["Hpx"] = bot.Data_Player._Hpx;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Spx"], bot.Data_Player._Spx, false))
-						{
-							c()["Spx"] = bot.Data_Player._Spx;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Agi"], bot.Data_Player._Agi, false))
-						{
-							c()["Agi"] = bot.Data_Player._Agi;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["+Int"], bot.Data_Player._Int2, false))
-						{
-							c()["+Int"] = bot.Data_Player._Int2;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["+Atk"], bot.Data_Player._Atk2, false))
-						{
-							c()["+Atk"] = bot.Data_Player._Atk2;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["+Def"], bot.Data_Player._Def2, false))
-						{
-							c()["+Def"] = bot.Data_Player._Def2;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["+Hpx"], bot.Data_Player._Hpx2, false))
-						{
-							c()["+Hpx"] = bot.Data_Player._Hpx2;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["+Spx"], bot.Data_Player._Spx2, false))
-						{
-							c()["+Spx"] = bot.Data_Player._Spx2;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["+agi"], bot.Data_Player._Agi2, false))
-						{
-							c()["+agi"] = bot.Data_Player._Agi2;
-						}
-						int reborn = bot.Data_Player._Reborn;
-						if (reborn == 3)
-						{
-							if (ProgressBarEx_CharExp.BarColor1 != Label_Lv2.ForeColor)
-							{
-								ProgressBarEx_CharExp.BarColor1 = Label_Lv2.ForeColor;
-							}
-							if (!Label_Lv2.Visible)
-							{
-								Label_Lv2.Visible = true;
-							}
-							if (!Label_Lv_Plus.Visible)
-							{
-								Label_Lv_Plus.Visible = true;
-							}
-							if (Operators.CompareString(Label_Lv2.Text, bot.Data_Player._Lv2.ToString(), false) != 0)
-							{
-								Label_Lv2.Text = bot.Data_Player._Lv2.ToString();
-							}
-						}
-						else
-						{
-							if (ProgressBarEx_CharExp.BarColor1 != ProgressBarEx_PetExp.BackColor1)
-							{
-								ProgressBarEx_CharExp.BarColor1 = ProgressBarEx_PetExp.BackColor1;
-							}
-							if (Label_Lv2.Visible)
-							{
-								Label_Lv2.Visible = false;
-							}
-							if (Label_Lv_Plus.Visible)
-							{
-								Label_Lv_Plus.Visible = false;
-							}
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Texp"], bot.Data_Player._Texp, false))
-						{
-							c()["Texp"] = bot.Data_Player._Texp;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["God"], bot.Data_Player._God, false))
-						{
-							c()["God"] = bot.Data_Player._God;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Ghost"], bot.Data_Player._Ghost, false))
-						{
-							c()["Ghost"] = bot.Data_Player._Ghost;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Reborn"], bot.Data_Player._Reborn, false))
-						{
-							c()["Reborn"] = bot.Data_Player._Reborn;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["proto"], bot.Data_Player._ThuocTinh, false))
-						{
-							c()["proto"] = bot.Data_Player._ThuocTinh;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["PlayerOnline"], bot.Data_Player._PlayerOnline, false))
-						{
-							c()["PlayerOnline"] = bot.Data_Player._PlayerOnline;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["LeaderId"], bot.Data_Player._LeaderId, false))
-						{
-							c()["LeaderId"] = bot.Data_Player._LeaderId;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["PartyFull"], bot.Data_Player._PartyFull, false))
-						{
-							c()["PartyFull"] = bot.Data_Player._PartyFull;
-						}
-						if (Operators.ConditionalCompareObjectNotEqual(c()["Point"], bot.Data_Player._Point, false))
-						{
-							c()["Point"] = bot.Data_Player._Point;
-						}
-						if (Operators.CompareString(StatusBarPanel_MapName.Text, bot.Data_Player._MapName, false) != 0)
-						{
-							StatusBarPanel_MapName.Text = bot.Data_Player._MapName;
-						}
-						if (Conversions.ToDouble(Label_PetExpMin.Text) != (double)bot.Data_PetInfo._ExpMin)
-						{
-							Label_PetExpMin.Text = Conversions.ToString(bot.Data_PetInfo._ExpMin);
-						}
-						if (_bot.Data_Player._Point > 0)
-						{
-							if (!PictureBox_char_add_int.Visible)
-							{
-								PictureBox_char_add_int.Visible = true;
-							}
-							if (!PictureBox_char_add_atk.Visible)
-							{
-								PictureBox_char_add_atk.Visible = true;
-							}
-							if (!PictureBox_char_add_def.Visible)
-							{
-								PictureBox_char_add_def.Visible = true;
-							}
-							if (!PictureBox_char_add_hpx.Visible)
-							{
-								PictureBox_char_add_hpx.Visible = true;
-							}
-							if (!PictureBox_char_add_spx.Visible)
-							{
-								PictureBox_char_add_spx.Visible = true;
-							}
-							if (!PictureBox_char_add_agi.Visible)
-							{
-								PictureBox_char_add_agi.Visible = true;
-							}
-						}
-						else
-						{
-							if (PictureBox_char_add_int.Visible)
-							{
-								PictureBox_char_add_int.Visible = false;
-							}
-							if (PictureBox_char_add_atk.Visible)
-							{
-								PictureBox_char_add_atk.Visible = false;
-							}
-							if (PictureBox_char_add_def.Visible)
-							{
-								PictureBox_char_add_def.Visible = false;
-							}
-							if (PictureBox_char_add_hpx.Visible)
-							{
-								PictureBox_char_add_hpx.Visible = false;
-							}
-							if (PictureBox_char_add_spx.Visible)
-							{
-								PictureBox_char_add_spx.Visible = false;
-							}
-							if (PictureBox_char_add_agi.Visible)
-							{
-								PictureBox_char_add_agi.Visible = false;
-							}
-						}
-						if (Operators.CompareString(Label_BDY.Text, _bot.Label_BDY, false) != 0)
-						{
-							Label_BDY.Text = _bot.Label_BDY;
-						}
-						if (ProgressBarEx_BDY.Value != _bot.ProgressBarEx_BDY)
-						{
-							ProgressBarEx_BDY.Value = _bot.ProgressBarEx_BDY;
-						}
-						if (bot.Data_Player._LeaderId > 0)
-						{
-							int leaderId = bot.Data_Player._LeaderId;
-							if (leaderId == bot.Data_Player._Id)
-							{
-								if ((_bot.TextBox_IDmem1 == _bot._IDmem1) & (_bot._IDmem1 > 0))
-								{
-									if (TextBox_IDmem1.BackColor != Color.LightGreen)
-									{
-										TextBox_IDmem1.BackColor = Color.LightGreen;
-									}
-								}
-								else if (TextBox_IDmem1.BackColor != SystemColors.Window)
-								{
-									TextBox_IDmem1.BackColor = SystemColors.Window;
-								}
-								if ((_bot.TextBox_IDmem2 == _bot._IDmem2) & (_bot._IDmem2 > 0))
-								{
-									if (TextBox_IDmem2.BackColor != Color.LightGreen)
-									{
-										TextBox_IDmem2.BackColor = Color.LightGreen;
-									}
-								}
-								else if (TextBox_IDmem2.BackColor != SystemColors.Window)
-								{
-									TextBox_IDmem2.BackColor = SystemColors.Window;
-								}
-								if ((_bot.TextBox_IDmem3 == _bot._IDmem3) & (_bot._IDmem3 > 0))
-								{
-									if (TextBox_IDmem3.BackColor != Color.LightGreen)
-									{
-										TextBox_IDmem3.BackColor = Color.LightGreen;
-									}
-								}
-								else if (TextBox_IDmem3.BackColor != SystemColors.Window)
-								{
-									TextBox_IDmem3.BackColor = SystemColors.Window;
-								}
-								if ((_bot.TextBox_IDmem4 == _bot._IDmem4) & (_bot._IDmem4 > 0))
-								{
-									if (TextBox_IDmem4.BackColor != Color.LightGreen)
-									{
-										TextBox_IDmem4.BackColor = Color.LightGreen;
-									}
-								}
-								else if (TextBox_IDmem4.BackColor != SystemColors.Window)
-								{
-									TextBox_IDmem4.BackColor = SystemColors.Window;
-								}
-								if (TextBox_IdLeader.BackColor != SystemColors.Window)
-								{
-									TextBox_IdLeader.BackColor = SystemColors.Window;
-								}
-							}
-							else
-							{
-								if (TextBox_IDmem1.BackColor != SystemColors.Window)
-								{
-									TextBox_IDmem1.BackColor = SystemColors.Window;
-								}
-								if (TextBox_IDmem2.BackColor != SystemColors.Window)
-								{
-									TextBox_IDmem2.BackColor = SystemColors.Window;
-								}
-								if (TextBox_IDmem3.BackColor != SystemColors.Window)
-								{
-									TextBox_IDmem3.BackColor = SystemColors.Window;
-								}
-								if (TextBox_IDmem4.BackColor != SystemColors.Window)
-								{
-									TextBox_IDmem4.BackColor = SystemColors.Window;
-								}
-								if ((_bot.TextBox_IdLeader == bot.Data_Player._LeaderId) & (bot.Data_Player._LeaderId > 0) & (_bot.TextBox_IdLeader > 0))
-								{
-									if (TextBox_IdLeader.BackColor != Color.LightGreen)
-									{
-										TextBox_IdLeader.BackColor = Color.LightGreen;
-									}
-								}
-								else if (TextBox_IdLeader.BackColor != SystemColors.Window)
-								{
-									TextBox_IdLeader.BackColor = SystemColors.Window;
-								}
-							}
-						}
-						else if (TextBox_IdLeader.BackColor != SystemColors.Window)
-						{
-							TextBox_IdLeader.BackColor = SystemColors.Window;
-						}
-					}
-				}
-			}
-			catch (Exception ex5)
-			{
-				ProjectData.SetProjectError(ex5);
-				Exception ex6 = ex5;
-				ProjectData.ClearProjectError();
-			}
-			bot = null;
-		}
-
-		private void bm(object A_0, EventArgs A_1)
-		{
-			if (_bot != null && _bot.logined == 1)
-			{
-				int num = Conversions.ToInteger(TextBox_IdLeader.Text);
-				_bot.MemRequestPartyto(num);
-			}
-		}
-
-		private void bl(object A_0, EventArgs A_1)
-		{
-			if (_bot != null && _bot.logined == 1)
-			{
-				int num = Conversions.ToInteger(TextBox_IdLeader.Text);
-				_bot.LeaderInvitePartyto(num);
-			}
-		}
-
-		private void bk(object A_0, EventArgs A_1)
-		{
-			if (_bot != null && _bot.logined == 1)
-			{
-				_bot.OutParty();
-			}
-		}
-
-		private void bj(object A_0, EventArgs A_1)
-		{
-			if (_bot != null)
-			{
-				SaveFileDialog_setting.InitialDirectory = MyProject.Application.Info.DirectoryPath + "\\Setting\\";
-				SaveFileDialog_setting.FileName = TBId.Text;
-				SaveFileDialog_setting.ShowDialog();
-			}
-		}
-
-		private void a(object A_0, CancelEventArgs A_1)
-		{
-			if (_bot != null)
-			{
-				string fileName = SaveFileDialog_setting.FileName;
-				_bot.SaveConfig(fileName);
-			}
-		}
-
-		private void bi(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				string text = "server.ini";
-				if (File.Exists(text))
-				{
-					string[] array = MyProject.Computer.FileSystem.ReadAllText(text).Split('\r');
-					foreach (string text2 in array)
-					{
-						string[] array2 = text2.Split('*');
-						if (Operators.CompareString(ComboBox_Server.Text, array2[0], false) == 0)
-						{
-							_Botting.ComboBox_Server = array2[1];
-							break;
-						}
-					}
-				}
-				else
-				{
-					Interaction.MsgBox("File server.ini không tồn tại");
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void bh(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				string text = "server.ini";
-				ComboBox_Server.Items.Clear();
-				if (File.Exists(text))
-				{
-					string[] array = MyProject.Computer.FileSystem.ReadAllText(text).Split('\r');
-					foreach (string text2 in array)
-					{
-						string[] array2 = text2.Split('*');
-						ComboBox_Server.Items.Add(array2[0]);
-					}
-				}
-				else
-				{
-					Interaction.MsgBox("File server.ini không tồn tại");
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void bg(object A_0, EventArgs A_1)
-		{
-			if (_Botting == null)
-			{
-				return;
-			}
-			object left = NewLateBinding.LateGet(A_0, null, "Name", new object[0], null, null, null);
-			if (Operators.ConditionalCompareObjectEqual(left, CheckBox_Reconnect.Name, false))
-			{
-				_Botting.C_CheckBox_Reconnect = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_QuestProtect.Name, false))
-			{
-				_Botting.C_CheckBox_QuestProtect = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_autosell.Name, false))
-			{
-				_Botting.C_CheckBox_autosell = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (CheckBox_autosell.Checked && _Botting.Data_Player._MapId != 12001)
-				{
-					_Botting.atw = 1;
-					_Botting.AutoWarptoMap = "12001";
-					_Botting.AutoWarp(_Botting.AutoWarptoMap);
-					_Botting._time_AutoSell = 0;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_TuLenNgua.Name, false))
-			{
-				_Botting.C_CheckBox_TuLenNgua = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (CheckBox_TuLenNgua.Checked)
-				{
-					_Botting.LenNgua();
-				}
-				else
-				{
-					_Botting.XuongNgua();
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_Bee.Name, false))
-			{
-				_Botting.C_CheckBox_Bee = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null)) && _Botting.logined == 1)
-				{
-					_Botting._Bee_X = _Botting.Data_Player._MapX;
-					_Botting._Bee_Y = _Botting.Data_Player._MapY;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_AutoRevival.Name, false))
-			{
-				_Botting.C_CheckBox_AutoRevival = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_LeaderDissNotEnough.Name, false))
-			{
-				_Botting.C_CheckBox_LeaderDissNotEnough = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_Char_ChangeTG.Name, false))
-			{
-				_Botting.C_CheckBox_Char_ChangeTG = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_AutoFlee_Sp.Name, false))
-			{
-				_Botting.C_CheckBox_AutoFlee_Sp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_AutoFlee_Party.Name, false))
-			{
-				_Botting.C_CheckBox_AutoFlee_Party = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_Pet_ChangeTG.Name, false))
-			{
-				_Botting.C_CheckBox_Pet_ChangeTG = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_AutoClickNPC.Name, false))
-			{
-				_Botting.C_CheckBox_AutoClickNPC = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (CheckBox_AutoClickNPC.Checked)
-				{
-					if (TextBox_ClickMOD.Text.Length == 0)
-					{
-						CheckBox_AutoClickNPC.Checked = false;
-						Interaction.MsgBox("Bạn chưa điền id npc");
-					}
-					else
-					{
-						TextBox_ClickMOD.Enabled = false;
-					}
-				}
-				else
-				{
-					TextBox_ClickMOD.Enabled = true;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_AutoPickup.Name, false))
-			{
-				_Botting.C_CheckBox_AutoPickup = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_DropHp.Name, false))
-			{
-				_Botting.C_CheckBox_DropHp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_DropSp.Name, false))
-			{
-				_Botting.C_CheckBox_DropSp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_DropHpSp.Name, false))
-			{
-				_Botting.C_CheckBox_DropHpSp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_DropMineWood.Name, false))
-			{
-				_Botting.C_CheckBox_DropMineWood = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_ContributeHp.Name, false))
-			{
-				_Botting.C_CheckBox_ContributeHp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_ContributeSp.Name, false))
-			{
-				_Botting.C_CheckBox_ContributeSp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_ContributeHpSp.Name, false))
-			{
-				_Botting.C_CheckBox_ContributeHpSp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_ContributeMineWood.Name, false))
-			{
-				_Botting.C_CheckBox_ContributeMineWood = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_SendHp.Name, false))
-			{
-				_Botting.C_CheckBox_SendHp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_SendSp.Name, false))
-			{
-				_Botting.C_CheckBox_SendSp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_SendHpSp.Name, false))
-			{
-				_Botting.C_CheckBox_SendHpSp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_SendMineWood.Name, false))
-			{
-				_Botting.C_CheckBox_SendMineWood = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_SellHp.Name, false))
-			{
-				_Botting.C_CheckBox_SellHp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_SellSP.Name, false))
-			{
-				_Botting.C_CheckBox_SellSP = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_SellHpSp.Name, false))
-			{
-				_Botting.C_CheckBox_SellHpSp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_SellMineWood.Name, false))
-			{
-				_Botting.C_CheckBox_SellMineWood = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_Pickup.Name, false))
-			{
-				_Botting.C_CheckBox_Pickup = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_QS1.Name, false))
-			{
-				_Botting.C_RadioButton_QS1 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (RadioButton_QS1.Checked & (TextBox_IDmem1.BackColor == Color.LightGreen))
-				{
-					_Botting.SetQuanSu(Conversions.ToInteger(TextBox_IDmem1.Text));
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_QS2.Name, false))
-			{
-				_Botting.C_RadioButton_QS2 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (RadioButton_QS2.Checked & (TextBox_IDmem2.BackColor == Color.LightGreen))
-				{
-					_Botting.SetQuanSu(Conversions.ToInteger(TextBox_IDmem2.Text));
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_QS3.Name, false))
-			{
-				_Botting.C_RadioButton_QS3 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (RadioButton_QS3.Checked & (TextBox_IDmem3.BackColor == Color.LightGreen))
-				{
-					_Botting.SetQuanSu(Conversions.ToInteger(TextBox_IDmem3.Text));
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_QS4.Name, false))
-			{
-				_Botting.C_RadioButton_QS4 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (RadioButton_QS4.Checked & (TextBox_IDmem4.BackColor == Color.LightGreen))
-				{
-					_Botting.SetQuanSu(Conversions.ToInteger(TextBox_IDmem4.Text));
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_CatPet.Name, false))
-			{
-				_Botting.C_CheckBox_CatPet = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_ClearGhost.Name, false))
-			{
-				_Botting.C_CheckBox_ClearGhost = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_AutoEquitExp.Name, false))
-			{
-				_Botting.C_CheckBox_AutoEquitExp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (!CheckBox_AutoEquitExp.Checked)
-				{
-					return;
-				}
-				int num = _Botting.Data_CharEquit[5]._Id;
-				int doben = _Botting.Data_CharEquit[5]._Doben;
-				if (!(num == 0 || num == 23024 || doben >= 250))
-				{
-					return;
-				}
-				int num2 = 1;
-				do
-				{
-					_Data._Tuido tuido = _Botting.Data_Tuido[num2];
-					int num3 = tuido._Id;
-					int stt = tuido._Stt;
-					if (num3 > 0 && Items.Data_Items.ContainsKey(num3) && _Botting.IDNgocEXP.Contains(Items.Data_Items[num3]._Type))
-					{
-						_Botting.CharEquit(stt, 1);
-						break;
-					}
-					num2 = checked(num2 + 1);
-				}
-				while (num2 <= 25);
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_AutoUsePT.Name, false))
-			{
-				_Botting.C_CheckBox_AutoUsePT = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				if (!CheckBox_AutoUsePT.Checked || !((_Botting.Data_Player._God == 0) & (_Botting.Data_Player._Ghost == 0)))
-				{
-					return;
-				}
-				int num4 = 1;
-				do
-				{
-					_Data._Tuido tuido2 = _Botting.Data_Tuido[num4];
-					int num5 = tuido2._Id;
-					int stt2 = tuido2._Stt;
-					if (num5 > 0)
-					{
-						int type = Items.Data_Items[num5]._Type;
-						if ((uint)(type - 33) <= 1u || type == 93)
-						{
-							_Botting.CharEquit(stt2, 1);
-							break;
-						}
-					}
-					num4 = checked(num4 + 1);
-				}
-				while (num4 <= 25);
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_LeaderRequestParty.Name, false))
-			{
-				_Botting.C_RadioButton_LeaderRequestParty = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_MemberRequestParty.Name, false))
-			{
-				_Botting.C_RadioButton_MemberRequestParty = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_PT_no.Name, false))
-			{
-				_Botting.C_RadioButton_PT_no = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_DCAfter1MinNoBattle.Name, false))
-			{
-				_Botting.C_CheckBox_DCAfter1MinNoBattle = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_DisExp.Name, false))
-			{
-				_Botting.C_CheckBox_DisExp = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_DCLeaderOut.Name, false))
-			{
-				_Botting.C_RadioButton_DCLeaderOut = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_DCmemout.Name, false))
-			{
-				_Botting.C_RadioButton_DCmemout = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_DC_no.Name, false))
-			{
-				_Botting.C_RadioButton_DC_no = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_AutoEat.Name, false))
-			{
-				_Botting.C_CheckBox_AutoEat = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_TL_mem1.Name, false))
-			{
-				_Botting.C_CheckBox_TL_mem1 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_TL_mem2.Name, false))
-			{
-				_Botting.C_CheckBox_TL_mem2 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_TL_mem3.Name, false))
-			{
-				_Botting.C_CheckBox_TL_mem3 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_TL_mem4.Name, false))
-			{
-				_Botting.C_CheckBox_TL_mem4 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_TL_pet1.Name, false))
-			{
-				_Botting.C_CheckBox_TL_pet1 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_TL_pet2.Name, false))
-			{
-				_Botting.C_CheckBox_TL_pet2 = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_AutoCreatCharacter.Name, false))
-			{
-				_Botting.C_CheckBox_AutoCreatCharacter = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_OpenMachine.Name, false))
-			{
-				_Botting.C_CheckBox_OpenMachine = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-				switch (CheckBox_OpenMachine.Checked)
-				{
-				case true:
-					_Botting.OpenMachineBox();
-					break;
-				case false:
-					_Botting.StopMachineBox();
-					break;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_dia.Name, false))
-			{
-				_Botting.C_RadioButton_dia = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_thuy.Name, false))
-			{
-				_Botting.C_RadioButton_thuy = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_hoa.Name, false))
-			{
-				_Botting.C_RadioButton_hoa = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, RadioButton_phong.Name, false))
-			{
-				_Botting.C_RadioButton_phong = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_Autosort.Name, false))
-			{
-				_Botting.C_CheckBox_Autosort = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, CheckBox_DCFullHomDo.Name, false))
-			{
-				_Botting.C_CheckBox_DCFullHomdo = Conversions.ToBoolean(NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null));
-			}
-		}
-
-		private void bf(object A_0, EventArgs A_1)
-		{
-			if (Operators.CompareString(Button_bot.Text, "Bắt đầu", false) == 0)
-			{
-				Button_bot.Text = "Dừng";
-				_Botting.bott = 1;
-				if (_Botting.logined == 1)
-				{
-					_Botting._StartBot();
-				}
-				return;
-			}
-			_Botting.bott = 2;
-			if (_bot.Battle == 0)
-			{
-				_bot.ClickNPCId(99);
-			}
-			Button_bot.Text = "Bắt đầu";
-			ComboBox_botname.Enabled = true;
-			Button_bot.Enabled = true;
-		}
-
-		private int a(string A_0)
-		{
-			int result = 10000;
-			if (Skills.Data_Skills_Name.ContainsKey(A_0))
-			{
-				result = Skills.Data_Skills_Name[A_0]._Id;
-			}
-			return result;
-		}
-
-		private string g(int A_0)
-		{
-			string result = Conversions.ToString(A_0);
-			if (Skills.Data_Skills.ContainsKey(A_0))
-			{
-				result = Skills.Data_Skills[A_0]._Name;
-			}
-			return result;
-		}
-
-		private int f(int A_0)
-		{
-			int result = 0;
-			if (Skills.Data_Skills.ContainsKey(A_0))
-			{
-				result = Skills.Data_Skills[A_0]._Sp;
-			}
-			return result;
-		}
-
-		private string e(int A_0)
-		{
-			string result = "";
-			if (Items.Data_Items.ContainsKey(A_0))
-			{
-				result = Items.Data_Items[A_0]._Name;
-			}
-			return result;
-		}
-
-		private int d(int A_0)
-		{
-			int result = 0;
-			if (Items.Data_Items.ContainsKey(A_0))
-			{
-				result = Items.Data_Items[A_0]._Hp;
-			}
-			return result;
-		}
-
-		private int c(int A_0)
-		{
-			int result = 0;
-			if (Items.Data_Items.ContainsKey(A_0))
-			{
-				result = Items.Data_Items[A_0]._Sp;
-			}
-			return result;
-		}
-
-		private string b(int A_0)
-		{
-			string text = "";
-			if (Items.Data_Items.ContainsKey(A_0))
-			{
-				Items.ItemInfo items = Items.Data_Items[A_0];
-				if (items._Lv != 0)
-				{
-					text = text + "Lv: " + items._Lv + "\r\n";
-				}
-				if (items._tt != 0)
-				{
-					text = text + "TT: " + API.GetThuocTinh(items._tt) + "\r\n";
-				}
-				if (items._Hp != 0)
-				{
-					text = text + "Hp: " + items._Hp + "\r\n";
-				}
-				if (items._Sp != 0)
-				{
-					text = text + "Sp: " + items._Sp + "\r\n";
-				}
-				if (items._Int1 != 0)
-				{
-					text = text + "Int: " + items._Int1 + "\r\n";
-				}
-				if (items._Atk1 != 0)
-				{
-					text = text + "Atk: " + items._Atk1 + "\r\n";
-				}
-				if (items._Def1 != 0)
-				{
-					text = text + "Def: " + items._Def1 + "\r\n";
-				}
-				if (items._Hpx1 != 0)
-				{
-					text = text + "Hpx: " + items._Hpx1 + "\r\n";
-				}
-				if (items._Spx1 != 0)
-				{
-					text = text + "Spx: " + items._Spx1 + "\r\n";
-				}
-				if (items._Agi1 != 0)
-				{
-					text = text + "Agi: " + items._Agi1 + "\r\n";
-				}
-				if (items._Fai1 != 0)
-				{
-					text = text + "Fai: " + items._Fai1 + "\r\n";
-				}
-				text = "\r\n" + text + API.VISCII_to_Unicode(items._Info);
-			}
-			return text;
-		}
-
-		private string a(int A_0)
-		{
-			string result = "";
-			if (Npcs.Data_Npcs.ContainsKey(A_0) && A_0 > 0)
-			{
-				result = Npcs.Data_Npcs[A_0]._Name;
-			}
-			return result;
-		}
-
-		private void be(object A_0, EventArgs A_1)
-		{
-			if (Conversions.ToInteger(ComboBox_CharTurnSetting.SelectedItem) > 0)
-			{
-				_bot.set__CharAttackSetting("Char_Skill" + Conversions.ToInteger(ComboBox_CharTurnSetting.SelectedItem), (object)a(ComboBox_CharSkill.Text));
-			}
-		}
-
-		private void bd(object A_0, EventArgs A_1)
-		{
-			if (Conversions.ToInteger(ComboBox_CharTurnSetting.SelectedItem) > 0)
-			{
-				_bot.set__CharAttackSetting("Char_Location" + Conversions.ToInteger(ComboBox_CharTurnSetting.SelectedItem), (object)ComboBox_CharLocation.Text);
-			}
-		}
-
-		private void bc(object A_0, EventArgs A_1)
-		{
-			if (Conversions.ToInteger(ComboBox_PetTurnSetting.SelectedItem) > 0)
-			{
-				_bot.set__PetAttackSetting("Pet_Skill" + Conversions.ToInteger(ComboBox_PetTurnSetting.SelectedItem), (object)a(ComboBox_PetSkill.Text));
-			}
-		}
-
-		private void bb(object A_0, EventArgs A_1)
-		{
-			if (Conversions.ToInteger(ComboBox_PetTurnSetting.SelectedItem) > 0)
-			{
-				_bot.set__PetAttackSetting("Pet_Location" + Conversions.ToInteger(ComboBox_PetTurnSetting.SelectedItem), (object)ComboBox_PetLocation.Text);
-			}
-		}
-
-		private void ba(object A_0, EventArgs A_1)
-		{
-			int num = _bot.Data_CharAttackSetting._TurnCount;
-			checked
-			{
-				if (A_0 == Button_CharTurnAdd)
-				{
-					if (num < 10)
-					{
-						_bot.Data_CharAttackSetting._TurnCount++;
-						num++;
-					}
-					ComboBox_CharTurnSetting.Items.Add(num);
-				}
-				else
-				{
-					if (A_0 != Button_CharTurnRemove)
-					{
-						return;
-					}
-					switch (_bot._Proxy)
-					{
-					case false:
-						if (num > 1)
-						{
-							_bot.Data_CharAttackSetting._TurnCount--;
-							num--;
-						}
-						break;
-					case true:
-						if (num >= 1)
-						{
-							_bot.Data_CharAttackSetting._TurnCount--;
-							num--;
-						}
-						break;
-					}
-					ComboBox_CharTurnSetting.Items.Remove(num + 1);
-				}
-			}
-		}
-
-		private void a9(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				if (Conversions.ToInteger(ComboBox_CharTurnSetting.SelectedItem) > 0)
-				{
-					string text = g(Conversions.ToInteger(_bot.get__CharAttackSetting("Char_Skill" + ComboBox_CharTurnSetting.Text)));
-					string text2 = _bot.get__CharAttackSetting("Char_Location" + ComboBox_CharTurnSetting.Text).ToString();
-					if (ComboBox_CharSkill.Items.Contains(text))
-					{
-						ComboBox_CharSkill.SelectedItem = text;
-					}
-					else
-					{
-						ComboBox_CharSkill.SelectedItem = "Đấu vật";
-					}
-					ComboBox_CharLocation.Text = text2;
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void a8(object A_0, EventArgs A_1)
-		{
-			int num = _bot.Data_PetAttackSetting._TurnCount;
-			checked
-			{
-				if (A_0 == Button_PetTurnAdd)
-				{
-					if (num < 10)
-					{
-						_bot.Data_PetAttackSetting._TurnCount++;
-						num++;
-					}
-					ComboBox_PetTurnSetting.Items.Add(num);
-				}
-				else
-				{
-					if (A_0 != Button_PetTurnRemove)
-					{
-						return;
-					}
-					switch (_bot._Proxy)
-					{
-					case false:
-						if (num > 1)
-						{
-							_bot.Data_PetAttackSetting._TurnCount--;
-							num--;
-						}
-						break;
-					case true:
-						if (num >= 1)
-						{
-							_bot.Data_PetAttackSetting._TurnCount--;
-							num--;
-						}
-						break;
-					}
-					ComboBox_PetTurnSetting.Items.Remove(num + 1);
-				}
-			}
-		}
-
-		private void a7(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				if (Conversions.ToInteger(ComboBox_PetTurnSetting.SelectedItem) > 0)
-				{
-					string text = g(Conversions.ToInteger(_bot.get__PetAttackSetting("Pet_Skill" + ComboBox_PetTurnSetting.Text)));
-					string text2 = _bot.get__PetAttackSetting("Pet_Location" + ComboBox_PetTurnSetting.Text).ToString();
-					if (ComboBox_PetSkill.Items.Contains(text))
-					{
-						ComboBox_PetSkill.SelectedItem = text;
-					}
-					else
-					{
-						ComboBox_PetSkill.SelectedItem = "Đấu vật";
-					}
-					ComboBox_PetLocation.Text = text2;
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void a6(object A_0, EventArgs A_1)
-		{
-			int num = Conversions.ToInteger(TextBox_AddIdDrop.Text);
-			if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListDrop.Contains(num))
-			{
-				ListView_AutoDrop.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				_bot.Data_ListDrop.Add(num);
-			}
-		}
-
-		private void g(object A_0, MouseEventArgs A_1)
-		{
-			if (A_1.Button != MouseButtons.Left || !Operators.ConditionalCompareObjectGreater(NewLateBinding.LateGet(NewLateBinding.LateGet(A_0, null, "Items", new object[0], null, null, null), null, "Count", new object[0], null, null, null), 0, false))
-			{
-				return;
-			}
-			try
-			{
-				ListViewItem listViewItem = (ListViewItem)NewLateBinding.LateGet(NewLateBinding.LateGet(A_0, null, "SelectedItems", new object[0], null, null, null), null, "Item", new object[1] { 0 }, null, null, null);
-				int num = Conversions.ToInteger(listViewItem.SubItems[0].Text);
-				object left = NewLateBinding.LateGet(A_0, null, "Name", new object[0], null, null, null);
-				if (Operators.ConditionalCompareObjectEqual(left, ListView_AutoDrop.Name, false))
-				{
-					if (_bot.Data_ListDrop.Contains(num))
-					{
-						_bot.Data_ListDrop.Remove(num);
-					}
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, ListView_AutoContribute.Name, false))
-				{
-					if (_bot.Data_ListContribute.Contains(num))
-					{
-						_bot.Data_ListContribute.Remove(num);
-					}
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, ListView_AutoSend.Name, false))
-				{
-					if (_bot.Data_ListSend.Contains(num))
-					{
-						_bot.Data_ListSend.Remove(num);
-					}
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left, ListView_AutoSell.Name, false))
-				{
-					if (_bot.Data_ListSell.Contains(num))
-					{
-						_bot.Data_ListSell.Remove(num);
-					}
-				}
-				else if (!Operators.ConditionalCompareObjectEqual(left, ListView_Shop.Name, false))
-				{
-				}
-				object[] array;
-				bool[] array2;
-				NewLateBinding.LateCall(NewLateBinding.LateGet(A_0, null, "Items", new object[0], null, null, null), null, "Remove", array = new object[1] { listViewItem }, null, null, array2 = new bool[1] { true }, true);
-				if (array2[0])
-				{
-					listViewItem = (ListViewItem)Conversions.ChangeType(RuntimeHelpers.GetObjectValue(array[0]), typeof(ListViewItem));
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void a5(object A_0, EventArgs A_1)
-		{
-			int num = Conversions.ToInteger(TextBox_AddIdContribute.Text);
-			if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListContribute.Contains(num))
-			{
-				ListView_AutoContribute.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				_bot.Data_ListContribute.Add(num);
-			}
-		}
-
-		private void a4(object A_0, EventArgs A_1)
-		{
-			int num = Conversions.ToInteger(TextBox_AddIdSend.Text);
-			if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListSend.Contains(num))
-			{
-				ListView_AutoSend.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				_bot.Data_ListSend.Add(num);
-			}
-		}
-
-		private void a3(object A_0, EventArgs A_1)
-		{
-			int num = Conversions.ToInteger(TextBox_AddIdSell.Text);
-			if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListSell.Contains(num))
-			{
-				ListView_AutoSell.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				_bot.Data_ListSell.Add(num);
-			}
-		}
-
-		private void a2(object A_0, EventArgs A_1)
-		{
-			ToolTip_info.SetToolTip((Control)A_0, "Nháy đúp chuột trái để xoá");
-		}
-
-		private void d(object A_0, DataGridViewCellEventArgs A_1)
-		{
-			int num = Conversions.ToInteger(DataSet1.Tables["Table_ListDrop"].Rows[A_1.RowIndex]["Id"]);
-			DataSet1.Tables["Table_ListDrop"].Rows.RemoveAt(A_1.RowIndex);
-			if (_bot.Data_ListDrop.Contains(num))
-			{
-				_bot.Data_ListDrop.Remove(num);
-			}
-		}
-
-		private void c(object A_0, DataGridViewCellEventArgs A_1)
-		{
-			int num = Conversions.ToInteger(DataSet1.Tables["Table_ListSell"].Rows[A_1.RowIndex]["Id"]);
-			DataSet1.Tables["Table_ListSell"].Rows.RemoveAt(A_1.RowIndex);
-			if (_bot.Data_ListSell.Contains(num))
-			{
-				_bot.Data_ListSell.Remove(num);
-			}
-		}
-
-		private void b(object A_0, DataGridViewCellEventArgs A_1)
-		{
-			int num = Conversions.ToInteger(DataSet1.Tables["Table_ListContribute"].Rows[A_1.RowIndex]["Id"]);
-			DataSet1.Tables["Table_ListContribute"].Rows.RemoveAt(A_1.RowIndex);
-			if (_bot.Data_ListContribute.Contains(num))
-			{
-				_bot.Data_ListContribute.Remove(num);
-			}
-		}
-
-		private void a(object A_0, DataGridViewCellEventArgs A_1)
-		{
-			int num = Conversions.ToInteger(DataSet1.Tables["Table_ListSend"].Rows[A_1.RowIndex]["Id"]);
-			DataSet1.Tables["Table_ListSend"].Rows.RemoveAt(A_1.RowIndex);
-			if (_bot.Data_ListSend.Contains(num))
-			{
-				_bot.Data_ListSend.Remove(num);
-			}
-		}
-
-		private void a1(object A_0, EventArgs A_1)
-		{
-			if (_bot != null && _bot.logined == 1)
-			{
-				_bot.atw = 1;
-				_bot.AutoWarptoMap = TextBox_idWarp2.Text;
-				CheckBox_QuestProtect.Checked = false;
-				_bot.ClickNPCId(99);
-				_bot.AutoWarp(_bot.AutoWarptoMap);
-			}
-		}
-
-		private void a0(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				if (_bot != null)
-				{
-					if (Operators.CompareString(Vs2010TabControl_Main.TabPages[Vs2010TabControl_Main.SelectedIndex].Name, "TabPage_Main", false) == 0)
-					{
-						updatesystem();
-						updateChat();
-					}
-					if (Operators.CompareString(Vs2010TabControl_Main.TabPages[Vs2010TabControl_Main.SelectedIndex].Name, "TabPage_Quest", false) == 0)
-					{
-						updateQuest();
-						a();
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void a(object A_0, KeyPressEventArgs A_1)
-		{
-			if (A_1.KeyChar != '\r' || _bot.logined != 1)
-			{
-				return;
-			}
-			string text = ComboBox_kenh.Text;
-			switch (FnvHash.Compute(text))
-			{
-			case 2999784422u:
-				if (Operators.CompareString(text, "Toàn", false) == 0)
-				{
-					_bot.Chat(1, ComboBox_chat.Text);
-					API.AddColorText_Chat(_bot, _bot.Rtbchat, "[Toàn] " + _bot.Data_Player._Name + ": " + ComboBox_chat.Text, Color.Khaki);
-				}
-				break;
-			case 2950256199u:
-				if (Operators.CompareString(text, "Gần", false) == 0)
-				{
-					_bot.Chat(2, ComboBox_chat.Text);
-					API.AddColorText_Chat(_bot, _bot.Rtbchat, "[Gần] " + _bot.Data_Player._Name + ": " + ComboBox_chat.Text, Color.Gold);
-				}
-				break;
-			case 3592419773u:
-			{
-				if (Operators.CompareString(text, "Thì thầm", false) != 0)
-				{
-					break;
-				}
-				int idPlayer = _bot.GetIdPlayer(ComboBox_nameprivate.Text);
-				if (idPlayer > 0)
-				{
-					_bot.ChatPrivate(idPlayer, ComboBox_chat.Text);
-					if (!ComboBox_nameprivate.Items.Contains(ComboBox_nameprivate.Text))
-					{
-						ComboBox_nameprivate.Items.Add(ComboBox_nameprivate.Text);
-					}
-				}
-				else
-				{
-					API.AddColorText2(_bot, _bot.Rtbsystem, ComboBox_nameprivate.Text + " không có hoặc đã rời mạng!", Color.Orange);
-				}
-				break;
-			}
-			case 1674640113u:
-				if (Operators.CompareString(text, "GM", false) == 0)
-				{
-					_bot.Chat(4, ComboBox_chat.Text);
-				}
-				break;
-			case 1183301393u:
-				if (Operators.CompareString(text, "Đội", false) == 0)
-				{
-					_bot.Chat(5, ComboBox_chat.Text);
-				}
-				break;
-			case 3289375914u:
-				if (Operators.CompareString(text, "Đoàn", false) == 0)
-				{
-					_bot.Chat(6, ComboBox_chat.Text);
-				}
-				break;
-			case 3393541234u:
-				if (Operators.CompareString(text, "Liên Minh", false) == 0)
-				{
-					_bot.Chat(7, ComboBox_chat.Text);
-				}
-				break;
-			}
-			if (!ComboBox_chat.Items.Contains(ComboBox_chat.Text))
-			{
-				ComboBox_chat.Items.Add(ComboBox_chat.Text);
-			}
-			ComboBox_chat.Text = "";
-		}
-
-		private void az(object A_0, EventArgs A_1)
-		{
-			if (_bot.battle_show == 0)
-			{
-				_bot.battle_show = 1;
-				BattleInfo1 battleInfo = new BattleInfo1(ref _bot);
-				battleInfo.Show();
-			}
-		}
-
-		private void ay(object A_0, EventArgs A_1)
-		{
-			_bot.ComboBox_Port = Conversions.ToInteger(NewLateBinding.LateGet(ComboBox_Port.SelectedItem, null, "Substring", new object[1] { 5 }, null, null, null));
-			if ((_bot.ComboBox_Port > 10) & (_bot.ComboBox_Port < 100))
-			{
-				ToolStripLabel1.Visible = true;
-				ToolStripTextBox_KenhPassword.Visible = true;
-			}
-			else
-			{
-				ToolStripLabel1.Visible = false;
-				ToolStripTextBox_KenhPassword.Visible = false;
-			}
-		}
-
-		private void ax(object A_0, EventArgs A_1)
-		{
-			checked
-			{
-				try
-				{
-					if (Operators.CompareString(Vs2010TabControl_Main.TabPages[Vs2010TabControl_Main.SelectedIndex].Name, "TabPage_Players", false) == 0)
-					{
-						ListPlayer listPlayer = new ListPlayer(_bot);
-						listPlayer.TopLevel = false;
-						listPlayer.FormBorderStyle = FormBorderStyle.None;
-						listPlayer.Dock = DockStyle.Fill;
-						listPlayer.Show();
-						if (!Vs2010TabControl_Main.TabPages["TabPage_Players"].Controls.ContainsKey("ListPlayer"))
-						{
-							Vs2010TabControl_Main.SelectedTab.Controls.Add(listPlayer);
-						}
-						return;
-					}
-					if (Operators.CompareString(Vs2010TabControl_Main.TabPages[Vs2010TabControl_Main.SelectedIndex].Name, "TabPage_Shop", false) == 0)
-					{
-						ComboBox_ShopType.SelectedIndex = _bot.List_ShopType;
-						TextBox_ShopName.Text = _bot.List_ShopName;
-						if (_bot.List_ShopItem.Values.Count <= 0 || _bot.List_ShopItem.Values.Count == ListView_Shop.Items.Count)
-						{
-							return;
-						}
-						if (ListView_Shop.Items.Count > 0)
-						{
-							ListView_Shop.Items.Clear();
-						}
-						{
-							foreach (Items.ShopItem value in _bot.List_ShopItem.Values)
-							{
-								int num = value._Id;
-								string name = value._Name;
-								int price = value._Price;
-								ListViewItem listViewItem = ListView_Shop.Items.Add(Conversions.ToString(num));
-								listViewItem.SubItems.Add(name);
-								listViewItem.SubItems.Add(Conversions.ToString(price));
-								ListView_Shop.Update();
-							}
-							return;
-						}
-					}
-					if (Operators.CompareString(Vs2010TabControl_Main.TabPages[Vs2010TabControl_Main.SelectedIndex].Name, "TabPage_Attack", false) == 0 && _bot.logined == 1)
-					{
-						if (List_skill_char.Count != _bot.Data_CharListSkill.Count)
-						{
-							ComboBox_CharSkill.Items.Clear();
-							List_skill_char.Clear();
-							int num2 = _bot.Data_CharListSkill.Count - 1;
-							for (int i = 0; i <= num2; i++)
-							{
-								Char_AddSkillToList(Conversions.ToInteger(_bot.Data_CharListSkill[i]));
-							}
-							ComboBox_CharTurnSetting.SelectedItem = 1;
-							int idskill = Conversions.ToInteger(_bot.get__CharAttackSetting("Char_Skill1"));
-							string text = g(Conversions.ToInteger(_bot.get__CharAttackSetting("Char_Skill1")));
-							string selectedValue = _bot.get__CharAttackSetting("Char_Location1").ToString();
-							SkillSelected(idskill, ComboBox_CharSkill);
-							ComboBox_CharLocation.SelectedValue = selectedValue;
-						}
-						if (List_skill_pet.Count != _bot.Data_PetListSkill.Count)
-						{
-							ComboBox_PetSkill.Items.Clear();
-							List_skill_pet.Clear();
-							int num3 = _bot.Data_PetListSkill.Count - 1;
-							for (int j = 0; j <= num3; j++)
-							{
-								Pet_AddSkillToList(Conversions.ToInteger(_bot.Data_PetListSkill[j]));
-							}
-							ComboBox_PetTurnSetting.SelectedItem = 1;
-							int idskill2 = Conversions.ToInteger(_bot.get__PetAttackSetting("Pet_Skill1"));
-							string text2 = _bot.get__PetAttackSetting("Pet_Location1").ToString();
-							SkillSelected(idskill2, ComboBox_PetSkill);
-							ComboBox_PetLocation.Text = text2;
-						}
-					}
-					if (Vs2010TabControl_Main.TabPages["TabPage_Players"].Controls.ContainsKey("ListPlayer"))
-					{
-						ListPlayer listPlayer2 = (ListPlayer)Vs2010TabControl_Main.TabPages["TabPage_Players"].Controls["ListPlayer"];
-						listPlayer2.Close();
-						Vs2010TabControl_Main.TabPages["TabPage_Players"].Controls.RemoveByKey("ListPlayer");
-					}
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-				}
-			}
-		}
-
-		private void aw(object A_0, EventArgs A_1)
-		{
-			if (_bot != null)
-			{
-				_bot.ComboBox_namePublic = ComboBox_nameprivate.Text;
-			}
-		}
-
-		private void av(object A_0, EventArgs A_1)
-		{
-			if ((Conversions.ToInteger(TextBox_walkX.Text) > 0) & (Conversions.ToInteger(TextBox_walkY.Text) > 0))
-			{
-				_bot.Walk(Conversions.ToInteger(TextBox_walkX.Text), Conversions.ToInteger(TextBox_walkY.Text));
-			}
-			try
-			{
-				Bitmap bmp = (Bitmap)_map.Clone();
-				int num = _bot.Data_Player._MapX / 20;
-				int num2 = _bot.Data_Player._MapY / 20;
-				bmp = API.ResizeImage(bmp, num, num2, Color.Red);
-				PictureBox1.Width = bmp.Width;
-				PictureBox1.Height = bmp.Height;
-				PictureBox1.Image = bmp;
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void au(object A_0, EventArgs A_1)
-		{
-			if (_bot != null && _bot.logined == 1)
-			{
-				_bot.atw = 1;
-				_bot.AutoWarptoMap = TextBox_idWarp.Text;
-				CheckBox_QuestProtect.Checked = false;
-				_bot.ClickNPCId(99);
-				_bot.AutoWarp(_bot.AutoWarptoMap);
-			}
-		}
-
-		private void f(object A_0, MouseEventArgs A_1)
-		{
-			if (A_1.Button == MouseButtons.Right)
-			{
-				TreeNode nodeAt = TreeView1.GetNodeAt(A_1.X, A_1.Y);
-				if (nodeAt != null)
-				{
-					TreeView1.SelectedNode = nodeAt;
-				}
-			}
-		}
-
-		private void at(object A_0, EventArgs A_1)
-		{
-			if (_bot != null && _bot.logined == 1)
-			{
-				_bot.atw = 1;
-				TextBox_idWarp.Text = TreeView1.SelectedNode.Name;
-				TextBox_idWarp.Text = TreeView1.SelectedNode.Name;
-				_bot.AutoWarptoMap = TextBox_idWarp.Text;
-				CheckBox_QuestProtect.Checked = false;
-				_bot.AutoWarp(_bot.AutoWarptoMap);
-			}
-		}
-
-		private void @as(object A_0, EventArgs A_1)
-		{
-			if (Operators.CompareString(Button_StartAutoQuest.Text, "Dừng", false) == 0)
-			{
-				Button_StartAutoQuest.Text = "Bắt đầu";
-				DataGridView1.Enabled = true;
-				ComboBox_Quest.Enabled = true;
-				_bot.Startautoquest = false;
-				_bot.EndQuest = 0;
-				aem.Clear();
-				if (_bot.showmenu == 1)
-				{
-					_bot.ChoiceId(0);
-				}
-				_bot.SendEnd();
-				_bot.ClickNPCId(99);
-				return;
-			}
-			Button_StartAutoQuest.Text = "Dừng";
-			if ((_bot.ComboBox_Port != 0) & !_bot._Proxy)
-			{
-				Interaction.MsgBox("Bạn chỉ có thể sử dụng ở kênh 0!");
-				return;
-			}
-			if (_bot.bott != 0)
-			{
-				MsgBoxResult msgBoxResult = Interaction.MsgBox("Bạn đang bot, Bạn có muốn dừng bot không?", MsgBoxStyle.YesNo, "Chú ý");
-				if (msgBoxResult == MsgBoxResult.No)
-				{
-					return;
-				}
-				_bot.bott = 0;
-			}
-			if (_bot.atw != 0)
-			{
-				Interaction.MsgBox("Bạn đang autowarp, dừng autowarp trước!");
-			}
-			else if ((_bot.Data_Player._LeaderId != 0) & (_bot.Data_Player._LeaderId != _bot.Data_Player._Id))
-			{
-				Interaction.MsgBox("Bạn đang trong nhóm và không phải chủ nhóm!");
-			}
-			else if (Operators.CompareString(_bot.Online, "ON", false) != 0)
-			{
-				Interaction.MsgBox("Bạn phải đăng nhập vào game!");
-			}
-			else
-			{
-				b();
-			}
-		}
-
-		private void ar(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				string[] files = Directory.GetFiles(MyProject.Application.Info.DirectoryPath + "\\QuestFarm", "*.ini");
-				ComboBox_Quest.Items.Clear();
-				string[] array = files;
-				foreach (string text in array)
-				{
-					if (text.Contains(".ini"))
-					{
-						ComboBox_Quest.Items.Add(text.Substring(checked(text.LastIndexOf("\\") + 1)).Replace(".ini", ""));
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void aq(object A_0, EventArgs A_1)
-		{
-			string file = "QuestFarm\\" + ComboBox_Quest.Text + ".ini";
-			DataGridView1.Rows.Clear();
-			string[] array = MyProject.Computer.FileSystem.ReadAllText(file).Split('\r', '\r');
-			checked
-			{
-				foreach (string text in array)
-				{
-					if (text.Length <= 1)
-					{
-						continue;
-					}
-					string[] array2 = text.Split(' ');
-					if (array2.Length > 1)
-					{
-						string text2 = array2[0].Replace("\n", "");
-						string text3 = array2[1];
-						string text4 = "";
-						if (array2.Length > 2)
-						{
-							int num = array2.Length - 1;
-							for (int j = 2; j <= num; j++)
-							{
-								text4 += array2[j];
-							}
-						}
-						if (DataGridView1.Rows.Count == 1)
-						{
-							DataGridView1.Rows.Add(true, text2, text3, text4);
-						}
-						else
-						{
-							DataGridView1.Rows.Add(false, text2, text3, text4);
-						}
-					}
-					else
-					{
-						DataGridView1.Rows.Add(false, text);
-					}
-				}
-			}
-		}
-
-		public string StrToHex(ref string Data)
-		{
-			string text = "";
-			while (Data.Length > 0)
-			{
-				string text2 = Strings.Asc(Data.Substring(0, 1)).ToString("X2");
-				Data = Data.Substring(1, checked(Data.Length - 1));
-				text += text2;
-			}
-			return text;
-		}
-
-		private void b()
-		{
-			if (DataGridView1.Rows.Count == 0)
-			{
-				return;
-			}
-			DataGridView1.Enabled = false;
-			ComboBox_Quest.Enabled = false;
-			RichTextBox_hienthiquest.Clear();
-			aem.Clear();
-			aen = 0;
-			try
-			{
-				int num = 0;
-				foreach (DataGridViewRow item in (IEnumerable)DataGridView1.Rows)
-				{
-					if (Operators.ConditionalCompareObjectEqual(item.Cells[0].Value, true, false))
-					{
-						num = 1;
-					}
-					if (num != 1)
-					{
-						continue;
-					}
-					Type typeFromHandle = typeof(Strings);
-					DataGridViewCell dataGridViewCell;
-					object[] obj = new object[1] { (dataGridViewCell = item.Cells[1]).Value };
-					object[] array = obj;
-					bool[] obj2 = new bool[1] { true };
-					bool[] array2 = obj2;
-					object obj3 = NewLateBinding.LateGet(null, typeFromHandle, "LCase", obj, null, null, obj2);
-					if (array2[0])
-					{
-						dataGridViewCell.Value = RuntimeHelpers.GetObjectValue(RuntimeHelpers.GetObjectValue(array[0]));
-					}
-					string text = obj3.ToString().Replace(" ", "");
-					if (_list_Func.Contains(text))
-					{
-						int num2 = Conversions.ToInteger(item.Cells[2].Value);
-						switch (text)
-						{
-						case "end":
-						case "battle":
-						case "next":
-						case "catpet":
-						{
-							_QuestStep questStep2 = new _QuestStep
-							{
-								_Func = text,
-								_id = 0,
-								_index = item.Index
-							};
-							aem.Add(questStep2);
-							break;
-						}
-						default:
-						{
-							_QuestStep questStep = new _QuestStep
-							{
-								_Func = text,
-								_id = num2,
-								_index = item.Index
-							};
-							aem.Add(questStep);
-							break;
-						}
-						}
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				Interaction.MsgBox("Script lỗi!!!");
-				ProjectData.ClearProjectError();
-			}
-			_bot.Step_sendend = 0;
-			_bot.Startautoquest = true;
-		}
-
-		private void a()
-		{
-			checked
-			{
-				if (_bot.Startautoquest & (_bot.EndQuest == 0) & (_bot.Battle == 0) & (_bot.BTQ == 0) & (_bot.atw == 0) & (aem.Count > 0))
-				{
-					_QuestStep questStep = (_QuestStep)aem[aen];
-					string func = questStep._Func;
-					int num = questStep._id;
-					int index = questStep._index;
-					switch (FnvHash.Compute(func))
-					{
-					case 2398780079u:
-						if (Operators.CompareString(func, "warp", false) == 0)
-						{
-							int num2 = num;
-							if (num2 == _bot.Data_Player._MapId)
-							{
-								DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-								DataGridView1.Rows[index].Cells[1].Selected = true;
-								DataGridView1.FirstDisplayedScrollingRowIndex = index;
-								RichTextBox_hienthiquest.AppendText("\r\n" + func + " " + num);
-								aen++;
-							}
-							else if (_bot._Questing == 0)
-							{
-								_bot.atw = 1;
-								_bot.AutoWarptoMap = num.ToString();
-								_bot.AutoWarp(_bot.AutoWarptoMap);
-								DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-								DataGridView1.Rows[index].Cells[1].Selected = true;
-								DataGridView1.FirstDisplayedScrollingRowIndex = index;
-								RichTextBox_hienthiquest.AppendText("\r\n" + func + " " + num);
-								aen++;
-							}
-						}
-						break;
-					case 2160783330u:
-						if (Operators.CompareString(func, "warpid", false) == 0 && _bot._Questing == 0)
-						{
-							_bot.Warp(num);
-							DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-							DataGridView1.Rows[index].Cells[1].Selected = true;
-							DataGridView1.FirstDisplayedScrollingRowIndex = index;
-							RichTextBox_hienthiquest.AppendText("\r\n" + func + " " + num);
-							aen++;
-						}
-						break;
-					case 1551804527u:
-						if (Operators.CompareString(func, "click", false) == 0 && _bot._Questing == 0)
-						{
-							NpcOnMap.Key_NpcOnMap key = new NpcOnMap.Key_NpcOnMap
-							{
-								_Idmap = _bot.Data_Player._MapId,
-								_id = num
-							};
-							if (NpcOnMap.Data_NpcOnMap.ContainsKey(key))
-							{
-								NpcOnMap.NpcMapInfo npcOnMap = NpcOnMap.Data_NpcOnMap[key];
-								_bot.Walk(npcOnMap._X, npcOnMap._Y);
-								Thread.Sleep(200);
-							}
-							_bot.ClickNPCId(num);
-							DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-							DataGridView1.Rows[index].Cells[1].Selected = true;
-							DataGridView1.FirstDisplayedScrollingRowIndex = index;
-							RichTextBox_hienthiquest.AppendText("\r\n" + func + " " + num);
-							aen++;
-						}
-						break;
-					case 2581912890u:
-						if (Operators.CompareString(func, "menu", false) == 0)
-						{
-							switch (_bot.showmenu)
-							{
-							case 1:
-								_bot.showmenu = 0;
-								_bot.ChoiceId(num);
-								_bot.SendEnd();
-								DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-								DataGridView1.Rows[index].Cells[1].Selected = true;
-								DataGridView1.FirstDisplayedScrollingRowIndex = index;
-								RichTextBox_hienthiquest.AppendText("\r\n" + func + " " + num);
-								aen++;
-								break;
-							case 2:
-								_bot.showmenu = 0;
-								DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.OrangeRed;
-								DataGridView1.Rows[index].Cells[1].Selected = true;
-								DataGridView1.FirstDisplayedScrollingRowIndex = index;
-								RichTextBox_hienthiquest.AppendText("\r\n" + func + " [Cancel]");
-								aen++;
-								break;
-							}
-						}
-						break;
-					case 1555467752u:
-						if (Operators.CompareString(func, "next", false) == 0)
-						{
-							_bot.ClickNPCId(99);
-							DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-							DataGridView1.Rows[index].Cells[1].Selected = true;
-							DataGridView1.FirstDisplayedScrollingRowIndex = index;
-							RichTextBox_hienthiquest.AppendText("\r\n" + func);
-							aen++;
-						}
-						break;
-					case 2820971575u:
-						if (Operators.CompareString(func, "battle", false) == 0)
-						{
-							DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-							DataGridView1.Rows[index].Cells[1].Selected = true;
-							DataGridView1.FirstDisplayedScrollingRowIndex = index;
-							RichTextBox_hienthiquest.AppendText("\r\n" + func);
-							aen++;
-						}
-						break;
-					case 4216135404u:
-						if (Operators.CompareString(func, "catpet", false) == 0)
-						{
-							_bot.SendPacket(API.hexstringtobyte("F44402001302"));
-							DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-							DataGridView1.Rows[index].Cells[1].Selected = true;
-							DataGridView1.FirstDisplayedScrollingRowIndex = index;
-							RichTextBox_hienthiquest.AppendText("\r\n" + func);
-							aen++;
-						}
-						break;
-					case 1709849540u:
-						if (Operators.CompareString(func, "xuatchien", false) == 0)
-						{
-							DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-							DataGridView1.Rows[index].Cells[1].Selected = true;
-							DataGridView1.FirstDisplayedScrollingRowIndex = index;
-							_bot.SendPacket(API.hexstringtobyte("F44406001301" + API.Int32ToHex2(num) + "0000"));
-							RichTextBox_hienthiquest.AppendText("\r\n" + func);
-							aen++;
-						}
-						break;
-					case 1787721130u:
-						if (Operators.CompareString(func, "end", false) == 0)
-						{
-							_bot.EndQuest = 1;
-							_bot.DelayEndQuest = 0;
-							DataGridView1.Rows[index].Cells[1].Style.BackColor = Color.LightSkyBlue;
-							DataGridView1.Rows[index].Cells[1].Selected = true;
-							DataGridView1.FirstDisplayedScrollingRowIndex = index;
-							RichTextBox_hienthiquest.AppendText("\r\n" + func);
-						}
-						break;
-					}
-					_bot.DelayStepQuest = 0;
-				}
-				if (_bot.EndQuest == 1)
-				{
-					if (_bot.DelayEndQuest >= 2)
-					{
-						RichTextBox_hienthiquest.AppendText("\r\nXong Quest");
-						Button_StartAutoQuest.Text = "Bắt đầu";
-						DataGridView1.Enabled = true;
-						ComboBox_Quest.Enabled = true;
-						_bot.Startautoquest = false;
-						_bot.EndQuest = 0;
-					}
-				}
-				else
-				{
-					if (!((_bot.DelayStepQuest >= 5) & (_bot.Battle == 0) & (aem.Count > 0)))
-					{
-						return;
-					}
-					_bot.DelayStepQuest = 0;
-					_QuestStep questStep2 = (_QuestStep)aem[aen - 1];
-					string func2 = questStep2._Func;
-					int num3 = questStep2._id;
-					int index2 = questStep2._index;
-					if (Operators.CompareString(func2, "warp", false) == 0)
-					{
-						int num4 = num3;
-						if (num4 == _bot.Data_Player._MapId)
-						{
-							DataGridView1.Rows[index2].Cells[1].Style.BackColor = Color.LightPink;
-							DataGridView1.Rows[index2].Cells[1].Selected = true;
-							DataGridView1.FirstDisplayedScrollingRowIndex = index2;
-							RichTextBox_hienthiquest.AppendText("\r\n" + func2 + " " + num3);
-						}
-						else
-						{
-							_bot.atw = 1;
-							_bot.AutoWarptoMap = num3.ToString();
-							_bot.AutoWarp(_bot.AutoWarptoMap);
-							DataGridView1.Rows[index2].Cells[1].Style.BackColor = Color.LightPink;
-							DataGridView1.Rows[index2].Cells[1].Selected = true;
-							DataGridView1.FirstDisplayedScrollingRowIndex = index2;
-							RichTextBox_hienthiquest.AppendText("\r\n" + func2 + " " + num3);
-						}
-					}
-				}
-			}
-		}
-
-		private void ap(object A_0, EventArgs A_1)
-		{
-			checked
-			{
-				try
-				{
-					_bot.DelayStepQuest++;
-					if (_bot.EndQuest == 1)
-					{
-						_bot.DelayEndQuest++;
-					}
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-				}
-			}
-		}
-
-		private void ao(object A_0, EventArgs A_1)
-		{
-			_bot.ToolStripTextBox_KenhPassword = ToolStripTextBox_KenhPassword.Text;
-		}
-
-		private void an(object A_0, EventArgs A_1)
-		{
-		}
-
-		private void am(object A_0, EventArgs A_1)
-		{
-		}
-
-		private void al(object A_0, EventArgs A_1)
-		{
-			if (_bot == null)
-			{
-				return;
-			}
-			checked
-			{
-				if (_bot.skill_buonban > 0)
-				{
-					int num = Conversions.ToInteger(TextBox_ShopAddId.Text);
-					int num2 = Conversions.ToInteger(TextBox_ShopAddPrice.Text);
-					string text = "Không biết tên!!!";
-					if (Items.Data_Items.ContainsKey(num))
-					{
-						if (ListView_Shop.Items.Count < _bot.skill_buonban + 3)
-						{
-							if (ListView_Shop.Items.Count > 0)
-							{
-								try
-								{
-									ListViewItem listViewItem = ListView_Shop.FindItemWithText(num.ToString(), false, 0);
-									if (listViewItem.Text.Length > 0)
-									{
-										Interaction.MsgBox("Vật phẩm đã tồn tại!!!");
-									}
-									return;
-								}
-								catch (Exception ex)
-								{
-									ProjectData.SetProjectError(ex);
-									Exception ex2 = ex;
-									ProjectData.ClearProjectError();
-								}
-							}
-							text = Items.Data_Items[num]._Name;
-							ListViewItem listViewItem2 = ListView_Shop.Items.Add(Conversions.ToString(num));
-							listViewItem2.SubItems.Add(text);
-							listViewItem2.SubItems.Add(Conversions.ToString(num2));
-						}
-						else
-						{
-							Interaction.MsgBox("Thuật buôn bán cấp " + _bot.skill_buonban + " chỉ bán được " + (_bot.skill_buonban + 3) + " đồ !!!");
-						}
-					}
-					else
-					{
-						Interaction.MsgBox("Không có vật phẩm này!!!");
-					}
-				}
-				else
-				{
-					Interaction.MsgBox("Chưa học thuật buôn bán!!!");
-				}
-			}
-		}
-
-		private void ak(object A_0, EventArgs A_1)
-		{
-			if (_bot == null)
-			{
-				return;
-			}
-			string left = Button_Shop_Start.Text;
-			checked
-			{
-				if (Operators.CompareString(left, "Bày bán", false) == 0)
-				{
-					if (_bot.ComboBox_Port != 0)
-					{
-						Interaction.MsgBox("Bạn chỉ có thể sử dụng ở kênh 0!");
-					}
-					else if (ListView_Shop.Items.Count == 0)
-					{
-						Interaction.MsgBox("Chưa có đồ để bán!");
-					}
-					else
-					{
-						if (ListView_Shop.Items.Count <= 0)
-						{
-							return;
-						}
-						if (_bot.List_ShopItem.Count > 0)
-						{
-							_bot.List_ShopItem.Clear();
-						}
-						int num = ListView_Shop.Items.Count - 1;
-						for (int i = 0; i <= num; i++)
-						{
-							foreach (_Data._Tuido value2 in _bot.Data_Tuido.Values)
-							{
-								int num2 = value2._Id;
-								if (num2 == Conversions.ToInteger(ListView_Shop.Items[i].Text))
-								{
-									Items.ShopItem value = new Items.ShopItem
-									{
-										_Id = num2,
-										_Name = ListView_Shop.Items[i].SubItems[1].Text,
-										_Stt = value2._Stt,
-										_Price = Conversions.ToInteger(ListView_Shop.Items[i].SubItems[2].Text)
-									};
-									if (!_bot.List_ShopItem.ContainsKey(value2._Stt))
-									{
-										_bot.List_ShopItem.Add(value2._Stt, value);
-									}
-								}
-							}
-						}
-						if (_bot.List_ShopItem.Count <= 0)
-						{
-							return;
-						}
-						_bot.List_ShopType = 1;
-						_bot.List_ShopName = "";
-						try
-						{
-							if (ComboBox_ShopType.SelectedItem.ToString().Length > 0)
-							{
-								_bot.List_ShopType = ComboBox_ShopType.SelectedIndex;
-							}
-						}
-						catch (Exception ex)
-						{
-							ProjectData.SetProjectError(ex);
-							Exception ex2 = ex;
-							ProjectData.ClearProjectError();
-						}
-						if (TextBox_ShopName.TextLength > 0)
-						{
-							_bot.List_ShopName = TextBox_ShopName.Text;
-						}
-						_bot.Shop_Opening();
-					}
-				}
-				else
-				{
-					_bot.Shop_Closing();
-				}
-			}
-		}
-
-		private void aj(object A_0, EventArgs A_1)
-		{
-			checked
-			{
-				try
-				{
-					int num = Conversions.ToInteger(Interaction.InputBox("Nhập giá muốn bán", "Lưu ý giá gồm các chữ số, lớn hơn 1 và nhỏ hơn 2 tỷ", "1"));
-					string text = "Không biết tên!!!";
-					if (num <= 0)
-					{
-						return;
-					}
-					int num2 = _bot.Data_Tuido[_Homdo_slot_select]._Id;
-					if (!((num2 > 0) & Items.Data_Items.ContainsKey(num2)))
-					{
-						return;
-					}
-					if (ListView_Shop.Items.Count < _bot.skill_buonban + 3)
-					{
-						if (ListView_Shop.Items.Count > 0)
-						{
-							try
-							{
-								ListViewItem listViewItem = ListView_Shop.FindItemWithText(num2.ToString(), false, 0);
-								if (listViewItem.Text.Length > 0)
-								{
-									Interaction.MsgBox("Vật phẩm đã tồn tại!!!");
-								}
-								return;
-							}
-							catch (Exception ex)
-							{
-								ProjectData.SetProjectError(ex);
-								Exception ex2 = ex;
-								ProjectData.ClearProjectError();
-							}
-						}
-						text = Items.Data_Items[num2]._Name;
-						ListViewItem listViewItem2 = ListView_Shop.Items.Add(Conversions.ToString(num2));
-						listViewItem2.SubItems.Add(text);
-						listViewItem2.SubItems.Add(Conversions.ToString(num));
-					}
-					else
-					{
-						Interaction.MsgBox("Thuật buôn bán cấp " + _bot.skill_buonban + " chỉ bán được " + (_bot.skill_buonban + 3) + " đồ !!!");
-					}
-				}
-				catch (Exception ex3)
-				{
-					ProjectData.SetProjectError(ex3);
-					Exception ex4 = ex3;
-					ProjectData.ClearProjectError();
-				}
-			}
-		}
-
-		private void ai(object A_0, EventArgs A_1)
-		{
-		}
-
-		private void ah(object A_0, EventArgs A_1)
-		{
-		}
-
-		private void ag(object A_0, EventArgs A_1)
-		{
-			Timer_QC.Interval = Convert.ToInt32(NumericUpDown_sendpacket.Value);
-			try
-			{
-				if (_bot != null && _bot._Proxy && (CheckBox_QC.Checked & (TextBox_idQC.Text.Length > 0)))
-				{
-					int num = Conversions.ToInteger(TextBox_idQC.Text);
-					byte[] array = API.hexstringtobyte(Conversions.ToInteger(TextBox_idQC.Text).ToString("X12"));
-					byte[] bytes = new byte[6]
-					{
-						array[5],
-						array[4],
-						array[3],
-						array[2],
-						array[1],
-						array[0]
-					};
-					_bot.SendPacket(API.hexstringtobyte("F44409000B0204" + API.bytestohexstring(bytes)));
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		public void LoadLanguage()
-		{
-			ComboBox_kenh.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "ComboBox_kenh", "");
-			TabPage3.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "TabPage3", "");
-			CheckBox_Pet_ChangeTG.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_Pet_ChangeTG", "");
-			CheckBox_Char_ChangeTG.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_Char_ChangeTG", "");
-			CheckBox_LeaderDissNotEnough.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_LeaderDissNotEnough", "");
-			GroupBox8.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox8", "");
-			CheckBox_AutoClickNPC.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_AutoClickNPC", "");
-			Label53.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label53", "");
-			Label52.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label52", "");
-			Label47.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label47", "");
-			Label48.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label48", "");
-			CheckBox_AutoRevival.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_AutoRevival", "");
-			CheckBox_AutoFlee_Party.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_AutoFlee_Party", "");
-			CheckBox_AutoFlee_Sp.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_AutoFlee_Sp", "");
-			Label62.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label62", "");
-			Label54.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label54", "");
-			Label49.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label49", "");
-			Label50.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label50", "");
-			Button_StartAutoQuest.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_StartAutoQuest", "");
-			Button_warp.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_warp", "");
-			Label_PlayerCount.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label_PlayerCount", "");
-			TabPage7.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "TabPage7", "");
-			GroupBox_disconnect.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox_disconnect", "");
-			CheckBox_DisExp.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_DisExp", "");
-			RadioButton_DCmemout.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "RadioButton_DCmemout", "");
-			RadioButton_DCLeaderOut.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "RadioButton_DCLeaderOut", "");
-			CheckBox_DCAfter1MinNoBattle.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_DCAfter1MinNoBattle", "");
-			GroupBox9.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox9", "");
-			Label79.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label79", "");
-			Label13.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label13", "");
-			Label77.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label77", "");
-			GroupBox_Basic.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox_Basic", "");
-			CheckBox_AutoUsePT.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_AutoUsePT", "");
-			CheckBox_AutoEquitExp.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_AutoEquitExp", "");
-			CheckBox_CatPet.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_CatPet", "");
-			RadioButton_MemberRequestParty.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "RadioButton_MemberRequestParty", "");
-			RadioButton_LeaderRequestParty.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "RadioButton_LeaderRequestParty", "");
-			CheckBox_ClearGhost.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_ClearGhost", "");
-			TabPage8.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "TabPage8", "");
-			GroupBox3.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox3", "");
-			Label25.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label25", "");
-			Label33.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label33", "");
-			CheckBox_TL_mem1.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_TL_mem1", "");
-			Label32.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label32", "");
-			CheckBox_TL_mem2.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_TL_mem2", "");
-			Label36.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label36", "");
-			CheckBox_TL_mem3.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_TL_mem3", "");
-			CheckBox_TL_pet2.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_TL_pet2", "");
-			CheckBox_TL_pet1.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_TL_pet1", "");
-			CheckBox_TL_mem4.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_TL_mem4", "");
-			GroupBox2.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox2", "");
-			CheckBox_AutoEat.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_AutoEat", "");
-			Label45.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label45", "");
-			Label46.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label46", "");
-			Label7.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label7", "");
-			Label5.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label5", "");
-			TabPage2.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "TabPage2", "");
-			TabPage11.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "TabPage11", "");
-			GroupBox5.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox5", "");
-			CheckBox_DropMineWood.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_DropMineWood", "");
-			Button_AddIdDrop.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_AddIdDrop", "");
-			TabPage12.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "TabPage12", "");
-			GroupBox6.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox6", "");
-			CheckBox_ContributeMineWood.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_ContributeMineWood", "");
-			Button_AddIdContribute.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_AddIdContribute", "");
-			TabPage1.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "TabPage1", "");
-			GroupBox7.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox7", "");
-			Label75.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label75", "");
-			CheckBox_SendMineWood.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_SendMineWood", "");
-			Button_AddIdSend.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_AddIdSend", "");
-			TabPage5.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "TabPage5", "");
-			GroupBox10.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox10", "");
-			CheckBox_SellMineWood.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_SellMineWood", "");
-			Button_AddIdSell.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_AddIdSell", "");
-			GroupBox4.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox4", "");
-			CheckBox_AutoPickup.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_AutoPickup", "");
-			GroupBox11.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox11", "");
-			Label86.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label86", "");
-			Label87.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label87", "");
-			Label90.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label90", "");
-			Label91.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label91", "");
-			CheckBox_OpenMachine.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_OpenMachine", "");
-			Label8.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label8", "");
-			Label_BDY.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label_BDY", "");
-			Label4.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label4", "");
-			GroupBox_Bot.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox_Bot", "");
-			CheckBox_QuestProtect.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_QuestProtect", "");
-			CheckBox_autosell.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_autosell", "");
-			CheckBox_TuLenNgua.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_TuLenNgua", "");
-			Button_bot.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_bot", "");
-			Label51.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Label51", "");
-			CheckBox_Bee.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_Bee", "");
-			Button_warp2.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_warp2", "");
-			Button_walk.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_walk", "");
-			GroupBox_team.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "GroupBox_team", "");
-			Button_OutParty.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_OutParty", "");
-			Button_InviteParty.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_InviteParty", "");
-			Button_RequestParty.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_RequestParty", "");
-			StatusBar1.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "StatusBar1", "");
-			CheckBox_Reconnect.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_Reconnect", "");
-			Button_BattleInfo.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "Button_BattleInfo", "");
-			CheckBox_Autosort.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_Autosort", "");
-			CheckBox_DCFullHomDo.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Language", "CheckBox_DCFullHomDo", "");
-		}
-
-		private void e(object A_0, MouseEventArgs A_1)
-		{
-			if (A_1.Button == MouseButtons.Left)
-			{
-				try
-				{
-					Bitmap bmp;
-					checked
-					{
-						if ((A_1.X > 0) & (A_1.Y > 0))
-						{
-							_bot.Walk((int)Math.Round((double)A_1.X * 6.666666), (int)Math.Round((double)A_1.Y * 6.6666666));
-						}
-						bmp = (Bitmap)_map.Clone();
-					}
-					int num = _bot.Data_Player._MapX / 20;
-					int num2 = _bot.Data_Player._MapY / 20;
-					bmp = API.ResizeImage(bmp, num, num2, Color.Red);
-					PictureBox1.Width = bmp.Width;
-					PictureBox1.Height = bmp.Height;
-					PictureBox1.Image = bmp;
-					return;
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-					return;
-				}
-			}
-			if (A_1.Button != MouseButtons.Right)
-			{
-			}
-		}
-
-		private void af(object A_0, EventArgs A_1)
-		{
-			if (_bot == null || _bot.logined != 1)
-			{
-				return;
-			}
-			if (ComboBox_Mini_Warp.Items.Count > 0)
-			{
-				ComboBox_Mini_Warp.Items.Clear();
-			}
-			if (_bot.listquest_Done.Count <= 0)
-			{
-				return;
-			}
-			checked
-			{
-				int num = _bot.listquest_Done.Count - 1;
-				for (int i = 0; i <= num; i++)
-				{
-					int key = Conversions.ToInteger(_bot.listquest_Done[i]);
-					if (Ground.Data_Warps_QuestID.ContainsKey(key))
-					{
-						int key2 = Ground.Data_Warps_QuestID[key];
-						if (Ground.Data_Warps.ContainsKey(key2))
-						{
-							int num2 = Ground.Data_Warps[key2];
-							ComboBox_Mini_Warp.Items.Add(Conversions.ToString(num2) + "  " + MapNames.Data_MapNames[num2]);
-						}
-					}
-				}
-			}
-		}
-
-		private void ae(object A_0, EventArgs A_1)
-		{
-			if (_bot == null || _bot.logined != 1)
-			{
-				return;
-			}
-			try
-			{
-				string[] array = (string[])NewLateBinding.LateGet(ComboBox_Mini_Warp.SelectedItem, null, "Split", new object[1] { "  " }, null, null, null);
-				int num = Conversions.ToInteger(array[0]);
-				if (Ground.Data_Warps_MapID.ContainsKey(num))
-				{
-					int num2 = Ground.Data_Warps_MapID[num];
-					string packet = "4401" + API.Int32ToHex2(num) + num2.ToString("X2");
-					_bot.SendPacket(API.hexstringtobyte(API.Packet_Maker(packet)));
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void ad(object A_0, EventArgs A_1)
-		{
-			Interaction.MsgBox("Các hàm có thể sư dụng:\r\n\r\nwarp x       (x là mapid )\r\nwarpid x     (x là id)\r\nclick x      (x là id npc click)\r\nmenu x       (x là số trả lời câu hỏi)\r\ncatpet       (cất pet đi)\r\nxuatchien x  (x là id pet xuất chiến)\r\nend          (kết thúc)");
-		}
-
-		private void ac(object A_0, EventArgs A_1)
-		{
-			if (ListView_Quest.Items.Count > 0)
-			{
-				ListView_Quest.Items.Clear();
-			}
-			if (_bot == null || _bot.logined != 1)
-			{
-				return;
-			}
-			checked
-			{
-				try
-				{
-					if (_bot.listquest_Done.Count > 0)
-					{
-						int num = _bot.listquest_Done.Count - 1;
-						for (int i = 0; i <= num; i++)
-						{
-							int num2 = Conversions.ToInteger(_bot.listquest_Done[i]);
-							switch (Ground.Data_Marks_Name.ContainsKey(num2))
-							{
-							case true:
-							{
-								ListViewItem listViewItem2 = ListView_Quest.Items.Add(Ground.Data_Marks_Name[num2]);
-								listViewItem2.UseItemStyleForSubItems = false;
-								break;
-							}
-							case false:
-							{
-								ListViewItem listViewItem = ListView_Quest.Items.Add(Conversions.ToString(num2));
-								listViewItem.UseItemStyleForSubItems = false;
-								break;
-							}
-							}
-						}
-					}
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-				}
-				try
-				{
-					if (_bot.listquest_Doing.Count <= 0)
-					{
-						return;
-					}
-					int num3 = _bot.listquest_Doing.Count - 1;
-					for (int j = 0; j <= num3; j++)
-					{
-						int key = Conversions.ToInteger(_bot.listquest_Doing[j]);
-						bool flag = Ground.Data_Marks_Name.ContainsKey(key);
-						if (flag)
-						{
-							ListViewItem listViewItem3 = ListView_Quest.Items.Add(Ground.Data_Marks_Name[key]);
-							listViewItem3.UseItemStyleForSubItems = false;
-							listViewItem3.SubItems[0].ForeColor = Color.RoyalBlue;
-						}
-					}
-				}
-				catch (Exception ex3)
-				{
-					ProjectData.SetProjectError(ex3);
-					Exception ex4 = ex3;
-					ProjectData.ClearProjectError();
-				}
-			}
-		}
-
-		private void ab(object A_0, EventArgs A_1)
-		{
-			ArrayList arrayList = new ArrayList(new int[8] { 10325, 10327, 10329, 10361, 10807, 10529, 10385, 10565 });
-			string text = "";
-			checked
-			{
-				int num = arrayList.Count - 1;
-				for (int i = 0; i <= num; i++)
-				{
-					int num2 = Conversions.ToInteger(arrayList[i]);
-					text = ((!_bot.listquest_Done.Contains(num2)) ? (text + Ground.Data_Marks_Name[num2] + "\t [No]\r\n") : (text + Ground.Data_Marks_Name[num2] + "\t [Yes]\r\n"));
-				}
-				Interaction.MsgBox(text);
-			}
-		}
-
-		private void aa(object A_0, EventArgs A_1)
-		{
-			if (_bot != null)
-			{
-				if (_petSelect != _bot.PetBattle)
-				{
-					_bot.SendPacket(API.hexstringtobyte("F44406001301" + API.Int32ToHex2(_bot.Data_PetsInfo[_petSelect]._Id) + "0000"));
-				}
-				else
-				{
-					_bot.SendPacket(API.hexstringtobyte("F44402001302"));
-				}
-			}
-		}
-
-		private void d(object A_0, MouseEventArgs A_1)
-		{
-			try
-			{
-				Bitmap bitmap = (Bitmap)NewLateBinding.LateGet(A_0, null, "BackgroundImage", new object[0], null, null, null);
-				int num = 0;
-				int num2 = bitmap.Height / 3;
-				int num3 = bitmap.Width;
-				int num4 = bitmap.Height / 3;
-				Rectangle srcRect = new Rectangle(num, num2, num3, num4);
-				Bitmap image = bitmap;
-				Bitmap bitmap2 = new Bitmap(srcRect.Width, srcRect.Height);
-				using (Graphics graphics = Graphics.FromImage(bitmap2))
-				{
-					graphics.DrawImage(image, new Rectangle(0, 0, srcRect.Width, srcRect.Height), srcRect, GraphicsUnit.Pixel);
-				}
-				NewLateBinding.LateSet(A_0, null, "Image", new object[1] { bitmap2 }, null, null);
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void c(object A_0, MouseEventArgs A_1)
-		{
-			try
-			{
-				Bitmap bitmap = (Bitmap)NewLateBinding.LateGet(A_0, null, "BackgroundImage", new object[0], null, null, null);
-				int num = 0;
-				int num2;
-				int num3;
-				checked
-				{
-					num2 = unchecked(bitmap.Height / 3) * 2;
-					num3 = bitmap.Width;
-				}
-				int num4 = bitmap.Height / 3;
-				Rectangle srcRect = new Rectangle(num, num2, num3, num4);
-				Bitmap image = bitmap;
-				Bitmap bitmap2 = new Bitmap(srcRect.Width, srcRect.Height);
-				using (Graphics graphics = Graphics.FromImage(bitmap2))
-				{
-					graphics.DrawImage(image, new Rectangle(0, 0, srcRect.Width, srcRect.Height), srcRect, GraphicsUnit.Pixel);
-				}
-				NewLateBinding.LateSet(A_0, null, "Image", new object[1] { bitmap2 }, null, null);
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void z(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				NewLateBinding.LateSet(A_0, null, "Image", new object[1], null, null);
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void b(object A_0, MouseEventArgs A_1)
-		{
-			try
-			{
-				NewLateBinding.LateSet(A_0, null, "Image", new object[1], null, null);
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void y(object A_0, EventArgs A_1)
-		{
-			int num = 0;
-			int num2;
-			do
-			{
-				num = checked(num + 1);
-				switch (_petSelect)
-				{
-				case 1:
-					_petSelect = 4;
-					break;
-				case 2:
-					_petSelect = 1;
-					break;
-				case 3:
-					_petSelect = 2;
-					break;
-				case 4:
-					_petSelect = 3;
-					break;
-				}
-				num2 = Conversions.ToInteger(_bot.get_DataPets(_petSelect, _Data.Type_Pets._Id));
-			}
-			while (num2 == 0 && num < 5);
-		}
-
-		private void x(object A_0, EventArgs A_1)
-		{
-			int num = 0;
-			int num2;
-			do
-			{
-				num = checked(num + 1);
-				switch (_petSelect)
-				{
-				case 1:
-					_petSelect = 2;
-					break;
-				case 2:
-					_petSelect = 3;
-					break;
-				case 3:
-					_petSelect = 4;
-					break;
-				case 4:
-					_petSelect = 1;
-					break;
-				}
-				num2 = Conversions.ToInteger(_bot.get_DataPets(_petSelect, _Data.Type_Pets._Id));
-			}
-			while (num2 == 0 && num < 5);
-		}
-
-		private void w(object A_0, EventArgs A_1)
-		{
-			if (!((_Tuideo_slot_select < 1) | (_Tuideo_slot_select > 25)))
-			{
-				_Data._Tuideo tuideo = _bot.Data_Tuideo[_Tuideo_slot_select];
-				int num = tuideo._Id;
-				if (num > 0)
-				{
-					int stt = tuideo._Stt;
-					_bot.SendPacket(API.hexstringtobyte("F44403001725" + stt.ToString("X2")));
-				}
-			}
-		}
-
-		private void v(object A_0, EventArgs A_1)
-		{
-			if (!((_Tuideo_slot_select < 1) | (_Tuideo_slot_select > 25)))
-			{
-				int num = _bot.Data_Tuideo[_Tuideo_slot_select]._Id;
-				if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListDrop.Contains(num))
-				{
-					_bot.Data_ListDrop.Add(num);
-					ListView_AutoDrop.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				}
-			}
-		}
-
-		private void u(object A_0, EventArgs A_1)
-		{
-			if (!((_Tuideo_slot_select < 1) | (_Tuideo_slot_select > 25)))
-			{
-				int num = _bot.Data_Tuideo[_Tuideo_slot_select]._Id;
-				if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListContribute.Contains(num))
-				{
-					_bot.Data_ListContribute.Add(num);
-					ListView_AutoContribute.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				}
-			}
-		}
-
-		private void t(object A_0, EventArgs A_1)
-		{
-			if (!((_Tuideo_slot_select < 1) | (_Tuideo_slot_select > 25)))
-			{
-				int num = _bot.Data_Tuideo[_Tuideo_slot_select]._Id;
-				if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListSend.Contains(num))
-				{
-					_bot.Data_ListSend.Add(num);
-					ListView_AutoSend.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				}
-			}
-		}
-
-		private void s(object A_0, EventArgs A_1)
-		{
-			if (!((_Tuideo_slot_select < 1) | (_Tuideo_slot_select > 25)))
-			{
-				int num = _bot.Data_Tuideo[_Tuideo_slot_select]._Id;
-				if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListSell.Contains(num))
-				{
-					_bot.Data_ListSell.Add(num);
-					ListView_AutoSell.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				}
-			}
-		}
-
-		private void r(object A_0, EventArgs A_1)
-		{
-			if (((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25)) || _bot == null || _bot.logined != 1 || _Homdo_slot_select <= 0)
-			{
-				return;
-			}
-			try
-			{
-				int num = Conversions.ToInteger(ToolStripTextBox_SendBDY_Id.Text);
-				if (num > 0)
-				{
-					int idBDY = 0;
-					int num2 = 1;
-					do
-					{
-						if (_bot._list_BDY.Contains(_bot.Data_PetsInfo[num2]._Id))
-						{
-							idBDY = _bot.Data_PetsInfo[num2]._Id;
-							break;
-						}
-						num2 = checked(num2 + 1);
-					}
-					while (num2 <= 4);
-					_Data._Tuido tuido = _bot.Data_Tuido[_Homdo_slot_select];
-					int stt = tuido._Stt;
-					int num3 = tuido._Id;
-					int count = tuido._Sl;
-					if (num3 > 0)
-					{
-						_bot.SendItem(idBDY, num, stt, count);
-					}
-				}
-				else
-				{
-					API.AddColorText(rtbsystem, "Nhân vật hiện không có !!! Không thể gửi đồ.", Color.Black);
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void q(object A_0, EventArgs A_1)
-		{
-			if (!((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25)))
-			{
-				_Data._Tuido tuido = _bot.Data_Tuido[_Homdo_slot_select];
-				int num = tuido._Id;
-				if (num > 0)
-				{
-					int stt = tuido._Stt;
-					_bot.SendPacket(API.hexstringtobyte("F44403001724" + stt.ToString("X2")));
-				}
-			}
-		}
-
-		private void p(object A_0, EventArgs A_1)
-		{
-			if (!((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25)))
-			{
-				int num = _bot.Data_Tuido[_Homdo_slot_select]._Id;
-				if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListDrop.Contains(num))
-				{
-					_bot.Data_ListDrop.Add(num);
-					ListView_AutoDrop.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				}
-			}
-		}
-
-		private void o(object A_0, EventArgs A_1)
-		{
-			if (!((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25)))
-			{
-				int num = _bot.Data_Tuido[_Homdo_slot_select]._Id;
-				if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListContribute.Contains(num))
-				{
-					_bot.Data_ListContribute.Add(num);
-					ListView_AutoContribute.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				}
-			}
-		}
-
-		private void n(object A_0, EventArgs A_1)
-		{
-			if (!((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25)))
-			{
-				int num = _bot.Data_Tuido[_Homdo_slot_select]._Id;
-				if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListSend.Contains(num))
-				{
-					_bot.Data_ListSend.Add(num);
-					ListView_AutoSend.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				}
-			}
-		}
-
-		private void m(object A_0, EventArgs A_1)
-		{
-			if (!((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25)))
-			{
-				int num = _bot.Data_Tuido[_Homdo_slot_select]._Id;
-				if (((num > 0) & Items.Data_Items.ContainsKey(num)) && !_bot.Data_ListSell.Contains(num))
-				{
-					_bot.Data_ListSell.Add(num);
-					ListView_AutoSell.Items.Add(Conversions.ToString(num)).SubItems.Add(e(num));
-				}
-			}
-		}
-
-		private void l(object A_0, EventArgs A_1)
-		{
-			if ((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25))
-			{
-				return;
-			}
-			_Data._Tuido tuido = _bot.Data_Tuido[_Homdo_slot_select];
-			if (!Items.Data_Items.ContainsKey(tuido._Id))
-			{
-				return;
-			}
-			if (Items.Data_Items[tuido._Id]._Loai == 0)
-			{
-				if (tuido._Sl > 1)
-				{
-					int count = 1;
-					try
-					{
-						count = Conversions.ToInteger(Interaction.InputBox("Nhập số lượng."));
-					}
-					catch (Exception ex)
-					{
-						ProjectData.SetProjectError(ex);
-						Exception ex2 = ex;
-						ProjectData.ClearProjectError();
-					}
-					_bot.CharEquit(tuido._Stt, count);
-				}
-				else
-				{
-					_bot.CharEquit(tuido._Stt, 1);
-				}
-			}
-			else
-			{
-				_bot.CharEquit(tuido._Stt, 1);
-			}
-		}
-
-		private void k(object A_0, EventArgs A_1)
-		{
-			if ((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25))
-			{
-				return;
-			}
-			_Data._Tuido tuido = _bot.Data_Tuido[_Homdo_slot_select];
-			if (!Items.Data_Items.ContainsKey(tuido._Id))
-			{
-				return;
-			}
-			if (Items.Data_Items[tuido._Id]._Loai == 0)
-			{
-				if (tuido._Sl > 1)
-				{
-					int count = 1;
-					try
-					{
-						count = Conversions.ToInteger(Interaction.InputBox("Nhập số lượng."));
-					}
-					catch (Exception ex)
-					{
-						ProjectData.SetProjectError(ex);
-						Exception ex2 = ex;
-						ProjectData.ClearProjectError();
-					}
-					_bot.PetEquit_bySlot(tuido._Stt, count, _petSelect);
-				}
-				else
-				{
-					_bot.PetEquit_bySlot(tuido._Stt, 1, _petSelect);
-				}
-			}
-			else
-			{
-				_bot.PetEquit_bySlot(tuido._Stt, 1, _petSelect);
-			}
-		}
-
-		private void a(object A_0, MouseEventArgs A_1)
-		{
-			switch (A_1.Button)
-			{
-			case MouseButtons.Left:
-			{
-				int num2 = 1;
-				object left2 = NewLateBinding.LateGet(A_0, null, "name", new object[0], null, null, null);
-				if (Operators.ConditionalCompareObjectEqual(left2, PictureBox_char_add_int.Name, false))
-				{
-					if (_bot.Data_Player._Point > 0)
-					{
-						byte[] packet7 = API.hexstringtobyte("F4440A00080100001B" + num2.ToString("X2") + "00000000");
-						_bot.SendPacket(packet7);
-					}
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left2, PictureBox_char_add_atk.Name, false))
-				{
-					if (_bot.Data_Player._Point > 0)
-					{
-						byte[] packet8 = API.hexstringtobyte("F4440A00080100001C" + num2.ToString("X2") + "00000000");
-						_bot.SendPacket(packet8);
-					}
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left2, PictureBox_char_add_def.Name, false))
-				{
-					if (_bot.Data_Player._Point > 0)
-					{
-						byte[] packet9 = API.hexstringtobyte("F4440A00080100001D" + num2.ToString("X2") + "00000000");
-						_bot.SendPacket(packet9);
-					}
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left2, PictureBox_char_add_hpx.Name, false))
-				{
-					if (_bot.Data_Player._Point > 0)
-					{
-						byte[] packet10 = API.hexstringtobyte("F4440A00080100001F" + num2.ToString("X2") + "00000000");
-						_bot.SendPacket(packet10);
-					}
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left2, PictureBox_char_add_spx.Name, false))
-				{
-					if (_bot.Data_Player._Point > 0)
-					{
-						byte[] packet11 = API.hexstringtobyte("F4440A000801000020" + num2.ToString("X2") + "00000000");
-						_bot.SendPacket(packet11);
-					}
-				}
-				else if (Operators.ConditionalCompareObjectEqual(left2, PictureBox_char_add_agi.Name, false) && _bot.Data_Player._Point > 0)
-				{
-					byte[] packet12 = API.hexstringtobyte("F4440A00080100001E" + num2.ToString("X2") + "00000000");
-					_bot.SendPacket(packet12);
-				}
-				break;
-			}
-			case MouseButtons.Right:
-				try
-				{
-					int num = Conversions.ToInteger(Interaction.InputBox("Nhập số point."));
-					object left = NewLateBinding.LateGet(A_0, null, "name", new object[0], null, null, null);
-					if (Operators.ConditionalCompareObjectEqual(left, PictureBox_char_add_int.Name, false))
-					{
-						if (_bot.Data_Player._Point > 0)
-						{
-							byte[] packet = API.hexstringtobyte("F4440A00080100001B" + num.ToString("X2") + "00000000");
-							_bot.SendPacket(packet);
-						}
-					}
-					else if (Operators.ConditionalCompareObjectEqual(left, PictureBox_char_add_atk.Name, false))
-					{
-						if (_bot.Data_Player._Point > 0)
-						{
-							byte[] packet2 = API.hexstringtobyte("F4440A00080100001C" + num.ToString("X2") + "00000000");
-							_bot.SendPacket(packet2);
-						}
-					}
-					else if (Operators.ConditionalCompareObjectEqual(left, PictureBox_char_add_def.Name, false))
-					{
-						if (_bot.Data_Player._Point > 0)
-						{
-							byte[] packet3 = API.hexstringtobyte("F4440A00080100001D" + num.ToString("X2") + "00000000");
-							_bot.SendPacket(packet3);
-						}
-					}
-					else if (Operators.ConditionalCompareObjectEqual(left, PictureBox_char_add_hpx.Name, false))
-					{
-						if (_bot.Data_Player._Point > 0)
-						{
-							byte[] packet4 = API.hexstringtobyte("F4440A00080100001F" + num.ToString("X2") + "00000000");
-							_bot.SendPacket(packet4);
-						}
-					}
-					else if (Operators.ConditionalCompareObjectEqual(left, PictureBox_char_add_spx.Name, false))
-					{
-						if (_bot.Data_Player._Point > 0)
-						{
-							byte[] packet5 = API.hexstringtobyte("F4440A000801000020" + num.ToString("X2") + "00000000");
-							_bot.SendPacket(packet5);
-						}
-					}
-					else if (Operators.ConditionalCompareObjectEqual(left, PictureBox_char_add_agi.Name, false) && _bot.Data_Player._Point > 0)
-					{
-						byte[] packet6 = API.hexstringtobyte("F4440A00080100001E" + num.ToString("X2") + "00000000");
-						_bot.SendPacket(packet6);
-					}
-					break;
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-					break;
-				}
-			}
-		}
-
-		private void j(object A_0, EventArgs A_1)
-		{
-			if ((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25))
-			{
-				return;
-			}
-			try
-			{
-				int num = 1;
-				_Data._Tuido tuido = _bot.Data_Tuido[_Homdo_slot_select];
-				if (tuido._Sl > 1)
-				{
-					num = Conversions.ToInteger(Interaction.InputBox("Nhập số lượng."));
-				}
-				if ((num > 0) & (tuido._Sl > 0))
-				{
-					if (num > tuido._Sl)
-					{
-						_bot.DropItem(tuido._Stt, tuido._Sl);
-					}
-					else
-					{
-						_bot.DropItem(tuido._Stt, num);
-					}
-				}
-			}
-			catch (Exception projectError)
-			{
-				ProjectData.SetProjectError(projectError);
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void i(object A_0, EventArgs A_1)
-		{
-			if (!((_Homdo_slot_select < 1) | (_Homdo_slot_select > 25)))
-			{
-				_Data._Tuido tuido = _bot.Data_Tuido[_Homdo_slot_select];
-				if (tuido._Id > 0)
-				{
-					_bot.ContributeItem(tuido._Stt);
-				}
-			}
-		}
-
-		private void h(object A_0, EventArgs A_1)
-		{
-		}
-
-		private void g(object A_0, EventArgs A_1)
-		{
-			if (_bot.logined == 1)
-			{
-				_bot.AutoSort_Tuido();
-			}
-		}
-
-		[SpecialName]
-		[DebuggerHidden]
-		[CompilerGenerated]
-		private void f(object A_0, EventArgs A_1)
-		{
-			a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
-		}
-
-		[SpecialName]
-		[DebuggerHidden]
-		[CompilerGenerated]
-		private void e(object A_0, EventArgs A_1)
-		{
-			a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
-		}
-
-		[SpecialName]
-		[CompilerGenerated]
-		[DebuggerHidden]
-		private void d(object A_0, EventArgs A_1)
-		{
-			a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
-		}
-
-		[SpecialName]
-		[CompilerGenerated]
-		[DebuggerHidden]
-		private void c(object A_0, EventArgs A_1)
-		{
-			a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
-		}
-
-		[SpecialName]
-		[CompilerGenerated]
-		[DebuggerHidden]
-		private void b(object A_0, EventArgs A_1)
-		{
-			a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
-		}
-
-		[SpecialName]
-		[CompilerGenerated]
-		[DebuggerHidden]
-		private void a(object A_0, EventArgs A_1)
-		{
-			a(RuntimeHelpers.GetObjectValue(A_0), (MouseEventArgs)A_1);
 		}
 	}
 }
