@@ -17,6 +17,11 @@ namespace Simple_Bot
 			public int _doben;
 
 			public PictureBox _photo;
+
+			// True once _photo.Image has been successfully set from Items.Data_Items for the current _id.
+			// Needed because Items.Data_Items/GetPicture's icon cache load on a background thread; without
+			// this, an id seen before that thread finishes would never get its icon retried.
+			public bool _iconResolved;
 		}
 
 		public struct Tuido_Info
@@ -28,6 +33,8 @@ namespace Simple_Bot
 			public int _count;
 
 			public Label _photo;
+
+			public bool _iconResolved;
 		}
 
 		public struct Tuideo_Info
@@ -39,6 +46,8 @@ namespace Simple_Bot
 			public int _count;
 
 			public Label _photo;
+
+			public bool _iconResolved;
 		}
 
 		public struct _QuestStep

@@ -643,7 +643,7 @@ namespace Simple_Bot
 						ProjectData.SetProjectError(ex);
 						Exception ex2 = ex;
 						ProjectData.ClearProjectError();
-						break;
+						continue;
 					}
 				}
 			}

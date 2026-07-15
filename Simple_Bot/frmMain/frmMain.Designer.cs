@@ -20,70 +20,9 @@ using Simple_Bot.Renderers;
 namespace Simple_Bot
 {
 	[DesignerGenerated]
-	public class frmMain : Form
+	public partial class frmMain : Form
 	{
-		public delegate void load1FileDelegate(string[] FileNames);
-
-		public delegate void load1File_botDelegate(string FileName, string _Name);
-
-		public delegate void UpdateMainGridDelegate(TcpClient _s);
-
-		[CompilerGenerated]
-		internal sealed class LoadConfigClosure
-		{
-			public _ClientBot a;
-
-			public LoadConfigClosure(LoadConfigClosure A_0)
-			{
-				if (A_0 != null)
-				{
-					a = A_0.a;
-				}
-			}
-
-			[SpecialName]
-			[DebuggerHidden]
-			internal void b(object A_0)
-			{
-				a.LoadConfig(Conversions.ToString(A_0));
-			}
-		}
-
-		[CompilerGenerated]
-		internal sealed class LoadDefaultConfigClosure
-		{
-			public _ClientBot a;
-
-			[SpecialName]
-			[DebuggerHidden]
-			internal void b(object A_0)
-			{
-				a.LoadConfig(Conversions.ToString(A_0));
-			}
-		}
-
-		[CompilerGenerated]
-		internal sealed class LoadConfigThreadClosure
-		{
-			public _ClientBot a;
-
-			public LoadConfigThreadClosure(LoadConfigThreadClosure A_0)
-			{
-				if (A_0 != null)
-				{
-					a = A_0.a;
-				}
-			}
-
-			[SpecialName]
-			[DebuggerHidden]
-			internal void b(object A_0)
-			{
-				a.LoadConfig_Thread((A_0 != null) ? ((API._Type_LoadConfig)A_0) : default(API._Type_LoadConfig));
-			}
-		}
-
-		private IContainer m_a;
+		private IContainer components;
 
 		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		[CompilerGenerated]
@@ -510,50 +449,6 @@ namespace Simple_Bot
 		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		private Panel bx;
 
-		private IPAddress by;
-
-		private IPEndPoint bz;
-
-		private IPEndPoint b0;
-
-		private Socket b1;
-
-		public TreeView treeview1;
-
-		private int b2;
-
-		private Thread b3;
-
-		public string[] SkillIni;
-
-		public string[] PriestIni;
-
-		public string[] Priest_XIni;
-
-		public string[] DoorIni;
-
-		public string[] MapIni;
-
-		public string status;
-
-		public int loaded;
-
-		public const int MOD_ALT = 1;
-
-		public const int MOD_SHIFT = 4;
-
-		public const int MOD_CTRL = 2;
-
-		public const int MOD_WIN = 8;
-
-		public const int WM_HOTKEY = 786;
-
-		public int team;
-
-		private string b4;
-
-		public TcpListener server1;
-
 		internal virtual System.Windows.Forms.Timer Timer1
 		{
 			[CompilerGenerated]
@@ -565,7 +460,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ad;
+				EventHandler value2 = Timer1_Tick;
 				System.Windows.Forms.Timer timer = this.m_b;
 				if (timer != null)
 				{
@@ -636,7 +531,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = aa;
+				EventHandler value2 = ToolStripMenuItem_hide_Click;
 				ToolStripMenuItem toolStripMenuItem = this.m_f;
 				if (toolStripMenuItem != null)
 				{
@@ -677,7 +572,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ac;
+				EventHandler value2 = ToolStripMenuItem_exit_Click;
 				ToolStripMenuItem toolStripMenuItem = this.m_h;
 				if (toolStripMenuItem != null)
 				{
@@ -718,7 +613,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = a;
+				EventHandler value2 = ToolStripMenuItem_home_Click;
 				ToolStripMenuItem toolStripMenuItem = this.m_j;
 				if (toolStripMenuItem != null)
 				{
@@ -759,7 +654,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = ab;
+				EventHandler value2 = ToolStripMenuItem_about_Click;
 				ToolStripMenuItem toolStripMenuItem = this.m_l;
 				if (toolStripMenuItem != null)
 				{
@@ -800,7 +695,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				CancelEventHandler value2 = c;
+				CancelEventHandler value2 = OpenFileDialog_newtabconfig_FileOk;
 				OpenFileDialog openFileDialog = this.m_n;
 				if (openFileDialog != null)
 				{
@@ -826,7 +721,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = z;
+				EventHandler value2 = Timer2_Tick;
 				System.Windows.Forms.Timer timer = this.m_o;
 				if (timer != null)
 				{
@@ -867,7 +762,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				CancelEventHandler value2 = e;
+				CancelEventHandler value2 = ContextMenuStrip_Bot_Opening;
 				ContextMenuStrip contextMenuStrip = this.m_q;
 				if (contextMenuStrip != null)
 				{
@@ -893,7 +788,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = y;
+				EventHandler value2 = ToolStripMenuItem_Login_Click;
 				ToolStripMenuItem toolStripMenuItem = this.m_r;
 				if (toolStripMenuItem != null)
 				{
@@ -934,7 +829,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = u;
+				EventHandler value2 = ToolStripMenuItem_Bot_Click;
 				ToolStripMenuItem toolStripMenuItem = this.m_t;
 				if (toolStripMenuItem != null)
 				{
@@ -960,7 +855,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = x;
+				EventHandler value2 = ToolStripComboBox_bot_SelectedIndexChanged;
 				ToolStripComboBox toolStripComboBox = this.m_u;
 				if (toolStripComboBox != null)
 				{
@@ -986,7 +881,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				CancelEventHandler value2 = d;
+				CancelEventHandler value2 = OpenFileDialog_setting_FileOk;
 				OpenFileDialog openFileDialog = this.m_v;
 				if (openFileDialog != null)
 				{
@@ -1012,7 +907,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				MouseEventHandler value2 = a;
+				MouseEventHandler value2 = ListView1_MouseDoubleClick;
 				ListView listView = this.m_w;
 				if (listView != null)
 				{
@@ -1113,7 +1008,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = v;
+				EventHandler value2 = ToolStripMenuItem_battle_Click;
 				ToolStripMenuItem toolStripMenuItem = this.m_ac;
 				if (toolStripMenuItem != null)
 				{
@@ -1154,7 +1049,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = ae;
 				if (toolStripMenuItem != null)
 				{
@@ -1180,7 +1075,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = af;
 				if (toolStripMenuItem != null)
 				{
@@ -1206,7 +1101,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = ag;
 				if (toolStripMenuItem != null)
 				{
@@ -1232,7 +1127,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = ah;
 				if (toolStripMenuItem != null)
 				{
@@ -1258,7 +1153,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = ai;
 				if (toolStripMenuItem != null)
 				{
@@ -1284,7 +1179,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = aj;
 				if (toolStripMenuItem != null)
 				{
@@ -1310,7 +1205,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = ak;
 				if (toolStripMenuItem != null)
 				{
@@ -1336,7 +1231,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = al;
 				if (toolStripMenuItem != null)
 				{
@@ -1362,7 +1257,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = am;
 				if (toolStripMenuItem != null)
 				{
@@ -1388,7 +1283,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = t;
+				EventHandler value2 = TeamToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = an;
 				if (toolStripMenuItem != null)
 				{
@@ -1414,7 +1309,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = ao;
 				if (toolStripMenuItem != null)
 				{
@@ -1440,7 +1335,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = ap;
 				if (toolStripMenuItem != null)
 				{
@@ -1466,7 +1361,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = aq;
 				if (toolStripMenuItem != null)
 				{
@@ -1492,7 +1387,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = ar;
 				if (toolStripMenuItem != null)
 				{
@@ -1518,7 +1413,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = @as;
 				if (toolStripMenuItem != null)
 				{
@@ -1544,7 +1439,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = at;
 				if (toolStripMenuItem != null)
 				{
@@ -1570,7 +1465,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = au;
 				if (toolStripMenuItem != null)
 				{
@@ -1596,7 +1491,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = av;
 				if (toolStripMenuItem != null)
 				{
@@ -1622,7 +1517,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = aw;
 				if (toolStripMenuItem != null)
 				{
@@ -1648,7 +1543,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = s;
+				EventHandler value2 = TeamToolStripMenuItem1_Click;
 				ToolStripMenuItem toolStripMenuItem = ax;
 				if (toolStripMenuItem != null)
 				{
@@ -1734,7 +1629,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = r;
+				EventHandler value2 = Save1FileToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = a2;
 				if (toolStripMenuItem != null)
 				{
@@ -1760,7 +1655,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = q;
+				EventHandler value2 = Load1FileToolStripMenuItem_Click;
 				ToolStripMenuItem toolStripMenuItem = a3;
 				if (toolStripMenuItem != null)
 				{
@@ -1786,7 +1681,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				CancelEventHandler value2 = b;
+				CancelEventHandler value2 = OpenFileDialog_Load1File_FileOk;
 				OpenFileDialog openFileDialog = a4;
 				if (openFileDialog != null)
 				{
@@ -1812,7 +1707,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				CancelEventHandler value2 = a;
+				CancelEventHandler value2 = SaveFileDialog_1file_FileOk;
 				SaveFileDialog saveFileDialog = a5;
 				if (saveFileDialog != null)
 				{
@@ -1853,7 +1748,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = p;
+				EventHandler value2 = ToolStripMenuItem_Delete_Click;
 				ToolStripMenuItem toolStripMenuItem = a7;
 				if (toolStripMenuItem != null)
 				{
@@ -1954,7 +1849,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = o;
+				EventHandler value2 = ToolStripMenuItem_lv_CheckedChanged;
 				ToolStripMenuItem toolStripMenuItem = bd;
 				if (toolStripMenuItem != null)
 				{
@@ -1980,7 +1875,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = n;
+				EventHandler value2 = ToolStripMenuItem_Mapid_CheckedChanged;
 				ToolStripMenuItem toolStripMenuItem = be;
 				if (toolStripMenuItem != null)
 				{
@@ -2006,7 +1901,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = m;
+				EventHandler value2 = ToolStripMenuItem_Mapname_CheckedChanged;
 				ToolStripMenuItem toolStripMenuItem = bf;
 				if (toolStripMenuItem != null)
 				{
@@ -2032,7 +1927,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = l;
+				EventHandler value2 = ToolStripMenuItem_Mini_CheckedChanged;
 				ToolStripMenuItem toolStripMenuItem = bg;
 				if (toolStripMenuItem != null)
 				{
@@ -2058,7 +1953,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = k;
+				EventHandler value2 = ToolStripMenuItem_Status_CheckedChanged;
 				ToolStripMenuItem toolStripMenuItem = bh;
 				if (toolStripMenuItem != null)
 				{
@@ -2084,7 +1979,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = j;
+				EventHandler value2 = ToolStripMenuItem_Expmin_CheckedChanged;
 				ToolStripMenuItem toolStripMenuItem = bi;
 				if (toolStripMenuItem != null)
 				{
@@ -2110,7 +2005,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = i;
+				EventHandler value2 = ToolStripMenuItem_BattleCount_CheckedChanged;
 				ToolStripMenuItem toolStripMenuItem = bj;
 				if (toolStripMenuItem != null)
 				{
@@ -2196,7 +2091,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = h;
+				EventHandler value2 = CheckBox_Proxy_CheckedChanged;
 				CheckBox checkBox = bo;
 				if (checkBox != null)
 				{
@@ -2222,8 +2117,8 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = g;
-				EventHandler value3 = f;
+				EventHandler value2 = ComboBox_Server_SelectedIndexChanged;
+				EventHandler value3 = ComboBox_Server_DropDown;
 				ComboBox comboBox = bp;
 				if (comboBox != null)
 				{
@@ -2251,7 +2146,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = d;
+				EventHandler value2 = CheckBox_SVip_CheckedChanged;
 				CheckBox checkBox = bq;
 				if (checkBox != null)
 				{
@@ -2277,7 +2172,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = e;
+				EventHandler value2 = ComboBox_Style_SelectedIndexChanged;
 				ComboBox comboBox = br;
 				if (comboBox != null)
 				{
@@ -2303,7 +2198,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = c;
+				EventHandler value2 = ComboBox_Horse_SelectedIndexChanged;
 				ComboBox comboBox = bs;
 				if (comboBox != null)
 				{
@@ -2359,7 +2254,7 @@ namespace Simple_Bot
 			[CompilerGenerated]
 			set
 			{
-				EventHandler value2 = b;
+				EventHandler value2 = ToolStripComboBox1_SelectedIndexChanged;
 				ToolStripComboBox toolStripComboBox = bv;
 				if (toolStripComboBox != null)
 				{
@@ -2404,33 +2299,14 @@ namespace Simple_Bot
 			}
 		}
 
-		public frmMain()
-		{
-			base.Load += Form2_Load;
-			base.FormClosing += Form2_Closing;
-			by = IPAddress.Any;
-			bz = new IPEndPoint(by, 6421);
-			b0 = new IPEndPoint(IPAddress.Parse("159.196.179.229"), 6421);
-			b1 = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-			treeview1 = new TreeView();
-			b2 = 0;
-			b3 = null;
-			status = "";
-			loaded = 0;
-			team = 0;
-			b4 = "127.0.0.1";
-			server1 = null;
-			b();
-		}
 
-		[DebuggerNonUserCode]
 		protected override void Dispose(bool disposing)
 		{
 			try
 			{
-				if (disposing && this.m_a != null)
+				if (disposing && this.components != null)
 				{
-					this.m_a.Dispose();
+					this.components.Dispose();
 				}
 			}
 			finally
@@ -2439,14 +2315,13 @@ namespace Simple_Bot
 			}
 		}
 
-		[DebuggerStepThrough]
-		private void b()
+		private void InitializeComponent()
 		{
-			this.m_a = new Container();
+			this.components = new Container();
 			Vs2010MenuStripRenderer vs2010MenuStripRenderer = new Vs2010MenuStripRenderer();
 			Vs2010DefaultMenuStripColorTable colorTable = new Vs2010DefaultMenuStripColorTable();
 			ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(frmMain));
-			Timer1 = new System.Windows.Forms.Timer(this.m_a);
+			Timer1 = new System.Windows.Forms.Timer(this.components);
 			MenuStrip1 = new Vs2010MenuStrip();
 			ToolStripMenuItem_system = new ToolStripMenuItem();
 			ToolStripMenuItem_hide = new ToolStripMenuItem();
@@ -2494,7 +2369,7 @@ namespace Simple_Bot
 			ToolStripMenuItem_MainStatus = new ToolStripMenuItem();
 			ToolStripComboBox1 = new ToolStripComboBox();
 			OpenFileDialog_newtabconfig = new OpenFileDialog();
-			ContextMenuStrip_Bot = new ContextMenuStrip(this.m_a);
+			ContextMenuStrip_Bot = new ContextMenuStrip(this.components);
 			ToolStripMenuItem_Login = new ToolStripMenuItem();
 			ToolStripSeparator3 = new ToolStripSeparator();
 			ToolStripComboBox_bot = new ToolStripComboBox();
@@ -2503,7 +2378,7 @@ namespace Simple_Bot
 			ToolStripMenuItem_battle = new ToolStripMenuItem();
 			ToolStripSeparator5 = new ToolStripSeparator();
 			ToolStripMenuItem_Delete = new ToolStripMenuItem();
-			Timer2 = new System.Windows.Forms.Timer(this.m_a);
+			Timer2 = new System.Windows.Forms.Timer(this.components);
 			SaveFileDialog_setting = new SaveFileDialog();
 			OpenFileDialog_setting = new OpenFileDialog();
 			ListView1 = new ListView();
@@ -2520,7 +2395,7 @@ namespace Simple_Bot
 			ColumnHeader_petName = new ColumnHeader();
 			ColumnHeader_PetLv = new ColumnHeader();
 			ColumnHeader_Team = new ColumnHeader();
-			ToolTip_info = new ToolTip(this.m_a);
+			ToolTip_info = new ToolTip(this.components);
 			OpenFileDialog_Load1File = new OpenFileDialog();
 			SaveFileDialog_1file = new SaveFileDialog();
 			CheckBox_Proxy = new CheckBox();
@@ -2960,1552 +2835,6 @@ namespace Simple_Bot
 			Panel1.PerformLayout();
 			ResumeLayout(false);
 			PerformLayout();
-		}
-
-		[DllImport("User32.dll")]
-		public static extern int RegisterHotKey(IntPtr hwnd, int id, int fsModifiers, int vk);
-
-		[DllImport("User32.dll")]
-		public static extern int UnregisterHotKey(IntPtr hwnd, int id);
-
-		protected override void WndProc(ref Message m)
-		{
-			if (m.Msg == 786)
-			{
-				string left = m.WParam.ToString();
-				if (Operators.CompareString(left, Conversions.ToString(1989), false) == 0)
-				{
-					Show();
-				}
-			}
-			base.WndProc(ref m);
-		}
-
-		public void Form2_Load(object sender, EventArgs e)
-		{
-			RegisterHotKey(base.Handle, 1989, 1, 90);
-			object obj = MyProject.Application.Info.DirectoryPath + "\\Setting\\";
-			object objectValue = RuntimeHelpers.GetObjectValue(Interaction.CreateObject("Scripting.FileSystemObject"));
-			object[] obj2 = new object[1] { obj };
-			object[] array = obj2;
-			bool[] obj3 = new bool[1] { true };
-			bool[] array2 = obj3;
-			object operand = NewLateBinding.LateGet(objectValue, null, "FolderExists", obj2, null, null, obj3);
-			if (array2[0])
-			{
-				obj = RuntimeHelpers.GetObjectValue(array[0]);
-			}
-			if (Conversions.ToBoolean(Operators.NotObject(operand)))
-			{
-				object[] obj4 = new object[1] { obj };
-				array = obj4;
-				bool[] obj5 = new bool[1] { true };
-				array2 = obj5;
-				NewLateBinding.LateCall(objectValue, null, "CreateFolder", obj4, null, null, obj5, true);
-				if (array2[0])
-				{
-					obj = RuntimeHelpers.GetObjectValue(array[0]);
-				}
-			}
-			bool missingData = false;
-			if (!File.Exists("data\\priest.ini"))
-			{
-				Interaction.MsgBox("Tập tin [priest.ini] không tồn tại, ứng dụng tự thoát!");
-				missingData = true;
-				Close();
-			}
-			if (!File.Exists("data\\priest_x.ini"))
-			{
-				Interaction.MsgBox("Tập tin [priest_x.ini] không tồn tại, ứng dụng tự thoát!");
-				missingData = true;
-				Close();
-			}
-			if (!File.Exists("data\\skill.dat"))
-			{
-				Interaction.MsgBox("Tập tin [data\\skill.dat] không tồn tại, ứng dụng tự thoát!");
-				missingData = true;
-				Close();
-			}
-			if (!File.Exists("data\\map.ini"))
-			{
-				Interaction.MsgBox("Tập tin [map.ini] không tồn tại, ứng dụng tự thoát!");
-				missingData = true;
-				Close();
-			}
-			if (!File.Exists("data\\door.ini"))
-			{
-				Interaction.MsgBox("Tập tin [door.ini] không tồn tại, ứng dụng tự thoát!");
-				missingData = true;
-				Close();
-			}
-			if (!File.Exists("data\\mapname.ini"))
-			{
-				Interaction.MsgBox("Tập tin [mapname.ini] không tồn tại, ứng dụng tự thoát!");
-				missingData = true;
-				Close();
-			}
-			if (!File.Exists("data\\npc.dat"))
-			{
-				Interaction.MsgBox("Tập tin [data\\npc.dat] không tồn tại, ứng dụng tự thoát!");
-				missingData = true;
-				Close();
-			}
-			if (!File.Exists("data\\item.dat"))
-			{
-				Interaction.MsgBox("Tập tin [item.dat] không tồn tại, ứng dụng tự thoát!");
-				missingData = true;
-				Close();
-			}
-			if (missingData)
-			{
-				return;
-			}
-			Thread thread = new Thread(LoadDataNpcs);
-			thread.IsBackground = true;
-			thread.Start();
-			ToolStripComboBox1.SelectedIndex = API.Country;
-			int country = API.Country;
-			if (country == 1)
-			{
-				API.Language_Path = MyProject.Application.Info.DirectoryPath + "\\Country\\THAI.ini";
-				if (File.Exists(API.Language_Path))
-				{
-					ToolStripMenuItem_system.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_system", "");
-					ToolStripMenuItem_hide.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_hide", "");
-					ToolStripMenuItem_exit.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_exit", "");
-					ToolStripMenuItem_newtab.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_newtab", "");
-					ToolStripMenuItem_info.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_info", "");
-					ToolStripMenuItem_home.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_home", "");
-					ToolStripMenuItem_about.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_about", "");
-					NewtabConfigToolStripMenuItem.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "NewtabConfigToolStripMenuItem", "");
-					Save1FileToolStripMenuItem.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "Save1FileToolStripMenuItem", "");
-					Load1FileToolStripMenuItem.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "Load1FileToolStripMenuItem", "");
-					ToolStripMenuItem2.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem2", "");
-					ToolStripMenuItem_thuoctinh.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_thuoctinh", "");
-					ToolStripMenuItem_lv.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_lv", "");
-					ToolStripMenuItem_Mapname.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_Mapname", "");
-					ToolStripMenuItem_Status.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_Status", "");
-					ToolStripMenuItem_BattleCount.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_BattleCount", "");
-					ToolStripMenuItem_PetName.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_PetName", "");
-					ToolStripMenuItem_PetLv.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ToolStripMenuItem_PetLv", "");
-					ColumnHeader_Name.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ColumnHeader_Name", "");
-					ColumnHeader_MapName.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ColumnHeader_MapName", "");
-					ColumnHeader_Status.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ColumnHeader_Status", "");
-					ColumnHeader_Battles.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ColumnHeader_Battles", "");
-					ColumnHeader_petName.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ColumnHeader_petName", "");
-					ColumnHeader_PetLv.Text = IniFile.ReadStringOrEmpty(API.Language_Path, "Main", "ColumnHeader_PetLv", "");
-				}
-			}
-		}
-
-		public void Form2_Closing(object sender, FormClosingEventArgs e)
-		{
-			UnregisterHotKey(base.Handle, 1989);
-			MsgBoxResult msgBoxResult = Interaction.MsgBox("Bạn có chắc chắn không?", MsgBoxStyle.YesNo, "Chú ý");
-			if (msgBoxResult == MsgBoxResult.No)
-			{
-				e.Cancel = true;
-			}
-		}
-
-		public void LoadDataNpcs()
-		{
-			GetPicture.GetLinks();
-			GetPicture.GetPicture_item();
-			status = "DataItems_Name loading...";
-			GetDataName.LoadDataItems_Name();
-			status = "DataNpcs_Name loading...";
-			GetDataName.LoadDataNpcs_Name();
-			status = "DataSkills_Name loading...";
-			GetDataName.LoadDataSkills_Name();
-			status = "DataTexps loading...";
-			Texps.LoadDataTexps();
-			status = "DataNpcs loading...";
-			Npcs.LoadDataNpcs();
-			status = "DataTalks loading...";
-			talk.LoadDataTalks();
-			NpcOnMap.LoadDataNpcOnMap();
-			status = "DataItems loading...";
-			Items.LoadDataItems();
-			status = "DataGround loading...";
-			Ground.LoadDataGrounds();
-			status = "DataAstrolabe loading...";
-			Astrolabes.LoadDataAstrolabes();
-			Thread thread = new Thread(Getskill);
-			thread.IsBackground = true;
-			thread.Start();
-		}
-
-		public void Getskill()
-		{
-			status = "load skill.dat";
-			Skills.LoadSkills();
-			Thread thread = new Thread(Getdoor);
-			thread.IsBackground = true;
-			thread.Start();
-		}
-
-		public void Getdoor()
-		{
-			Doors.LoadDoors();
-			Thread thread = new Thread(Getmap);
-			thread.IsBackground = true;
-			thread.Start();
-		}
-
-		public void Getmap()
-		{
-			status = "load map.ini";
-			if (File.Exists("data\\map.ini"))
-			{
-				MapIni = MyProject.Computer.FileSystem.ReadAllText("data\\map.ini").Split('\r', '\r');
-			}
-			Thread thread = new Thread(Getmapname);
-			thread.IsBackground = true;
-			thread.Start();
-		}
-
-		public void Getmapname()
-		{
-			status = "load mapname.ini";
-			MapNames.LoadMapNames();
-			Thread thread = new Thread(UpdateMap);
-			thread.IsBackground = true;
-			thread.Start();
-		}
-
-		public void UpdateMap()
-		{
-			treeview1.Nodes.Clear();
-			List<TreeNode> list = new List<TreeNode>();
-			int num = 0;
-			string[] mapIni = MapIni;
-			foreach (string text in mapIni)
-			{
-				num = checked(num + 1);
-				status = "[data\\map.ini] " + Strings.FormatPercent((double)num / (double)MapIni.Length).ToString();
-				string text2 = text.Replace("\r\n", "").Replace("\r", "").Replace("\n", "");
-				if (text2.Length == 0)
-				{
-					break;
-				}
-				string[] array = text2.Split('\t');
-				string text3 = Conversions.ToString(Conversions.ToInteger(array[0]));
-				string text4 = Conversions.ToString(Conversions.ToInteger(array[1]));
-				TreeNode treeNode = new TreeNode();
-				treeNode.Name = text3;
-				treeNode.Text = text3;
-				TreeNode treeNode2 = new TreeNode();
-				treeNode2.Name = text4;
-				treeNode2.Text = text4 + " - " + Getmapname(Conversions.ToInteger(text4));
-				if (treeview1.Nodes.Count == 0)
-				{
-					treeview1.Nodes.Add(treeNode);
-					list.Add(treeNode);
-					treeview1.Update();
-				}
-				foreach (TreeNode item in list)
-				{
-					if (Operators.CompareString(item.Name, text3, false) == 0)
-					{
-						list.Add(treeNode2);
-						item.Nodes.Add(treeNode2);
-						treeview1.Update();
-						break;
-					}
-				}
-			}
-			loaded = 1;
-		}
-
-		public string Getmapname(int id)
-		{
-			string result = "id";
-			if (MapNames.Data_MapNames.ContainsKey(id))
-			{
-				result = MapNames.Data_MapNames[id];
-			}
-			return result;
-		}
-
-		private void ad(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				if (status.Length > 0)
-				{
-					Text = "Simple Bot - TS online - " + status;
-					status = "";
-				}
-				if (loaded == 1)
-				{
-					Text = "Simple Bot - TS online - " + base.ProductVersion + " - http://tsonline.xyz/";
-					Timer1.Enabled = false;
-					MenuStrip1.Enabled = true;
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void ac(object A_0, EventArgs A_1)
-		{
-			Close();
-		}
-
-		private void ab(object A_0, EventArgs A_1)
-		{
-			MyProject.Forms.About.ShowDialog();
-		}
-
-		private void aa(object A_0, EventArgs A_1)
-		{
-			Interaction.MsgBox("Alt+z để hiện");
-			Hide();
-		}
-
-		private void z(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				if (ToolStripMenuItem_MainStatus.Checked)
-				{
-					foreach (ListViewItem item in ListView1.Items)
-					{
-						try
-						{
-							_ClientBot clientBot = (_ClientBot)item.Tag;
-							switch (clientBot.logined)
-							{
-							case 0:
-								if (item.SubItems[1].BackColor != SystemColors.Window)
-								{
-									item.SubItems[1].BackColor = SystemColors.Window;
-								}
-								if (Operators.CompareString(item.SubItems[1].Text, "", false) != 0)
-								{
-									item.SubItems[1].Text = "";
-								}
-								if (Operators.CompareString(item.SubItems[6].Text, "OFF", false) != 0)
-								{
-									item.SubItems[6].Text = "OFF";
-								}
-								if ((Operators.CompareString(item.SubItems[7].Text, clientBot.Status, false) != 0) & ToolStripMenuItem_Status.Checked)
-								{
-									item.SubItems[7].Text = clientBot.Status;
-								}
-								break;
-							case 1:
-							{
-								if ((clientBot.Data_Player._LeaderId == clientBot.Data_Player._Id) & (clientBot.Data_Player._Id > 0))
-								{
-									if (item.BackColor != Color.LightBlue)
-									{
-										item.BackColor = Color.LightBlue;
-									}
-								}
-								else if (item.BackColor != SystemColors.Window)
-								{
-									item.BackColor = SystemColors.Window;
-								}
-								if (Operators.CompareString(item.SubItems[0].Text, clientBot.idlogin.ToString(), false) != 0)
-								{
-									item.SubItems[0].Text = clientBot.idlogin.ToString();
-								}
-								if (Operators.CompareString(item.SubItems[1].Text, clientBot.Data_Player._Name, false) != 0)
-								{
-									item.SubItems[1].Text = clientBot.Data_Player._Name;
-								}
-								int reborn = clientBot.Data_Player._Reborn;
-								if (reborn == 3)
-								{
-									if ((Operators.CompareString(item.SubItems[2].Text, "200 + " + Conversions.ToString(clientBot.Data_Player._Lv2), false) != 0) & ToolStripMenuItem_lv.Checked)
-									{
-										item.SubItems[2].Text = "200 + " + Conversions.ToString(clientBot.Data_Player._Lv2);
-									}
-								}
-								else if ((Conversions.ToDouble(item.SubItems[2].Text) != (double)clientBot.Data_Player._Lv) & ToolStripMenuItem_lv.Checked)
-								{
-									item.SubItems[2].Text = Conversions.ToString(clientBot.Data_Player._Lv);
-								}
-								if ((Conversions.ToDouble(item.SubItems[3].Text) != (double)clientBot.Data_Player._MapId) & ToolStripMenuItem_Mapid.Checked)
-								{
-									item.SubItems[3].Text = Conversions.ToString(clientBot.Data_Player._MapId);
-								}
-								if ((Operators.CompareString(item.SubItems[4].Text, clientBot.Data_Player._MapName, false) != 0) & ToolStripMenuItem_Mapname.Checked)
-								{
-									item.SubItems[4].Text = clientBot.Data_Player._MapName;
-								}
-								if ((Operators.CompareString(item.SubItems[5].Text, clientBot._Mini_Status, false) != 0) & ToolStripMenuItem_Mini.Checked)
-								{
-									item.SubItems[5].Text = clientBot._Mini_Status;
-								}
-								if (Operators.CompareString(item.SubItems[6].Text, clientBot.Online, false) != 0)
-								{
-									if (ToolStripMenuItem_thuoctinh.Checked)
-									{
-										item.SubItems[1].BackColor = API.GetColor(clientBot.Data_Player._ThuocTinh);
-									}
-									item.SubItems[6].Text = clientBot.Online;
-								}
-								if ((Operators.CompareString(item.SubItems[7].Text, clientBot.Status, false) != 0) & ToolStripMenuItem_Status.Checked)
-								{
-									item.SubItems[7].Text = clientBot.Status;
-								}
-								if ((Conversions.ToDouble(item.SubItems[8].Text) != (double)clientBot.Data_Player._ExpMin) & ToolStripMenuItem_Expmin.Checked)
-								{
-									item.SubItems[8].Text = Conversions.ToString(clientBot.Data_Player._ExpMin);
-								}
-								if ((Conversions.ToDouble(item.SubItems[9].Text) != (double)clientBot.battlecount) & ToolStripMenuItem_BattleCount.Checked)
-								{
-									item.SubItems[9].Text = Conversions.ToString(clientBot.battlecount);
-								}
-								if ((Operators.CompareString(item.SubItems[10].Text, clientBot.Data_PetInfo._Name, false) != 0) & ToolStripMenuItem_PetName.Checked)
-								{
-									item.SubItems[10].Text = clientBot.Data_PetInfo._Name;
-								}
-								if ((Conversions.ToDouble(item.SubItems[11].Text) != (double)clientBot.Data_PetInfo._Lv) & ToolStripMenuItem_PetLv.Checked)
-								{
-									item.SubItems[11].Text = Conversions.ToString(clientBot.Data_PetInfo._Lv);
-								}
-								break;
-							}
-							}
-						}
-						catch (Exception ex)
-						{
-							ProjectData.SetProjectError(ex);
-							Exception ex2 = ex;
-							ProjectData.ClearProjectError();
-						}
-					}
-				}
-				foreach (ListViewItem item2 in ListView1.Items)
-				{
-					try
-					{
-						_ClientBot clientBot2 = (_ClientBot)item2.Tag;
-						if (clientBot2._Proxy && clientBot2._Proxy_Disconnect)
-						{
-							ListView1.Items.Remove(item2);
-							break;
-						}
-					}
-					catch (Exception ex3)
-					{
-						ProjectData.SetProjectError(ex3);
-						Exception ex4 = ex3;
-						ProjectData.ClearProjectError();
-					}
-				}
-			}
-			catch (Exception ex5)
-			{
-				ProjectData.SetProjectError(ex5);
-				Exception ex6 = ex5;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void y(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				if (ListView1.Items.Count <= 0)
-				{
-					return;
-				}
-				_ClientBot clientBot = (_ClientBot)ListView1.SelectedItems[0].Tag;
-				if (clientBot != null)
-				{
-					if (clientBot.Disconnected == 1)
-					{
-						clientBot._Connect();
-					}
-					else
-					{
-						clientBot._Disconnect();
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void e(object A_0, CancelEventArgs A_1)
-		{
-			try
-			{
-				if (ListView1.Items.Count <= 0)
-				{
-					return;
-				}
-				_ClientBot clientBot = (_ClientBot)ListView1.SelectedItems[0].Tag;
-				if (clientBot == null)
-				{
-					return;
-				}
-				if (clientBot._Proxy)
-				{
-					ToolStripComboBox_bot.Visible = false;
-					ToolStripMenuItem_Bot.Visible = false;
-				}
-				else if (clientBot.bott == 0)
-				{
-					ToolStripMenuItem_Bot.Text = "Bắt đầu Bot";
-					if ((clientBot.Data_Player._LeaderId == clientBot.Data_Player._Id) | (clientBot.Data_Player._LeaderId == 0))
-					{
-						ToolStripComboBox_bot.Enabled = true;
-						ToolStripMenuItem_Bot.Enabled = true;
-						try
-						{
-							string[] files = Directory.GetFiles(MyProject.Application.Info.DirectoryPath + "\\QuestBot", "*.ini");
-							ToolStripComboBox_bot.Items.Clear();
-							string[] array = files;
-							foreach (string text in array)
-							{
-								ToolStripComboBox_bot.Items.Add(checked(text.Substring(text.LastIndexOf("\\") + 1, text.IndexOf(".") - text.LastIndexOf("\\") - 1)));
-							}
-							if (ToolStripComboBox_bot.Items.Count > 0)
-							{
-								ToolStripComboBox_bot.SelectedIndex = 0;
-							}
-						}
-						catch (Exception ex)
-						{
-							ProjectData.SetProjectError(ex);
-							Exception ex2 = ex;
-							ProjectData.ClearProjectError();
-						}
-					}
-					else
-					{
-						ToolStripComboBox_bot.Enabled = false;
-						ToolStripMenuItem_Bot.Enabled = false;
-					}
-				}
-				else if (clientBot.bott == 1)
-				{
-					ToolStripMenuItem_Bot.Text = "Dừng Bot";
-					ToolStripComboBox_bot.Enabled = false;
-				}
-				else if (clientBot.bott == 2)
-				{
-					ToolStripMenuItem_Bot.Text = "Bắt đầu Bot";
-					ToolStripComboBox_bot.Enabled = false;
-				}
-				if (clientBot.Disconnected == 0)
-				{
-					ToolStripMenuItem_Login.Text = "Thoát";
-				}
-				else
-				{
-					ToolStripMenuItem_Login.Text = "Đăng nhập";
-				}
-			}
-			catch (Exception ex3)
-			{
-				ProjectData.SetProjectError(ex3);
-				Exception ex4 = ex3;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void x(object A_0, EventArgs A_1)
-		{
-			string text = MyProject.Application.Info.DirectoryPath + "\\QuestBot\\" + ToolStripComboBox_bot.Text + ".ini";
-			if (!File.Exists(text))
-			{
-				return;
-			}
-			checked
-			{
-				try
-				{
-					if (ListView1.Items.Count <= 0)
-					{
-						return;
-					}
-					_ClientBot clientBot = (_ClientBot)ListView1.SelectedItems[0].Tag;
-					if (clientBot == null)
-					{
-						return;
-					}
-					clientBot.packetbot = "";
-					clientBot.idmapbot = 0;
-					string[] array = MyProject.Computer.FileSystem.ReadAllText(text).Split('\r');
-					for (int i = 0; i < array.Length; i++)
-					{
-						string text2 = array[i];
-						text2 = text2.Replace("\n", "");
-						if (text2.StartsWith("warpid "))
-						{
-							int num = Conversions.ToInteger(text2.Substring(7));
-							clientBot.packetbot = clientBot.packetbot + "F44404001408" + num.ToString("X2") + "00";
-						}
-						else if (text2.StartsWith("[") & text2.EndsWith("]"))
-						{
-							clientBot.idmapbot = Conversions.ToInteger(text2.Replace("]", "").Replace("[", ""));
-						}
-						else if (text2.StartsWith("walk "))
-						{
-							string text3 = text2.Substring(5);
-							int num2 = Conversions.ToInteger(text3.Substring(0, text3.IndexOf(",")));
-							int num3 = Conversions.ToInteger(text3.Substring(text3.IndexOf(",") + 1));
-							string text4 = API.bytestohexstring(new byte[2]
-							{
-								API.hexstringtobyte(num2.ToString("X4"))[1],
-								API.hexstringtobyte(num2.ToString("X4"))[0]
-							});
-							string text5 = API.bytestohexstring(new byte[2]
-							{
-								API.hexstringtobyte(num3.ToString("X4"))[1],
-								API.hexstringtobyte(num3.ToString("X4"))[0]
-							});
-							clientBot.packetbot = clientBot.packetbot + "F4440900060105" + text4 + text5 + "47EB";
-						}
-						else if (text2.StartsWith("click "))
-						{
-							int num4 = Conversions.ToInteger(text2.Substring(6));
-							string text6 = API.Int32ToHex2(num4);
-							clientBot.packetbot = clientBot.packetbot + "F44404001401" + text6;
-						}
-						else if (text2.StartsWith("menu "))
-						{
-							int num5 = Conversions.ToInteger(text2.Substring(5)) + 29;
-							clientBot.packetbot = clientBot.packetbot + "F44403001409" + num5.ToString("X2");
-						}
-						else if (text2.StartsWith("send "))
-						{
-							int num6 = Conversions.ToInteger(text2.Substring(5));
-							string text7 = "";
-							int num7 = num6;
-							for (int j = 1; j <= num7; j++)
-							{
-								text7 += "F44402001406";
-							}
-							clientBot.packetbot += text7;
-						}
-						else if (text2.StartsWith("battle"))
-						{
-							break;
-						}
-					}
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-				}
-			}
-		}
-
-		private void w(object A_0, EventArgs A_1)
-		{
-			OpenFileDialog_setting.InitialDirectory = MyProject.Application.Info.DirectoryPath + "\\Setting\\";
-			OpenFileDialog_setting.ShowDialog();
-		}
-
-		private void d(object A_0, CancelEventArgs A_1)
-		{
-			string[] fileNames = OpenFileDialog_setting.FileNames;
-			foreach (string text in fileNames)
-			{
-				if (File.Exists(text))
-				{
-					string text2 = text.Substring(checked(text.LastIndexOf("\\") + 1));
-					text2 = text2.Replace(".lx", "");
-					if (!text.EndsWith(".lx"))
-					{
-					}
-				}
-			}
-		}
-
-		private void a(object A_0, MouseEventArgs A_1)
-		{
-			if (A_1.Button != MouseButtons.Left || ListView1.Items.Count <= 0)
-			{
-				return;
-			}
-			try
-			{
-				_ClientBot clientBot = (_ClientBot)ListView1.SelectedItems[0].Tag;
-				if (clientBot != null && clientBot.Setting_show == 0)
-				{
-					frmClient frmClient2 = new frmClient(clientBot);
-					ListView1.SelectedItems[0].SubItems[0].Tag = frmClient2;
-					frmClient2.Show();
-					clientBot.Setting_show = 1;
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void v(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				if (ListView1.Items.Count > 0)
-				{
-					_ClientBot _b = (_ClientBot)ListView1.SelectedItems[0].Tag;
-					if (_b != null && _b.battle_show == 0)
-					{
-						_b.battle_show = 1;
-						BattleInfo1 battleInfo = new BattleInfo1(ref _b);
-						ListView1.SelectedItems[0].SubItems[1].Tag = battleInfo;
-						battleInfo.Show();
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void u(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				if (ListView1.Items.Count <= 0)
-				{
-					return;
-				}
-				_ClientBot clientBot = (_ClientBot)ListView1.SelectedItems[0].Tag;
-				if (clientBot == null)
-				{
-					return;
-				}
-				if (clientBot.bott == 0)
-				{
-					clientBot.bott = 1;
-					if (clientBot.logined == 1)
-					{
-						clientBot._StartBot();
-					}
-				}
-				else if (clientBot.bott == 1)
-				{
-					clientBot.bott = 2;
-					if (clientBot.Battle == 0)
-					{
-						clientBot.ClickNPCId(99);
-					}
-				}
-				else if (clientBot.bott == 2)
-				{
-					clientBot.bott = 1;
-					if (clientBot.Battle == 0)
-					{
-						clientBot.ClickNPCId(99);
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void c(object A_0, CancelEventArgs A_1)
-		{
-			string[] fileNames = OpenFileDialog_newtabconfig.FileNames;
-			LoadConfigClosure closure = default(LoadConfigClosure);
-			foreach (string text in fileNames)
-			{
-				if (File.Exists(text) && text.EndsWith(".Ini"))
-				{
-					_ClientBot clientBot = new _ClientBot();
-					closure = new LoadConfigClosure(closure);
-					closure.a = clientBot;
-					Thread thread = new Thread(closure.b);
-					thread.IsBackground = true;
-					thread.Start(text);
-					ListViewItem listViewItem = ListView1.Items.Add(clientBot.idlogin.ToString());
-					listViewItem.UseItemStyleForSubItems = false;
-					listViewItem.SubItems.Add(clientBot.Data_Player._Name);
-					listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._Lv));
-					listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._MapId));
-					listViewItem.SubItems.Add(clientBot.Data_Player._MapName);
-					listViewItem.SubItems.Add("");
-					listViewItem.SubItems.Add(clientBot.Online.ToString());
-					listViewItem.SubItems.Add(clientBot.Status);
-					listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._ExpMin));
-					listViewItem.SubItems.Add(Conversions.ToString(clientBot.battlecount));
-					listViewItem.SubItems.Add(clientBot.Data_PetInfo._Name);
-					listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_PetInfo._Lv));
-					listViewItem.SubItems.Add(Conversions.ToString(team));
-					listViewItem.Tag = clientBot;
-				}
-			}
-		}
-
-		private void t(object A_0, EventArgs A_1)
-		{
-			team = Conversions.ToInteger(NewLateBinding.LateGet(A_0, null, "name", new object[0], null, null, null).ToString().Substring(4, 2)
-				.Replace("T", ""));
-			OpenFileDialog_newtabconfig.InitialDirectory = MyProject.Application.Info.DirectoryPath + "\\Setting\\";
-			OpenFileDialog_newtabconfig.ShowDialog();
-		}
-
-		private void s(object A_0, EventArgs A_1)
-		{
-			team = Conversions.ToInteger(NewLateBinding.LateGet(A_0, null, "name", new object[0], null, null, null).ToString().Substring(4, 2)
-				.Replace("T", ""));
-			_ClientBot clientBot = new _ClientBot();
-			_ClientBot a = clientBot;
-			Thread thread = new Thread([SpecialName] [DebuggerHidden] (object obj) =>
-			{
-				a.LoadConfig(Conversions.ToString(obj));
-			});
-			thread.IsBackground = true;
-			thread.Start("Setting\\default.Ini");
-			ListViewItem listViewItem = ListView1.Items.Add(clientBot.idlogin.ToString());
-			listViewItem.UseItemStyleForSubItems = false;
-			listViewItem.SubItems.Add(clientBot.Data_Player._Name);
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._Lv));
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._MapId));
-			listViewItem.SubItems.Add(clientBot.Data_Player._MapName);
-			listViewItem.SubItems.Add("");
-			listViewItem.SubItems.Add(clientBot.Online.ToString());
-			listViewItem.SubItems.Add(clientBot.Status);
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._ExpMin));
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.battlecount));
-			listViewItem.SubItems.Add(clientBot.Data_PetInfo._Name);
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_PetInfo._Lv));
-			listViewItem.SubItems.Add(Conversions.ToString(team));
-			listViewItem.Tag = clientBot;
-		}
-
-		private void r(object A_0, EventArgs A_1)
-		{
-			if (ListView1.Items.Count > 0)
-			{
-				SaveFileDialog_1file.InitialDirectory = MyProject.Application.Info.DirectoryPath + "\\Setting\\";
-				SaveFileDialog_1file.ShowDialog();
-			}
-		}
-
-		private void q(object A_0, EventArgs A_1)
-		{
-			OpenFileDialog_Load1File.InitialDirectory = MyProject.Application.Info.DirectoryPath + "\\Setting\\";
-			OpenFileDialog_Load1File.ShowDialog();
-		}
-
-		private void b(object A_0, CancelEventArgs A_1)
-		{
-			string[] fileNames = OpenFileDialog_Load1File.FileNames;
-			Thread thread = new Thread([SpecialName] [DebuggerHidden] (object obj) =>
-			{
-				add1file((string[])obj);
-			});
-			thread.IsBackground = true;
-			thread.Start(fileNames);
-		}
-
-		public void add1file(string[] FileNames)
-		{
-			Delegate method = new load1FileDelegate(add1file_adding);
-			Invoke(method, new object[1] { FileNames });
-		}
-
-		public void add1file_adding(string[] FileNames)
-		{
-			LoadConfigThreadClosure closure = default(LoadConfigThreadClosure);
-			foreach (string text in FileNames)
-			{
-				if (!File.Exists(text) || !text.EndsWith(".1file"))
-				{
-					continue;
-				}
-				string[] array = IniFile.ReadStringOrEmpty(text, "ListAccount", "Ids", "").Split(',');
-				if (array.Length <= 0)
-				{
-					continue;
-				}
-				string[] array2 = array;
-				foreach (string text2 in array2)
-				{
-					if (text2.Length > 0)
-					{
-						_ClientBot clientBot = new _ClientBot();
-						if (Operators.CompareString(IniFile.ReadStringOrEmpty(text, text2.ToString(), "_Team", ""), "", false) != 0)
-						{
-							API._Type_LoadConfig type_LoadConfig = new API._Type_LoadConfig
-							{
-								_path = text,
-								_name = text2
-							};
-							closure = new LoadConfigThreadClosure(closure);
-							closure.a = clientBot;
-							Thread thread = new Thread(closure.b);
-							thread.IsBackground = true;
-							thread.Start(type_LoadConfig);
-							ListViewItem listViewItem = ListView1.Items.Add(clientBot.idlogin.ToString());
-							listViewItem.UseItemStyleForSubItems = false;
-							listViewItem.SubItems.Add(clientBot.Data_Player._Name);
-							listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._Lv));
-							listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._MapId));
-							listViewItem.SubItems.Add(clientBot.Data_Player._MapName);
-							listViewItem.SubItems.Add("");
-							listViewItem.SubItems.Add(clientBot.Online.ToString());
-							listViewItem.SubItems.Add(clientBot.Status);
-							listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._ExpMin));
-							listViewItem.SubItems.Add(Conversions.ToString(clientBot.battlecount));
-							listViewItem.SubItems.Add(clientBot.Data_PetInfo._Name);
-							listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_PetInfo._Lv));
-							listViewItem.SubItems.Add(IniFile.ReadStringOrEmpty(text, text2.ToString(), "_Team", ""));
-							listViewItem.Tag = clientBot;
-						}
-					}
-					ListView1.Update();
-					Thread.Sleep(100);
-				}
-			}
-		}
-
-		private void a(object A_0, CancelEventArgs A_1)
-		{
-			string fileName = SaveFileDialog_1file.FileName;
-			string text = "";
-			foreach (ListViewItem item in ListView1.Items)
-			{
-				_ClientBot clientBot = (_ClientBot)item.Tag;
-				if (!clientBot._Proxy)
-				{
-					clientBot.SaveConfig(fileName, clientBot.idlogin.ToString());
-					text = text + "," + item.SubItems[0].Text;
-					IniFile.WriteString(fileName, clientBot.idlogin.ToString(), "_Team", item.SubItems[checked(ListView1.Columns.Count - 1)].Text);
-				}
-			}
-			IniFile.WriteString(fileName, "ListAccount", "Ids", text);
-		}
-
-		private void p(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				if (ListView1.Items.Count <= 0)
-				{
-					return;
-				}
-				_ClientBot clientBot = (_ClientBot)ListView1.SelectedItems[0].Tag;
-				if (clientBot != null)
-				{
-					MsgBoxResult msgBoxResult = Interaction.MsgBox("Bạn có chắc chắn muốn tắt bot của Id [" + Conversions.ToString(clientBot.idlogin) + "] không?", MsgBoxStyle.YesNo, "Cảnh báo!");
-					if (msgBoxResult == MsgBoxResult.No)
-					{
-						return;
-					}
-					clientBot.Deleted = 1;
-					clientBot.C_CheckBox_Reconnect = false;
-					clientBot._Disconnect();
-				}
-				ListView1.Items.Remove(ListView1.SelectedItems[0]);
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void o(object A_0, EventArgs A_1)
-		{
-			object left = NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null);
-			if (Operators.ConditionalCompareObjectEqual(left, true, false))
-			{
-				if (ListView1.Columns.Count > 2)
-				{
-					ListView1.Columns[2].Width = 36;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, false, false) && ListView1.Columns.Count > 2)
-			{
-				ListView1.Columns[2].Width = 0;
-			}
-		}
-
-		private void n(object A_0, EventArgs A_1)
-		{
-			object left = NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null);
-			if (Operators.ConditionalCompareObjectEqual(left, true, false))
-			{
-				if (ListView1.Columns.Count > 3)
-				{
-					ListView1.Columns[3].Width = 60;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, false, false) && ListView1.Columns.Count > 3)
-			{
-				ListView1.Columns[3].Width = 0;
-			}
-		}
-
-		private void m(object A_0, EventArgs A_1)
-		{
-			object left = NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null);
-			if (Operators.ConditionalCompareObjectEqual(left, true, false))
-			{
-				if (ListView1.Columns.Count > 4)
-				{
-					ListView1.Columns[4].Width = 140;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, false, false) && ListView1.Columns.Count > 4)
-			{
-				ListView1.Columns[4].Width = 0;
-			}
-		}
-
-		private void l(object A_0, EventArgs A_1)
-		{
-			object left = NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null);
-			if (Operators.ConditionalCompareObjectEqual(left, true, false))
-			{
-				if (ListView1.Columns.Count > 5)
-				{
-					ListView1.Columns[5].Width = 60;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, false, false) && ListView1.Columns.Count > 5)
-			{
-				ListView1.Columns[5].Width = 0;
-			}
-		}
-
-		private void k(object A_0, EventArgs A_1)
-		{
-			object left = NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null);
-			if (Operators.ConditionalCompareObjectEqual(left, true, false))
-			{
-				if (ListView1.Columns.Count > 6)
-				{
-					ListView1.Columns[7].Width = 163;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, false, false) && ListView1.Columns.Count > 6)
-			{
-				ListView1.Columns[7].Width = 0;
-			}
-		}
-
-		private void j(object A_0, EventArgs A_1)
-		{
-			object left = NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null);
-			if (Operators.ConditionalCompareObjectEqual(left, true, false))
-			{
-				if (ListView1.Columns.Count > 7)
-				{
-					ListView1.Columns[8].Width = 60;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, false, false) && ListView1.Columns.Count > 7)
-			{
-				ListView1.Columns[8].Width = 0;
-			}
-		}
-
-		private void i(object A_0, EventArgs A_1)
-		{
-			object left = NewLateBinding.LateGet(A_0, null, "Checked", new object[0], null, null, null);
-			if (Operators.ConditionalCompareObjectEqual(left, true, false))
-			{
-				if (ListView1.Columns.Count > 8)
-				{
-					ListView1.Columns[9].Width = 60;
-				}
-			}
-			else if (Operators.ConditionalCompareObjectEqual(left, false, false) && ListView1.Columns.Count > 8)
-			{
-				ListView1.Columns[9].Width = 0;
-			}
-		}
-
-		private void h(object A_0, EventArgs A_1)
-		{
-			switch (CheckBox_Proxy.Checked)
-			{
-			case true:
-				try
-				{
-					ComboBox_Server.Enabled = false;
-					IPAddress localaddr = IPAddress.Parse(b4);
-					try
-					{
-						server1 = new TcpListener(localaddr, 6414);
-						server1.Start(65535);
-						API.Proxy = true;
-					}
-					catch (Exception ex3)
-					{
-						ProjectData.SetProjectError(ex3);
-						Exception ex4 = ex3;
-						Interaction.MsgBox("Không thể tạo Proxy, có thể phần mềm khác đã tạo, vui lòng kiểm tra!!!");
-						CheckBox_Proxy.Checked = false;
-						ProjectData.ClearProjectError();
-						break;
-					}
-					Interaction.MsgBox("Tạo Proxy thành công!!!");
-					Thread thread = new Thread(GetConnect);
-					thread.IsBackground = true;
-					thread.Start();
-					break;
-				}
-				catch (Exception ex5)
-				{
-					ProjectData.SetProjectError(ex5);
-					Exception ex6 = ex5;
-					Interaction.MsgBox("Không thể tạo Proxy, có thể phần mềm khác đã tạo, vui lòng kiểm tra!!!");
-					ProjectData.ClearProjectError();
-					break;
-				}
-			case false:
-				try
-				{
-					ComboBox_Server.Enabled = true;
-					API.Proxy = false;
-					server1.Stop();
-					Interaction.MsgBox("Dừng Proxy thành công!!!");
-					break;
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-					break;
-				}
-			}
-		}
-
-		public void Connection(TcpClient _s)
-		{
-			_ClientBot clientBot = new _ClientBot(_s);
-			clientBot._Proxy = true;
-			clientBot.ComboBox_Port = 0;
-			ListViewItem listViewItem = ListView1.Items.Add(clientBot.idlogin.ToString());
-			listViewItem.UseItemStyleForSubItems = false;
-			listViewItem.SubItems.Add(clientBot.Data_Player._Name);
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._Lv));
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._MapId));
-			listViewItem.SubItems.Add(clientBot.Data_Player._MapName);
-			listViewItem.SubItems.Add("");
-			listViewItem.SubItems.Add(clientBot.Online.ToString());
-			listViewItem.SubItems.Add(clientBot.Status);
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._ExpMin));
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.battlecount));
-			listViewItem.SubItems.Add(clientBot.Data_PetInfo._Name);
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_PetInfo._Lv));
-			listViewItem.SubItems.Add(Conversions.ToString(team));
-			listViewItem.Tag = clientBot;
-		}
-
-		public void GetConnect()
-		{
-			Delegate method = new UpdateMainGridDelegate(Connection);
-			while (true)
-			{
-				try
-				{
-					TcpClient tcpClient = server1.AcceptTcpClient();
-					Invoke(method, tcpClient);
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-				}
-			}
-		}
-
-		private void g(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				string text = "server.ini";
-				if (File.Exists(text))
-				{
-					string[] array = MyProject.Computer.FileSystem.ReadAllText(text).Split('\r');
-					foreach (string text2 in array)
-					{
-						string[] array2 = text2.Split('*');
-						if (Operators.CompareString(ComboBox_Server.Text, array2[0], false) == 0)
-						{
-							API.ServerIp = array2[1];
-							switch (API.List_Ip_nts.Contains(API.ServerIp))
-							{
-							case true:
-								ComboBox_Style.Enabled = true;
-								ComboBox_Style.Visible = true;
-								CheckBox_SVip.Enabled = true;
-								CheckBox_SVip.Visible = true;
-								ComboBox_Horse.Enabled = true;
-								ComboBox_Horse.Visible = true;
-								Label1.Enabled = true;
-								Label1.Visible = true;
-								Label2.Enabled = true;
-								Label2.Visible = true;
-								break;
-							case false:
-								ComboBox_Style.Enabled = false;
-								ComboBox_Style.Visible = false;
-								CheckBox_SVip.Enabled = false;
-								CheckBox_SVip.Visible = false;
-								ComboBox_Horse.Enabled = false;
-								ComboBox_Horse.Visible = false;
-								Label1.Enabled = false;
-								Label1.Visible = false;
-								Label2.Enabled = false;
-								Label2.Visible = false;
-								break;
-							}
-							break;
-						}
-					}
-				}
-				else
-				{
-					Interaction.MsgBox("File server.ini không tồn tại");
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void f(object A_0, EventArgs A_1)
-		{
-			try
-			{
-				string text = "server.ini";
-				ComboBox_Server.Items.Clear();
-				if (File.Exists(text))
-				{
-					string[] array = MyProject.Computer.FileSystem.ReadAllText(text).Split('\r');
-					foreach (string text2 in array)
-					{
-						string[] array2 = text2.Split('*');
-						ComboBox_Server.Items.Add(array2[0]);
-					}
-				}
-				else
-				{
-					Interaction.MsgBox("File server.ini không tồn tại");
-				}
-			}
-			catch (Exception ex)
-			{
-				ProjectData.SetProjectError(ex);
-				Exception ex2 = ex;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		private void e(object A_0, EventArgs A_1)
-		{
-			switch (ComboBox_Style.Text)
-			{
-			case "None":
-				API.Style = 0;
-				break;
-			case "Set Cap":
-				API.Style = 1;
-				break;
-			case "Set Thor":
-				API.Style = 2;
-				break;
-			case "Set Iron":
-				API.Style = 3;
-				break;
-			case "Set Thai Duong":
-				API.Style = 4;
-				break;
-			}
-			a(API.Style);
-		}
-
-		private void a(int A_0)
-		{
-			foreach (ListViewItem item in ListView1.Items)
-			{
-				try
-				{
-					_ClientBot clientBot = (_ClientBot)item.Tag;
-					if (!(clientBot._Proxy & (clientBot.logined == 1) & API.List_Ip_nts.Contains(API.ServerIp)))
-					{
-						continue;
-					}
-					ArrayList arrayList = new ArrayList();
-					switch (A_0)
-					{
-					case 0:
-						arrayList = API.List_Style0;
-						break;
-					case 1:
-						arrayList = API.List_Style1;
-						break;
-					case 2:
-						arrayList = API.List_Style2;
-						break;
-					case 3:
-						arrayList = API.List_Style3;
-						break;
-					case 4:
-						arrayList = API.List_Style4;
-						break;
-					}
-					int num = Conversions.ToInteger(arrayList[0]);
-					int num2 = Conversions.ToInteger(arrayList[1]);
-					int num3 = Conversions.ToInteger(arrayList[2]);
-					int num4 = Conversions.ToInteger(arrayList[3]);
-					int num5 = Conversions.ToInteger(arrayList[4]);
-					string text = "";
-					if (A_0 == 0)
-					{
-						text = API.Packet_Maker("17100700");
-						text += API.Packet_Maker("17100800");
-						text += API.Packet_Maker("17100900");
-						text += API.Packet_Maker("17100A00");
-						text += API.Packet_Maker("17100B00");
-						byte[] packet = API.hexstringtobyte(text);
-						clientBot._Local_SendPacket(packet);
-					}
-					else
-					{
-						if (num > 0)
-						{
-							text = text + API.Int32ToHex2(num) + "0000000000000000";
-						}
-						if (num2 > 0)
-						{
-							text = text + API.Int32ToHex2(num2) + "0000000000000000";
-						}
-						if (num3 > 0)
-						{
-							text = text + API.Int32ToHex2(num3) + "0000000000000000";
-						}
-						if (num4 > 0)
-						{
-							text = text + API.Int32ToHex2(num4) + "0000000000000000";
-						}
-						if (num5 > 0)
-						{
-							text = text + API.Int32ToHex2(num5) + "0000000000000000";
-						}
-						byte[] packet2 = API.hexstringtobyte(API.Packet_Maker("170B" + text));
-						clientBot._Local_SendPacket(packet2);
-					}
-					text = "";
-					if (num > 0)
-					{
-						text += API.Int32ToHex2(num);
-					}
-					if (num2 > 0)
-					{
-						text += API.Int32ToHex2(num2);
-					}
-					if (num3 > 0)
-					{
-						text += API.Int32ToHex2(num3);
-					}
-					if (num4 > 0)
-					{
-						text += API.Int32ToHex2(num4);
-					}
-					if (num5 > 0)
-					{
-						text += API.Int32ToHex2(num5);
-					}
-					int textBox_IDmem = clientBot.TextBox_IDmem1;
-					int textBox_IDmem2 = clientBot.TextBox_IDmem2;
-					int textBox_IDmem3 = clientBot.TextBox_IDmem3;
-					int textBox_IDmem4 = clientBot.TextBox_IDmem4;
-					byte[] packet3 = API.hexstringtobyte(API.Packet_Maker("0500" + API.Int32ToHex4(textBox_IDmem) + text));
-					byte[] packet4 = API.hexstringtobyte(API.Packet_Maker("0500" + API.Int32ToHex4(textBox_IDmem2) + text));
-					byte[] packet5 = API.hexstringtobyte(API.Packet_Maker("0500" + API.Int32ToHex4(textBox_IDmem3) + text));
-					byte[] packet6 = API.hexstringtobyte(API.Packet_Maker("0500" + API.Int32ToHex4(textBox_IDmem4) + text));
-					clientBot._Local_SendPacket(packet3);
-					clientBot._Local_SendPacket(packet4);
-					clientBot._Local_SendPacket(packet5);
-					clientBot._Local_SendPacket(packet6);
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-				}
-			}
-		}
-
-		private void d(object A_0, EventArgs A_1)
-		{
-			switch (CheckBox_SVip.Checked)
-			{
-			case true:
-				API.Vip = 4;
-				break;
-			case false:
-				API.Vip = 0;
-				break;
-			}
-			foreach (ListViewItem item in ListView1.Items)
-			{
-				try
-				{
-					_ClientBot clientBot = (_ClientBot)item.Tag;
-					if ((clientBot._Proxy & (clientBot.logined == 1)) && ((API.Vip >= 0) & API.List_Ip_nts.Contains(API.ServerIp)))
-					{
-						byte[] packet = API.hexstringtobyte(API.Packet_Maker("08010201" + API.Vip.ToString("X2")));
-						clientBot._Local_SendPacket(packet);
-						try
-						{
-							int textBox_IDmem = clientBot.TextBox_IDmem1;
-							int textBox_IDmem2 = clientBot.TextBox_IDmem2;
-							int textBox_IDmem3 = clientBot.TextBox_IDmem3;
-							int textBox_IDmem4 = clientBot.TextBox_IDmem4;
-							byte[] packet2 = API.hexstringtobyte(API.Packet_Maker("080D" + API.Int32ToHex4(textBox_IDmem) + API.Vip.ToString("X2")));
-							byte[] packet3 = API.hexstringtobyte(API.Packet_Maker("080D" + API.Int32ToHex4(textBox_IDmem2) + API.Vip.ToString("X2")));
-							byte[] packet4 = API.hexstringtobyte(API.Packet_Maker("080D" + API.Int32ToHex4(textBox_IDmem3) + API.Vip.ToString("X2")));
-							byte[] packet5 = API.hexstringtobyte(API.Packet_Maker("080D" + API.Int32ToHex4(textBox_IDmem4) + API.Vip.ToString("X2")));
-							clientBot._Local_SendPacket(packet2);
-							clientBot._Local_SendPacket(packet3);
-							clientBot._Local_SendPacket(packet4);
-							clientBot._Local_SendPacket(packet5);
-						}
-						catch (Exception ex)
-						{
-							ProjectData.SetProjectError(ex);
-							Exception ex2 = ex;
-							ProjectData.ClearProjectError();
-						}
-					}
-				}
-				catch (Exception ex3)
-				{
-					ProjectData.SetProjectError(ex3);
-					Exception ex4 = ex3;
-					ProjectData.ClearProjectError();
-				}
-			}
-		}
-
-		private void c(object A_0, EventArgs A_1)
-		{
-			if (ComboBox_Horse.Text.Length > 0)
-			{
-				string[] array = ComboBox_Horse.Text.Split('\t');
-				int iDNgua = Conversions.ToInteger(array[0]);
-				API.IDNgua = iDNgua;
-			}
-			a();
-		}
-
-		private void a()
-		{
-			foreach (ListViewItem item in ListView1.Items)
-			{
-				try
-				{
-					_ClientBot clientBot = (_ClientBot)item.Tag;
-					if (clientBot._Proxy & (clientBot.logined == 1) & API.List_Ip_nts.Contains(API.ServerIp))
-					{
-						clientBot.Doi_Ngua();
-					}
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-				}
-			}
-		}
-
-		private void b(object A_0, EventArgs A_1)
-		{
-			string left = ToolStripComboBox1.Text;
-			if (Operators.CompareString(left, "VIET", false) != 0)
-			{
-				if (Operators.CompareString(left, "THAI", false) == 0 && API.Country != 1)
-				{
-					API.Country = 1;
-					Interaction.MsgBox("ร\u0e35สตาร\u0e4cทซอฟต\u0e4cแวร\u0e4cเพ\u0e37\u0e48อเป\u0e34ดใช\u0e49งาน");
-				}
-			}
-			else if (API.Country != 0)
-			{
-				API.Country = 0;
-				Interaction.MsgBox("Khởi động lại phần mềm để kích hoạt");
-			}
-		}
-
-		private void a(object A_0, EventArgs A_1)
-		{
-			a("http://tsonline.xyz");
-		}
-
-		private void a(string A_0, string A_1 = "default")
-		{
-			try
-			{
-				if (Operators.CompareString(A_1, "default", false) != 0)
-				{
-					try
-					{
-						Process.Start(A_1, A_0);
-						return;
-					}
-					catch (Exception ex)
-					{
-						ProjectData.SetProjectError(ex);
-						Exception ex2 = ex;
-						Process.Start(A_0);
-						ProjectData.ClearProjectError();
-						return;
-					}
-				}
-				Process.Start(A_0);
-			}
-			catch (Exception ex3)
-			{
-				ProjectData.SetProjectError(ex3);
-				Exception ex4 = ex3;
-				ProjectData.ClearProjectError();
-			}
-		}
-
-		[SpecialName]
-		[CompilerGenerated]
-		[DebuggerHidden]
-		private void a(object A_0)
-		{
-			add1file((string[])A_0);
 		}
 	}
 }

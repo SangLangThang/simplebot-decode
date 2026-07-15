@@ -1314,21 +1314,14 @@ namespace Simple_Bot
 								{
 									value._id = tuido._Id;
 									value._count = tuido._Sl;
-									Bitmap image = new Bitmap(1, 1);
+									value._iconResolved = false;
 									if (tuido._Id > 0)
 									{
-										if (Items.Data_Items.ContainsKey(tuido._Id))
-										{
-											image = GetPicture._GetPhoto_Item(Items.Data_Items[tuido._Id]._idPic);
-										}
-										value._photo.Image = image;
 										value._photo.Text = Conversions.ToString(tuido._Sl);
-										ToolTip_info.SetToolTip(value._photo, MakeItemInfo((ushort)tuido._Id));
 									}
 									else
 									{
-										image = new Bitmap(32, 32);
-										value._photo.Image = image;
+										value._photo.Image = new Bitmap(32, 32);
 										value._photo.Text = "";
 									}
 								}
@@ -1336,6 +1329,12 @@ namespace Simple_Bot
 								{
 									value._count = tuido._Sl;
 									value._photo.Text = Conversions.ToString(tuido._Sl);
+								}
+								if (tuido._Id > 0 && !value._iconResolved && Items.Data_Items.ContainsKey(tuido._Id))
+								{
+									value._photo.Image = GetPicture._GetPhoto_Item(Items.Data_Items[tuido._Id]._idPic);
+									ToolTip_info.SetToolTip(value._photo, MakeItemInfo((ushort)tuido._Id));
+									value._iconResolved = true;
 								}
 								if ((value._id == 0) & (Operators.CompareString(value._photo.Text, "", false) != 0))
 								{
@@ -1356,23 +1355,22 @@ namespace Simple_Bot
 								{
 									value2._id = tuideo._Id;
 									value2._count = tuideo._Sl;
-									Bitmap image3 = new Bitmap(1, 1);
+									value2._iconResolved = false;
 									if (tuideo._Id > 0)
 									{
-										if (Items.Data_Items.ContainsKey(tuideo._Id))
-										{
-											image3 = GetPicture._GetPhoto_Item(Items.Data_Items[tuideo._Id]._idPic);
-										}
-										value2._photo.Image = image3;
 										value2._photo.Text = Conversions.ToString(tuideo._Sl);
-										ToolTip_info.SetToolTip(value2._photo, MakeItemInfo((ushort)tuideo._Id));
 									}
 									else
 									{
-										image3 = new Bitmap(32, 32);
-										value2._photo.Image = image3;
+										value2._photo.Image = new Bitmap(32, 32);
 										value2._photo.Text = "";
 									}
+								}
+								if (tuideo._Id > 0 && !value2._iconResolved && Items.Data_Items.ContainsKey(tuideo._Id))
+								{
+									value2._photo.Image = GetPicture._GetPhoto_Item(Items.Data_Items[tuideo._Id]._idPic);
+									ToolTip_info.SetToolTip(value2._photo, MakeItemInfo((ushort)tuideo._Id));
+									value2._iconResolved = true;
 								}
 								if ((value2._id == 0) & (Operators.CompareString(value2._photo.Text, "", false) != 0))
 								{
@@ -1389,18 +1387,26 @@ namespace Simple_Bot
 							{
 								_Data._CharEquit charEquit = _bot.Data_CharEquit[num3];
 								Trangbi_Info value3 = Data_Trangbi_Char[num3];
+								bool flag2 = false;
 								if (value3._id != charEquit._Id)
 								{
 									value3._id = charEquit._Id;
-									if (Items.Data_Items.ContainsKey(charEquit._Id))
-									{
-										value3._photo.Image = GetPicture._GetPhoto_Item(Items.Data_Items[charEquit._Id]._idPic);
-										ToolTip_info.SetToolTip(value3._photo, MakeItemInfo((ushort)value3._id));
-									}
-									else
+									value3._iconResolved = false;
+									if (charEquit._Id == 0)
 									{
 										value3._photo.Image = null;
 									}
+									flag2 = true;
+								}
+								if (charEquit._Id != 0 && !value3._iconResolved && Items.Data_Items.ContainsKey(charEquit._Id))
+								{
+									value3._photo.Image = GetPicture._GetPhoto_Item(Items.Data_Items[charEquit._Id]._idPic);
+									ToolTip_info.SetToolTip(value3._photo, MakeItemInfo((ushort)value3._id));
+									value3._iconResolved = true;
+									flag2 = true;
+								}
+								if (flag2)
+								{
 									Data_Trangbi_Char[num3] = value3;
 								}
 								num3++;
@@ -1554,18 +1560,26 @@ namespace Simple_Bot
 											break;
 										}
 										Trangbi_Info value4 = Data_Trangbi_Pet[num6];
+										bool flag3 = false;
 										if (value4._id != num7)
 										{
 											value4._id = num7;
-											if (Items.Data_Items.ContainsKey(num7))
-											{
-												value4._photo.Image = GetPicture._GetPhoto_Item(Items.Data_Items[num7]._idPic);
-												ToolTip_info.SetToolTip(value4._photo, MakeItemInfo((ushort)value4._id));
-											}
-											else
+											value4._iconResolved = false;
+											if (num7 == 0)
 											{
 												value4._photo.Image = null;
 											}
+											flag3 = true;
+										}
+										if (num7 != 0 && !value4._iconResolved && Items.Data_Items.ContainsKey(num7))
+										{
+											value4._photo.Image = GetPicture._GetPhoto_Item(Items.Data_Items[num7]._idPic);
+											ToolTip_info.SetToolTip(value4._photo, MakeItemInfo((ushort)value4._id));
+											value4._iconResolved = true;
+											flag3 = true;
+										}
+										if (flag3)
+										{
 											Data_Trangbi_Pet[num6] = value4;
 										}
 										num6++;

@@ -16,6 +16,7 @@ internal class AppApplication : WindowsFormsApplicationBase
 	[EditorBrowsable(EditorBrowsableState.Advanced)]
 	internal static void Main(string[] args)
 	{
+		System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 		try
 		{
 			Application.SetCompatibleTextRenderingDefault(WindowsFormsApplicationBase.UseCompatibleTextRendering);

@@ -968,14 +968,7 @@ namespace Simple_Bot
 					this.m_f = "";
 					try
 					{
-						if (ComboBox_Port == 0)
-						{
-							clientSocket.Connect(ComboBox_Server, 6414);
-						}
-						else
-						{
-							clientSocket.Connect(ComboBox_Server, 6420 + ComboBox_Port);
-						}
+						clientSocket.Connect(ComboBox_Server, ComboBox_Port);
 					}
 					catch (Exception ex)
 					{
