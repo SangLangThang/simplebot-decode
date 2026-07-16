@@ -400,11 +400,6 @@ namespace Simple_Bot
 		private ToolStripMenuItem bn;
 
 		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
-		[AccessedThroughProperty("CheckBox_Proxy")]
-		[CompilerGenerated]
-		private CheckBox bo;
-
-		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		[CompilerGenerated]
 		[AccessedThroughProperty("ComboBox_Server")]
 		private ComboBox bp;
@@ -2080,31 +2075,6 @@ namespace Simple_Bot
 			}
 		}
 
-		internal virtual CheckBox CheckBox_Proxy
-		{
-			[CompilerGenerated]
-			get
-			{
-				return bo;
-			}
-			[MethodImpl(MethodImplOptions.Synchronized)]
-			[CompilerGenerated]
-			set
-			{
-				EventHandler value2 = CheckBox_Proxy_CheckedChanged;
-				CheckBox checkBox = bo;
-				if (checkBox != null)
-				{
-					checkBox.CheckedChanged -= value2;
-				}
-				bo = value;
-				checkBox = bo;
-				if (checkBox != null)
-				{
-					checkBox.CheckedChanged += value2;
-				}
-			}
-		}
 
 		internal virtual ComboBox ComboBox_Server
 		{
@@ -2398,7 +2368,6 @@ namespace Simple_Bot
 			ToolTip_info = new ToolTip(this.components);
 			OpenFileDialog_Load1File = new OpenFileDialog();
 			SaveFileDialog_1file = new SaveFileDialog();
-			CheckBox_Proxy = new CheckBox();
 			ComboBox_Server = new ComboBox();
 			CheckBox_SVip = new CheckBox();
 			ComboBox_Style = new ComboBox();
@@ -2730,13 +2699,6 @@ namespace Simple_Bot
 			OpenFileDialog_Load1File.RestoreDirectory = true;
 			SaveFileDialog_1file.Filter = "Setting files (*.1file)|*.1file";
 			SaveFileDialog_1file.RestoreDirectory = true;
-			CheckBox_Proxy.AutoSize = true;
-			CheckBox_Proxy.Location = new Point(101, 4);
-			CheckBox_Proxy.Name = "CheckBox_Proxy";
-			CheckBox_Proxy.Size = new Size(52, 17);
-			CheckBox_Proxy.TabIndex = 110;
-			CheckBox_Proxy.Text = "Proxy";
-			CheckBox_Proxy.UseVisualStyleBackColor = true;
 			ComboBox_Server.DropDownStyle = ComboBoxStyle.DropDownList;
 			ComboBox_Server.DropDownWidth = 132;
 			ComboBox_Server.FlatStyle = FlatStyle.System;
@@ -2804,7 +2766,6 @@ namespace Simple_Bot
 			Label2.Text = "Ngoại Trang";
 			Label2.Visible = false;
 			Panel1.Controls.Add(ComboBox_Server);
-			Panel1.Controls.Add(CheckBox_Proxy);
 			Panel1.Controls.Add(Label2);
 			Panel1.Controls.Add(CheckBox_SVip);
 			Panel1.Controls.Add(Label1);

@@ -1,9 +1,6 @@
 using System;
 using System.ComponentModel;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
-using System.Threading;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
@@ -449,105 +446,6 @@ namespace Simple_Bot
 			else if (Operators.ConditionalCompareObjectEqual(left, false, false) && ListView1.Columns.Count > 8)
 			{
 				ListView1.Columns[9].Width = 0;
-			}
-		}
-
-		private void CheckBox_Proxy_CheckedChanged(object sender, EventArgs e)
-		{
-			switch (CheckBox_Proxy.Checked)
-			{
-			case true:
-				try
-				{
-					ComboBox_Server.Enabled = false;
-					IPAddress localaddr = IPAddress.Parse(_proxyBindAddress);
-					try
-					{
-						server1 = new TcpListener(localaddr, 6414);
-						server1.Start(65535);
-						API.Proxy = true;
-					}
-					catch (Exception ex3)
-					{
-						ProjectData.SetProjectError(ex3);
-						Exception ex4 = ex3;
-						Interaction.MsgBox("Không thể tạo Proxy, có thể phần mềm khác đã tạo, vui lòng kiểm tra!!!");
-						CheckBox_Proxy.Checked = false;
-						ProjectData.ClearProjectError();
-						break;
-					}
-					Interaction.MsgBox("Tạo Proxy thành công!!!");
-					Thread thread = new Thread(GetConnect);
-					thread.IsBackground = true;
-					thread.Start();
-					break;
-				}
-				catch (Exception ex5)
-				{
-					ProjectData.SetProjectError(ex5);
-					Exception ex6 = ex5;
-					Interaction.MsgBox("Không thể tạo Proxy, có thể phần mềm khác đã tạo, vui lòng kiểm tra!!!");
-					ProjectData.ClearProjectError();
-					break;
-				}
-			case false:
-				try
-				{
-					ComboBox_Server.Enabled = true;
-					API.Proxy = false;
-					server1.Stop();
-					Interaction.MsgBox("Dừng Proxy thành công!!!");
-					break;
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-					break;
-				}
-			}
-		}
-
-
-		public void Connection(TcpClient _s)
-		{
-			_ClientBot clientBot = new _ClientBot(_s);
-			clientBot._Proxy = true;
-			clientBot.ComboBox_Port = 0;
-			ListViewItem listViewItem = ListView1.Items.Add(clientBot.idlogin.ToString());
-			listViewItem.UseItemStyleForSubItems = false;
-			listViewItem.SubItems.Add(clientBot.Data_Player._Name);
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._Lv));
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._MapId));
-			listViewItem.SubItems.Add(clientBot.Data_Player._MapName);
-			listViewItem.SubItems.Add("");
-			listViewItem.SubItems.Add(clientBot.Online.ToString());
-			listViewItem.SubItems.Add(clientBot.Status);
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_Player._ExpMin));
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.battlecount));
-			listViewItem.SubItems.Add(clientBot.Data_PetInfo._Name);
-			listViewItem.SubItems.Add(Conversions.ToString(clientBot.Data_PetInfo._Lv));
-			listViewItem.SubItems.Add(Conversions.ToString(team));
-			listViewItem.Tag = clientBot;
-		}
-
-		public void GetConnect()
-		{
-			Delegate method = new UpdateMainGridDelegate(Connection);
-			while (true)
-			{
-				try
-				{
-					TcpClient tcpClient = server1.AcceptTcpClient();
-					Invoke(method, tcpClient);
-				}
-				catch (Exception ex)
-				{
-					ProjectData.SetProjectError(ex);
-					Exception ex2 = ex;
-					ProjectData.ClearProjectError();
-				}
 			}
 		}
 

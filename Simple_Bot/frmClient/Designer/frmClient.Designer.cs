@@ -44,6 +44,7 @@ namespace Simple_Bot
 		[DebuggerStepThrough]
 		private void InitializeComponent()
 		{
+			// ==================== Renderers, color tables & control instantiation ====================
 			this.components = new Container();
 			ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(frmClient));
 			Vs2010TabControlRenderer vs2010TabControlRenderer = new Vs2010TabControlRenderer();
@@ -1298,6 +1299,7 @@ namespace Simple_Bot
 			TabPage_Shop.SuspendLayout();
 			TabPage_Map.SuspendLayout();
 			SuspendLayout();
+			// ==================== Embedded DataSet: tables, columns, relations ====================
 			DataSet1.DataSetName = "NewDataSet";
 			DataSet1.Tables.AddRange(new DataTable[41]
 			{
@@ -3094,6 +3096,7 @@ namespace Simple_Bot
 			ToolStripSplitButton_save.RightToLeft = RightToLeft.No;
 			ToolStripSplitButton_save.Size = new Size(40, 18);
 			ToolStripSplitButton_save.Text = "Lưu thiết lập mặc định";
+			// ==================== Shared components: context menus, dialogs, misc ====================
 			ContextMenuStrip_ToTuideo.ImageScalingSize = new Size(20, 20);
 			ContextMenuStrip_ToTuideo.Items.AddRange(new ToolStripItem[6] { ToolStripMenuItem_ToTuiDo, ToolStripSeparator2, ToolStripMenuItem_TuideoAddtoDrop, ToolStripMenuItem_TuideoAddtoContribute, ToolStripMenuItem_TuideoAddtoSend, ToolStripMenuItem_TuideoAddtoSell });
 			ContextMenuStrip_ToTuideo.Name = "ContextMenuStrip_Warp";
@@ -3362,6 +3365,7 @@ namespace Simple_Bot
 			ImageList1.ColorDepth = ColorDepth.Depth16Bit;
 			ImageList1.ImageSize = new Size(32, 32);
 			ImageList1.TransparentColor = Color.Transparent;
+			// ==================== Main tab control & tab pages ====================
 			Vs2010TabControl_Main.Controls.Add(TabPage_Main);
 			Vs2010TabControl_Main.Controls.Add(TabPage_Attack);
 			Vs2010TabControl_Main.Controls.Add(TabPage_Quest);
@@ -3381,6 +3385,7 @@ namespace Simple_Bot
 			Vs2010TabControl_Main.SelectedIndex = 0;
 			Vs2010TabControl_Main.Size = new Size(671, 647);
 			Vs2010TabControl_Main.TabIndex = 35;
+			// ---- TabPage: Cơ bản (Main) ----
 			TabPage_Main.BackgroundImage = Resources.background;
 			TabPage_Main.BackgroundImageLayout = ImageLayout.None;
 			TabPage_Main.Controls.Add(PictureBox_mini);
@@ -3426,76 +3431,38 @@ namespace Simple_Bot
 			TabPage_Main.Controls.Add(Panel9);
 			TabPage_Main.Controls.Add(Label_Mini);
 			TabPage_Main.Controls.Add(Label83);
-			TabPage_Main.Controls.Add(Lb_tuideo25);
+			TabPage_Main.Controls.AddRange(new Control[]
+			{
+				Lb_tuideo1, Lb_tuideo2, Lb_tuideo3, Lb_tuideo4, Lb_tuideo5, Lb_tuideo6, Lb_tuideo7, Lb_tuideo8, Lb_tuideo9, Lb_tuideo10,
+				Lb_tuideo11, Lb_tuideo12, Lb_tuideo13, Lb_tuideo14, Lb_tuideo15, Lb_tuideo16, Lb_tuideo17, Lb_tuideo18, Lb_tuideo19, Lb_tuideo20,
+				Lb_tuideo21, Lb_tuideo22, Lb_tuideo23, Lb_tuideo24, Lb_tuideo25
+			});
 			TabPage_Main.Controls.Add(Panel_Login);
 			TabPage_Main.Controls.Add(Panel6);
-			TabPage_Main.Controls.Add(Lb_tuideo24);
 			TabPage_Main.Controls.Add(Label_Lv);
-			TabPage_Main.Controls.Add(Lb_tuideo23);
 			TabPage_Main.Controls.Add(GroupBox_Bot);
 			TabPage_Main.Controls.Add(GroupBox_team);
 			TabPage_Main.Controls.Add(Label_CharName);
-			TabPage_Main.Controls.Add(Lb_tuideo22);
 			TabPage_Main.Controls.Add(Label_petlv);
-			TabPage_Main.Controls.Add(Lb_tuideo21);
 			TabPage_Main.Controls.Add(Label_Lv_Plus);
-			TabPage_Main.Controls.Add(Lb_tuideo20);
 			TabPage_Main.Controls.Add(Label_Lv2);
-			TabPage_Main.Controls.Add(Lb_tuideo19);
 			TabPage_Main.Controls.Add(Label_PetExpMin);
-			TabPage_Main.Controls.Add(Lb_tuideo18);
 			TabPage_Main.Controls.Add(Label8);
-			TabPage_Main.Controls.Add(Lb_tuideo17);
-			TabPage_Main.Controls.Add(Lb_tuideo16);
 			TabPage_Main.Controls.Add(ProgressBarEx_PetExp);
-			TabPage_Main.Controls.Add(Lb_tuideo15);
-			TabPage_Main.Controls.Add(Lb_tuideo14);
-			TabPage_Main.Controls.Add(Lb_tuideo13);
-			TabPage_Main.Controls.Add(Lb_tuideo12);
 			TabPage_Main.Controls.Add(Label4);
-			TabPage_Main.Controls.Add(Lb_tuideo11);
-			TabPage_Main.Controls.Add(Lb_tuideo10);
 			TabPage_Main.Controls.Add(Label_CharExpMin);
-			TabPage_Main.Controls.Add(Lb_tuideo9);
 			TabPage_Main.Controls.Add(ProgressBarEx_PetSp);
-			TabPage_Main.Controls.Add(Lb_tuideo8);
-			TabPage_Main.Controls.Add(Lb_tuideo7);
-			TabPage_Main.Controls.Add(Lb_tuideo6);
-			TabPage_Main.Controls.Add(Lb_tuideo5);
 			TabPage_Main.Controls.Add(Label_gold);
-			TabPage_Main.Controls.Add(Lb_tuideo4);
 			TabPage_Main.Controls.Add(ProgressBarEx_PetHp);
-			TabPage_Main.Controls.Add(Lb_tuideo3);
-			TabPage_Main.Controls.Add(Lb_tuideo2);
 			TabPage_Main.Controls.Add(ProgressBarEx_CharHp);
-			TabPage_Main.Controls.Add(Lb_tuideo1);
-			TabPage_Main.Controls.Add(Lb_tuido25);
-			TabPage_Main.Controls.Add(Lb_tuido24);
-			TabPage_Main.Controls.Add(Lb_tuido23);
-			TabPage_Main.Controls.Add(Lb_tuido22);
-			TabPage_Main.Controls.Add(Lb_tuido21);
-			TabPage_Main.Controls.Add(Lb_tuido20);
-			TabPage_Main.Controls.Add(Lb_tuido19);
-			TabPage_Main.Controls.Add(Lb_tuido18);
+			TabPage_Main.Controls.AddRange(new Control[]
+			{
+				Lb_tuido1, Lb_tuido2, Lb_tuido3, Lb_tuido4, Lb_tuido5, Lb_tuido6, Lb_tuido7, Lb_tuido8, Lb_tuido9, Lb_tuido10,
+				Lb_tuido11, Lb_tuido12, Lb_tuido13, Lb_tuido14, Lb_tuido15, Lb_tuido16, Lb_tuido17, Lb_tuido18, Lb_tuido19, Lb_tuido20,
+				Lb_tuido21, Lb_tuido22, Lb_tuido23, Lb_tuido24, Lb_tuido25
+			});
 			TabPage_Main.Controls.Add(ProgressBarEx_CharExp);
-			TabPage_Main.Controls.Add(Lb_tuido17);
-			TabPage_Main.Controls.Add(Lb_tuido16);
 			TabPage_Main.Controls.Add(ProgressBarEx_CharSp);
-			TabPage_Main.Controls.Add(Lb_tuido15);
-			TabPage_Main.Controls.Add(Lb_tuido14);
-			TabPage_Main.Controls.Add(Lb_tuido1);
-			TabPage_Main.Controls.Add(Lb_tuido13);
-			TabPage_Main.Controls.Add(Lb_tuido2);
-			TabPage_Main.Controls.Add(Lb_tuido12);
-			TabPage_Main.Controls.Add(Lb_tuido3);
-			TabPage_Main.Controls.Add(Lb_tuido11);
-			TabPage_Main.Controls.Add(Lb_tuido4);
-			TabPage_Main.Controls.Add(Lb_tuido10);
-			TabPage_Main.Controls.Add(Lb_tuido5);
-			TabPage_Main.Controls.Add(Lb_tuido9);
-			TabPage_Main.Controls.Add(Lb_tuido6);
-			TabPage_Main.Controls.Add(Lb_tuido8);
-			TabPage_Main.Controls.Add(Lb_tuido7);
 			TabPage_Main.Controls.Add(PictureBox_Pet_photo);
 			TabPage_Main.Controls.Add(PictureBox_avatar);
 			TabPage_Main.Location = new Point(4, 30);
@@ -3679,66 +3646,28 @@ namespace Simple_Bot
 			PictureBox_Char_Thuoctinh.Size = new Size(28, 28);
 			PictureBox_Char_Thuoctinh.TabIndex = 165;
 			PictureBox_Char_Thuoctinh.TabStop = false;
-			PictureBox_Pet5.Location = new Point(532, 256);
-			PictureBox_Pet5.Name = "PictureBox_Pet5";
-			PictureBox_Pet5.Size = new Size(32, 32);
-			PictureBox_Pet5.TabIndex = 164;
-			PictureBox_Pet5.TabStop = false;
-			PictureBox_Pet6.Location = new Point(460, 225);
-			PictureBox_Pet6.Name = "PictureBox_Pet6";
-			PictureBox_Pet6.Size = new Size(32, 32);
-			PictureBox_Pet6.TabIndex = 163;
-			PictureBox_Pet6.TabStop = false;
-			PictureBox_Pet3.Location = new Point(604, 145);
-			PictureBox_Pet3.Name = "PictureBox_Pet3";
-			PictureBox_Pet3.Size = new Size(32, 32);
-			PictureBox_Pet3.TabIndex = 162;
-			PictureBox_Pet3.TabStop = false;
-			PictureBox_Pet2.Location = new Point(460, 141);
-			PictureBox_Pet2.Name = "PictureBox_Pet2";
-			PictureBox_Pet2.Size = new Size(32, 32);
-			PictureBox_Pet2.TabIndex = 161;
-			PictureBox_Pet2.TabStop = false;
-			PictureBox_Pet4.Location = new Point(604, 84);
-			PictureBox_Pet4.Name = "PictureBox_Pet4";
-			PictureBox_Pet4.Size = new Size(32, 32);
-			PictureBox_Pet4.TabIndex = 160;
-			PictureBox_Pet4.TabStop = false;
-			PictureBox_Pet1.Location = new Point(532, 83);
-			PictureBox_Pet1.Name = "PictureBox_Pet1";
-			PictureBox_Pet1.Size = new Size(32, 32);
-			PictureBox_Pet1.TabIndex = 159;
-			PictureBox_Pet1.TabStop = false;
-			PictureBox_char5.Location = new Point(98, 256);
-			PictureBox_char5.Name = "PictureBox_char5";
-			PictureBox_char5.Size = new Size(32, 32);
-			PictureBox_char5.TabIndex = 157;
-			PictureBox_char5.TabStop = false;
-			PictureBox_char6.Location = new Point(26, 225);
-			PictureBox_char6.Name = "PictureBox_char6";
-			PictureBox_char6.Size = new Size(32, 32);
-			PictureBox_char6.TabIndex = 156;
-			PictureBox_char6.TabStop = false;
-			PictureBox_char3.Location = new Point(170, 146);
-			PictureBox_char3.Name = "PictureBox_char3";
-			PictureBox_char3.Size = new Size(32, 32);
-			PictureBox_char3.TabIndex = 155;
-			PictureBox_char3.TabStop = false;
-			PictureBox_char2.Location = new Point(26, 141);
-			PictureBox_char2.Name = "PictureBox_char2";
-			PictureBox_char2.Size = new Size(32, 32);
-			PictureBox_char2.TabIndex = 154;
-			PictureBox_char2.TabStop = false;
-			PictureBox_char4.Location = new Point(170, 85);
-			PictureBox_char4.Name = "PictureBox_char4";
-			PictureBox_char4.Size = new Size(32, 32);
-			PictureBox_char4.TabIndex = 153;
-			PictureBox_char4.TabStop = false;
-			PictureBox_char1.Location = new Point(98, 84);
-			PictureBox_char1.Name = "PictureBox_char1";
-			PictureBox_char1.Size = new Size(32, 32);
-			PictureBox_char1.TabIndex = 152;
-			PictureBox_char1.TabStop = false;
+			void InitPortraitPicker(PictureBox[] boxes, string namePrefix, Point[] locations, int[] tabIndexes)
+			{
+				for (int i = 0; i < boxes.Length; i++)
+				{
+					PictureBox pb = boxes[i];
+					pb.Location = locations[i];
+					pb.Name = $"{namePrefix}{i + 1}";
+					pb.Size = new Size(32, 32);
+					pb.TabIndex = tabIndexes[i];
+					pb.TabStop = false;
+				}
+			}
+			InitPortraitPicker(
+				new[] { PictureBox_char1, PictureBox_char2, PictureBox_char3, PictureBox_char4, PictureBox_char5, PictureBox_char6 },
+				"PictureBox_char",
+				new[] { new Point(98, 84), new Point(26, 141), new Point(170, 146), new Point(170, 85), new Point(98, 256), new Point(26, 225) },
+				new[] { 152, 154, 155, 153, 157, 156 });
+			InitPortraitPicker(
+				new[] { PictureBox_Pet1, PictureBox_Pet2, PictureBox_Pet3, PictureBox_Pet4, PictureBox_Pet5, PictureBox_Pet6 },
+				"PictureBox_Pet",
+				new[] { new Point(532, 83), new Point(460, 141), new Point(604, 145), new Point(604, 84), new Point(532, 256), new Point(460, 225) },
+				new[] { 159, 161, 162, 160, 164, 163 });
 			Panel10.Controls.Add(RtbChat);
 			Panel10.Controls.Add(rtbsystem);
 			Panel10.Controls.Add(Panel_Chat);
@@ -3968,16 +3897,6 @@ namespace Simple_Bot
 			Label83.Size = new Size(31, 16);
 			Label83.TabIndex = 116;
 			Label83.Text = "400";
-			Lb_tuideo25.BackColor = Color.Transparent;
-			Lb_tuideo25.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo25.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo25.Location = new Point(386, 228);
-			Lb_tuideo25.Margin = new Padding(2);
-			Lb_tuideo25.Name = "Lb_tuideo25";
-			Lb_tuideo25.Size = new Size(32, 32);
-			Lb_tuideo25.TabIndex = 149;
-			Lb_tuideo25.Text = "50";
-			Lb_tuideo25.TextAlign = ContentAlignment.BottomLeft;
 			Panel_Login.BackColor = Color.Transparent;
 			Panel_Login.Controls.Add(CheckBox_Reconnect);
 			Panel_Login.Controls.Add(btnLogin);
@@ -4127,16 +4046,6 @@ namespace Simple_Bot
 			Label_BDY.TabIndex = 20;
 			Label_BDY.Text = "Gửi Ba Đậu Yêu";
 			Label_BDY.TextAlign = ContentAlignment.MiddleCenter;
-			Lb_tuideo24.BackColor = Color.Transparent;
-			Lb_tuideo24.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo24.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo24.Location = new Point(350, 228);
-			Lb_tuideo24.Margin = new Padding(2);
-			Lb_tuideo24.Name = "Lb_tuideo24";
-			Lb_tuideo24.Size = new Size(32, 32);
-			Lb_tuideo24.TabIndex = 148;
-			Lb_tuideo24.Text = "50";
-			Lb_tuideo24.TextAlign = ContentAlignment.BottomLeft;
 			Label_Lv.BackColor = Color.White;
 			Label_Lv.DataBindings.Add(new Binding("Text", DataSet1, "Table_database.Lv", true));
 			Label_Lv.FlatStyle = FlatStyle.System;
@@ -4147,16 +4056,6 @@ namespace Simple_Bot
 			Label_Lv.Size = new Size(26, 16);
 			Label_Lv.TabIndex = 24;
 			Label_Lv.Text = "200";
-			Lb_tuideo23.BackColor = Color.Transparent;
-			Lb_tuideo23.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo23.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo23.Location = new Point(314, 228);
-			Lb_tuideo23.Margin = new Padding(2);
-			Lb_tuideo23.Name = "Lb_tuideo23";
-			Lb_tuideo23.Size = new Size(32, 32);
-			Lb_tuideo23.TabIndex = 147;
-			Lb_tuideo23.Text = "50";
-			Lb_tuideo23.TextAlign = ContentAlignment.BottomLeft;
 			GroupBox_Bot.BackColor = Color.White;
 			GroupBox_Bot.Controls.Add(ComboBox_botname);
 			GroupBox_Bot.Controls.Add(TextBox_DelayBot);
@@ -4312,72 +4211,40 @@ namespace Simple_Bot
 			Panel5.Name = "Panel5";
 			Panel5.Size = new Size(96, 94);
 			Panel5.TabIndex = 19;
-			TextBox_IDmem4.Location = new Point(44, 71);
-			TextBox_IDmem4.Margin = new Padding(0, 2, 2, 2);
-			TextBox_IDmem4.MaxLength = 10;
-			TextBox_IDmem4.Name = "TextBox_IDmem4";
-			TextBox_IDmem4.Size = new Size(50, 19);
-			TextBox_IDmem4.TabIndex = 7;
-			TextBox_IDmem4.Text = "0";
-			TextBox_IDmem3.Location = new Point(44, 48);
-			TextBox_IDmem3.Margin = new Padding(0, 2, 2, 2);
-			TextBox_IDmem3.MaxLength = 10;
-			TextBox_IDmem3.Name = "TextBox_IDmem3";
-			TextBox_IDmem3.Size = new Size(50, 19);
-			TextBox_IDmem3.TabIndex = 6;
-			TextBox_IDmem3.Text = "0";
-			TextBox_IDmem2.Location = new Point(44, 25);
-			TextBox_IDmem2.Margin = new Padding(0, 2, 2, 2);
-			TextBox_IDmem2.MaxLength = 10;
-			TextBox_IDmem2.Name = "TextBox_IDmem2";
-			TextBox_IDmem2.Size = new Size(50, 19);
-			TextBox_IDmem2.TabIndex = 5;
-			TextBox_IDmem2.Text = "0";
-			TextBox_IDmem1.Location = new Point(44, 2);
-			TextBox_IDmem1.Margin = new Padding(0, 2, 2, 2);
-			TextBox_IDmem1.MaxLength = 10;
-			TextBox_IDmem1.Name = "TextBox_IDmem1";
-			TextBox_IDmem1.Size = new Size(50, 19);
-			TextBox_IDmem1.TabIndex = 4;
-			TextBox_IDmem1.Text = "0";
-			RadioButton_QS1.BackColor = Color.FromArgb(240, 240, 240);
-			RadioButton_QS1.Checked = true;
-			RadioButton_QS1.FlatStyle = FlatStyle.System;
-			RadioButton_QS1.Location = new Point(4, 4);
-			RadioButton_QS1.Margin = new Padding(2, 2, 0, 2);
-			RadioButton_QS1.Name = "RadioButton_QS1";
-			RadioButton_QS1.Size = new Size(40, 17);
-			RadioButton_QS1.TabIndex = 0;
-			RadioButton_QS1.TabStop = true;
-			RadioButton_QS1.Text = "VN";
-			RadioButton_QS1.UseVisualStyleBackColor = false;
-			RadioButton_QS2.BackColor = Color.FromArgb(240, 240, 240);
-			RadioButton_QS2.FlatStyle = FlatStyle.System;
-			RadioButton_QS2.Location = new Point(4, 27);
-			RadioButton_QS2.Margin = new Padding(2, 2, 0, 2);
-			RadioButton_QS2.Name = "RadioButton_QS2";
-			RadioButton_QS2.Size = new Size(40, 17);
-			RadioButton_QS2.TabIndex = 1;
-			RadioButton_QS2.Text = "VN";
-			RadioButton_QS2.UseVisualStyleBackColor = false;
-			RadioButton_QS3.BackColor = Color.FromArgb(240, 240, 240);
-			RadioButton_QS3.FlatStyle = FlatStyle.System;
-			RadioButton_QS3.Location = new Point(4, 50);
-			RadioButton_QS3.Margin = new Padding(2, 2, 0, 2);
-			RadioButton_QS3.Name = "RadioButton_QS3";
-			RadioButton_QS3.Size = new Size(40, 17);
-			RadioButton_QS3.TabIndex = 2;
-			RadioButton_QS3.Text = "VN";
-			RadioButton_QS3.UseVisualStyleBackColor = false;
-			RadioButton_QS4.BackColor = Color.FromArgb(240, 240, 240);
-			RadioButton_QS4.FlatStyle = FlatStyle.System;
-			RadioButton_QS4.Location = new Point(4, 73);
-			RadioButton_QS4.Margin = new Padding(2, 2, 0, 2);
-			RadioButton_QS4.Name = "RadioButton_QS4";
-			RadioButton_QS4.Size = new Size(40, 17);
-			RadioButton_QS4.TabIndex = 3;
-			RadioButton_QS4.Text = "VN";
-			RadioButton_QS4.UseVisualStyleBackColor = false;
+			void InitIdMemTextBoxes(TextBox[] boxes)
+			{
+				for (int i = 0; i < boxes.Length; i++)
+				{
+					TextBox tb = boxes[i];
+					tb.Location = new Point(44, 2 + i * 23);
+					tb.Margin = new Padding(0, 2, 2, 2);
+					tb.MaxLength = 10;
+					tb.Name = $"TextBox_IDmem{i + 1}";
+					tb.Size = new Size(50, 19);
+					tb.TabIndex = 4 + i;
+					tb.Text = "0";
+				}
+			}
+			InitIdMemTextBoxes(new[] { TextBox_IDmem1, TextBox_IDmem2, TextBox_IDmem3, TextBox_IDmem4 });
+			void InitQuickSelectRadios(RadioButton[] radios, int checkedIndex)
+			{
+				for (int i = 0; i < radios.Length; i++)
+				{
+					RadioButton rb = radios[i];
+					rb.BackColor = Color.FromArgb(240, 240, 240);
+					rb.Checked = i == checkedIndex;
+					rb.FlatStyle = FlatStyle.System;
+					rb.Location = new Point(4, 4 + i * 23);
+					rb.Margin = new Padding(2, 2, 0, 2);
+					rb.Name = $"RadioButton_QS{i + 1}";
+					rb.Size = new Size(40, 17);
+					rb.TabIndex = i;
+					rb.TabStop = true;
+					rb.Text = "VN";
+					rb.UseVisualStyleBackColor = false;
+				}
+			}
+			InitQuickSelectRadios(new[] { RadioButton_QS1, RadioButton_QS2, RadioButton_QS3, RadioButton_QS4 }, 0);
 			TextBox_IdLeader.Location = new Point(47, 114);
 			TextBox_IdLeader.Margin = new Padding(2);
 			TextBox_IdLeader.MaxLength = 20;
@@ -4394,16 +4261,6 @@ namespace Simple_Bot
 			Label_CharName.TabIndex = 28;
 			Label_CharName.Text = "&name";
 			Label_CharName.TextAlign = ContentAlignment.TopRight;
-			Lb_tuideo22.BackColor = Color.Transparent;
-			Lb_tuideo22.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo22.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo22.Location = new Point(278, 228);
-			Lb_tuideo22.Margin = new Padding(2);
-			Lb_tuideo22.Name = "Lb_tuideo22";
-			Lb_tuideo22.Size = new Size(32, 32);
-			Lb_tuideo22.TabIndex = 146;
-			Lb_tuideo22.Text = "50";
-			Lb_tuideo22.TextAlign = ContentAlignment.BottomLeft;
 			Label_petlv.BackColor = Color.White;
 			Label_petlv.FlatStyle = FlatStyle.System;
 			Label_petlv.Font = new Font("Microsoft Sans Serif", 8f, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -4413,16 +4270,6 @@ namespace Simple_Bot
 			Label_petlv.Size = new Size(25, 15);
 			Label_petlv.TabIndex = 25;
 			Label_petlv.Text = "200";
-			Lb_tuideo21.BackColor = Color.Transparent;
-			Lb_tuideo21.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo21.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo21.Location = new Point(242, 228);
-			Lb_tuideo21.Margin = new Padding(2);
-			Lb_tuideo21.Name = "Lb_tuideo21";
-			Lb_tuideo21.Size = new Size(32, 32);
-			Lb_tuideo21.TabIndex = 145;
-			Lb_tuideo21.Text = "50";
-			Lb_tuideo21.TextAlign = ContentAlignment.BottomLeft;
 			Label_Lv_Plus.BackColor = Color.Transparent;
 			Label_Lv_Plus.DataBindings.Add(new Binding("Text", DataSet1, "Table_database.+-Int", true));
 			Label_Lv_Plus.Font = new Font("Microsoft Sans Serif", 8f, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -4434,16 +4281,6 @@ namespace Simple_Bot
 			Label_Lv_Plus.TabIndex = 106;
 			Label_Lv_Plus.Text = "+";
 			Label_Lv_Plus.Visible = false;
-			Lb_tuideo20.BackColor = Color.Transparent;
-			Lb_tuideo20.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo20.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo20.Location = new Point(386, 192);
-			Lb_tuideo20.Margin = new Padding(2);
-			Lb_tuideo20.Name = "Lb_tuideo20";
-			Lb_tuideo20.Size = new Size(32, 32);
-			Lb_tuideo20.TabIndex = 144;
-			Lb_tuideo20.Text = "50";
-			Lb_tuideo20.TextAlign = ContentAlignment.BottomLeft;
 			Label_Lv2.BackColor = Color.Transparent;
 			Label_Lv2.Font = new Font("Microsoft Sans Serif", 8f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			Label_Lv2.ForeColor = Color.DarkViolet;
@@ -4454,16 +4291,6 @@ namespace Simple_Bot
 			Label_Lv2.TabIndex = 107;
 			Label_Lv2.Text = "200";
 			Label_Lv2.Visible = false;
-			Lb_tuideo19.BackColor = Color.Transparent;
-			Lb_tuideo19.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo19.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo19.Location = new Point(350, 192);
-			Lb_tuideo19.Margin = new Padding(2);
-			Lb_tuideo19.Name = "Lb_tuideo19";
-			Lb_tuideo19.Size = new Size(32, 32);
-			Lb_tuideo19.TabIndex = 143;
-			Lb_tuideo19.Text = "50";
-			Lb_tuideo19.TextAlign = ContentAlignment.BottomLeft;
 			Label_PetExpMin.BackColor = Color.White;
 			Label_PetExpMin.FlatStyle = FlatStyle.System;
 			Label_PetExpMin.Location = new Point(500, 377);
@@ -4473,16 +4300,6 @@ namespace Simple_Bot
 			Label_PetExpMin.TabIndex = 20;
 			Label_PetExpMin.Text = "0";
 			Label_PetExpMin.TextAlign = ContentAlignment.TopRight;
-			Lb_tuideo18.BackColor = Color.Transparent;
-			Lb_tuideo18.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo18.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo18.Location = new Point(314, 192);
-			Lb_tuideo18.Margin = new Padding(2);
-			Lb_tuideo18.Name = "Lb_tuideo18";
-			Lb_tuideo18.Size = new Size(32, 32);
-			Lb_tuideo18.TabIndex = 142;
-			Lb_tuideo18.Text = "50";
-			Lb_tuideo18.TextAlign = ContentAlignment.BottomLeft;
 			Label8.BackColor = Color.White;
 			Label8.FlatStyle = FlatStyle.System;
 			Label8.Location = new Point(448, 377);
@@ -4493,26 +4310,6 @@ namespace Simple_Bot
 			Label8.Text = "Exp/Phút :";
 			Label8.TextAlign = ContentAlignment.TopRight;
 			Label8.Visible = false;
-			Lb_tuideo17.BackColor = Color.Transparent;
-			Lb_tuideo17.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo17.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo17.Location = new Point(278, 192);
-			Lb_tuideo17.Margin = new Padding(2);
-			Lb_tuideo17.Name = "Lb_tuideo17";
-			Lb_tuideo17.Size = new Size(32, 32);
-			Lb_tuideo17.TabIndex = 141;
-			Lb_tuideo17.Text = "50";
-			Lb_tuideo17.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuideo16.BackColor = Color.Transparent;
-			Lb_tuideo16.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo16.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo16.Location = new Point(242, 192);
-			Lb_tuideo16.Margin = new Padding(2);
-			Lb_tuideo16.Name = "Lb_tuideo16";
-			Lb_tuideo16.Size = new Size(32, 32);
-			Lb_tuideo16.TabIndex = 140;
-			Lb_tuideo16.Text = "50";
-			Lb_tuideo16.TextAlign = ContentAlignment.BottomLeft;
 			ProgressBarEx_PetExp.BackColorStyle = ProgressBarEx.ColorStyle.Gradient;
 			ProgressBarEx_PetExp.BackGradientMode = LinearGradientMode.Vertical;
 			ProgressBarEx_PetExp.BackSigmaFocus = 30;
@@ -4532,46 +4329,6 @@ namespace Simple_Bot
 			ProgressBarEx_PetExp.TabIndex = 15;
 			ProgressBarEx_PetExp.Text = "ProgressBarEx4";
 			ProgressBarEx_PetExp.Value = 50;
-			Lb_tuideo15.BackColor = Color.Transparent;
-			Lb_tuideo15.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo15.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo15.Location = new Point(386, 156);
-			Lb_tuideo15.Margin = new Padding(2);
-			Lb_tuideo15.Name = "Lb_tuideo15";
-			Lb_tuideo15.Size = new Size(32, 32);
-			Lb_tuideo15.TabIndex = 139;
-			Lb_tuideo15.Text = "50";
-			Lb_tuideo15.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuideo14.BackColor = Color.Transparent;
-			Lb_tuideo14.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo14.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo14.Location = new Point(350, 156);
-			Lb_tuideo14.Margin = new Padding(2);
-			Lb_tuideo14.Name = "Lb_tuideo14";
-			Lb_tuideo14.Size = new Size(32, 32);
-			Lb_tuideo14.TabIndex = 138;
-			Lb_tuideo14.Text = "50";
-			Lb_tuideo14.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuideo13.BackColor = Color.Transparent;
-			Lb_tuideo13.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo13.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo13.Location = new Point(314, 156);
-			Lb_tuideo13.Margin = new Padding(2);
-			Lb_tuideo13.Name = "Lb_tuideo13";
-			Lb_tuideo13.Size = new Size(32, 32);
-			Lb_tuideo13.TabIndex = 137;
-			Lb_tuideo13.Text = "50";
-			Lb_tuideo13.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuideo12.BackColor = Color.Transparent;
-			Lb_tuideo12.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo12.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo12.Location = new Point(278, 156);
-			Lb_tuideo12.Margin = new Padding(2);
-			Lb_tuideo12.Name = "Lb_tuideo12";
-			Lb_tuideo12.Size = new Size(32, 32);
-			Lb_tuideo12.TabIndex = 136;
-			Lb_tuideo12.Text = "50";
-			Lb_tuideo12.TextAlign = ContentAlignment.BottomLeft;
 			Label4.BackColor = Color.White;
 			Label4.FlatStyle = FlatStyle.System;
 			Label4.Location = new Point(15, 377);
@@ -4580,26 +4337,6 @@ namespace Simple_Bot
 			Label4.Size = new Size(51, 15);
 			Label4.TabIndex = 11;
 			Label4.Text = "Exp/Phút :";
-			Lb_tuideo11.BackColor = Color.Transparent;
-			Lb_tuideo11.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo11.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo11.Location = new Point(242, 156);
-			Lb_tuideo11.Margin = new Padding(2);
-			Lb_tuideo11.Name = "Lb_tuideo11";
-			Lb_tuideo11.Size = new Size(32, 32);
-			Lb_tuideo11.TabIndex = 135;
-			Lb_tuideo11.Text = "50";
-			Lb_tuideo11.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuideo10.BackColor = Color.Transparent;
-			Lb_tuideo10.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo10.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo10.Location = new Point(386, 120);
-			Lb_tuideo10.Margin = new Padding(2);
-			Lb_tuideo10.Name = "Lb_tuideo10";
-			Lb_tuideo10.Size = new Size(32, 32);
-			Lb_tuideo10.TabIndex = 134;
-			Lb_tuideo10.Text = "50";
-			Lb_tuideo10.TextAlign = ContentAlignment.BottomLeft;
 			Label_CharExpMin.BackColor = Color.White;
 			Label_CharExpMin.DataBindings.Add(new Binding("Text", DataSet1, "Table_database.ExpMin", true));
 			Label_CharExpMin.FlatStyle = FlatStyle.System;
@@ -4610,16 +4347,6 @@ namespace Simple_Bot
 			Label_CharExpMin.TabIndex = 12;
 			Label_CharExpMin.Text = "0";
 			Label_CharExpMin.TextAlign = ContentAlignment.TopRight;
-			Lb_tuideo9.BackColor = Color.Transparent;
-			Lb_tuideo9.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo9.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo9.Location = new Point(350, 120);
-			Lb_tuideo9.Margin = new Padding(2);
-			Lb_tuideo9.Name = "Lb_tuideo9";
-			Lb_tuideo9.Size = new Size(32, 32);
-			Lb_tuideo9.TabIndex = 133;
-			Lb_tuideo9.Text = "50";
-			Lb_tuideo9.TextAlign = ContentAlignment.BottomLeft;
 			ProgressBarEx_PetSp.BackColorStyle = ProgressBarEx.ColorStyle.Gradient;
 			ProgressBarEx_PetSp.BackGradientMode = LinearGradientMode.Vertical;
 			ProgressBarEx_PetSp.BackSigmaFocus = 30;
@@ -4638,46 +4365,6 @@ namespace Simple_Bot
 			ProgressBarEx_PetSp.TabIndex = 14;
 			ProgressBarEx_PetSp.Text = "ProgressBarEx5";
 			ProgressBarEx_PetSp.Value = 50;
-			Lb_tuideo8.BackColor = Color.Transparent;
-			Lb_tuideo8.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo8.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo8.Location = new Point(314, 120);
-			Lb_tuideo8.Margin = new Padding(2);
-			Lb_tuideo8.Name = "Lb_tuideo8";
-			Lb_tuideo8.Size = new Size(32, 32);
-			Lb_tuideo8.TabIndex = 132;
-			Lb_tuideo8.Text = "50";
-			Lb_tuideo8.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuideo7.BackColor = Color.Transparent;
-			Lb_tuideo7.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo7.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo7.Location = new Point(278, 120);
-			Lb_tuideo7.Margin = new Padding(2);
-			Lb_tuideo7.Name = "Lb_tuideo7";
-			Lb_tuideo7.Size = new Size(32, 32);
-			Lb_tuideo7.TabIndex = 131;
-			Lb_tuideo7.Text = "50";
-			Lb_tuideo7.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuideo6.BackColor = Color.Transparent;
-			Lb_tuideo6.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo6.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo6.Location = new Point(242, 120);
-			Lb_tuideo6.Margin = new Padding(2);
-			Lb_tuideo6.Name = "Lb_tuideo6";
-			Lb_tuideo6.Size = new Size(32, 32);
-			Lb_tuideo6.TabIndex = 130;
-			Lb_tuideo6.Text = "50";
-			Lb_tuideo6.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuideo5.BackColor = Color.Transparent;
-			Lb_tuideo5.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo5.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo5.Location = new Point(386, 84);
-			Lb_tuideo5.Margin = new Padding(2);
-			Lb_tuideo5.Name = "Lb_tuideo5";
-			Lb_tuideo5.Size = new Size(32, 32);
-			Lb_tuideo5.TabIndex = 129;
-			Lb_tuideo5.Text = "50";
-			Lb_tuideo5.TextAlign = ContentAlignment.BottomLeft;
 			Label_gold.BackColor = Color.FromArgb(255, 255, 192);
 			Label_gold.DataBindings.Add(new Binding("Text", DataSet1, "Table_database.Gold", true));
 			Label_gold.FlatStyle = FlatStyle.System;
@@ -4689,16 +4376,6 @@ namespace Simple_Bot
 			Label_gold.TabIndex = 8;
 			Label_gold.Text = "0";
 			Label_gold.TextAlign = ContentAlignment.TopRight;
-			Lb_tuideo4.BackColor = Color.Transparent;
-			Lb_tuideo4.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo4.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo4.Location = new Point(350, 84);
-			Lb_tuideo4.Margin = new Padding(2);
-			Lb_tuideo4.Name = "Lb_tuideo4";
-			Lb_tuideo4.Size = new Size(32, 32);
-			Lb_tuideo4.TabIndex = 128;
-			Lb_tuideo4.Text = "50";
-			Lb_tuideo4.TextAlign = ContentAlignment.BottomLeft;
 			ProgressBarEx_PetHp.BackColorStyle = ProgressBarEx.ColorStyle.Gradient;
 			ProgressBarEx_PetHp.BackGradientMode = LinearGradientMode.Vertical;
 			ProgressBarEx_PetHp.BackSigmaFocus = 30;
@@ -4717,26 +4394,6 @@ namespace Simple_Bot
 			ProgressBarEx_PetHp.TabIndex = 13;
 			ProgressBarEx_PetHp.Text = "ProgressBarEx6";
 			ProgressBarEx_PetHp.Value = 50;
-			Lb_tuideo3.BackColor = Color.Transparent;
-			Lb_tuideo3.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo3.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo3.Location = new Point(314, 84);
-			Lb_tuideo3.Margin = new Padding(2);
-			Lb_tuideo3.Name = "Lb_tuideo3";
-			Lb_tuideo3.Size = new Size(32, 32);
-			Lb_tuideo3.TabIndex = 127;
-			Lb_tuideo3.Text = "50";
-			Lb_tuideo3.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuideo2.BackColor = Color.Transparent;
-			Lb_tuideo2.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo2.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo2.Location = new Point(278, 84);
-			Lb_tuideo2.Margin = new Padding(2);
-			Lb_tuideo2.Name = "Lb_tuideo2";
-			Lb_tuideo2.Size = new Size(32, 32);
-			Lb_tuideo2.TabIndex = 126;
-			Lb_tuideo2.Text = "50";
-			Lb_tuideo2.TextAlign = ContentAlignment.BottomLeft;
 			ProgressBarEx_CharHp.BackColor = SystemColors.Control;
 			ProgressBarEx_CharHp.BackColorStyle = ProgressBarEx.ColorStyle.Gradient;
 			ProgressBarEx_CharHp.BackGradientMode = LinearGradientMode.Vertical;
@@ -4758,104 +4415,27 @@ namespace Simple_Bot
 			ProgressBarEx_CharHp.TabIndex = 0;
 			ProgressBarEx_CharHp.Text = "ProgressBarEx1";
 			ProgressBarEx_CharHp.Value = 50;
-			Lb_tuideo1.BackColor = Color.Transparent;
-			Lb_tuideo1.ContextMenuStrip = ContextMenuStrip_ToTuideo;
-			Lb_tuideo1.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuideo1.Location = new Point(242, 84);
-			Lb_tuideo1.Margin = new Padding(2);
-			Lb_tuideo1.Name = "Lb_tuideo1";
-			Lb_tuideo1.Size = new Size(32, 32);
-			Lb_tuideo1.TabIndex = 125;
-			Lb_tuideo1.Text = "50";
-			Lb_tuideo1.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido25.AllowDrop = true;
-			Lb_tuido25.BackColor = Color.Transparent;
-			Lb_tuido25.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido25.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido25.Location = new Point(386, 440);
-			Lb_tuido25.Margin = new Padding(2);
-			Lb_tuido25.Name = "Lb_tuido25";
-			Lb_tuido25.Size = new Size(32, 32);
-			Lb_tuido25.TabIndex = 124;
-			Lb_tuido25.Text = "50";
-			Lb_tuido25.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido24.AllowDrop = true;
-			Lb_tuido24.BackColor = Color.Transparent;
-			Lb_tuido24.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido24.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido24.Location = new Point(350, 440);
-			Lb_tuido24.Margin = new Padding(2);
-			Lb_tuido24.Name = "Lb_tuido24";
-			Lb_tuido24.Size = new Size(32, 32);
-			Lb_tuido24.TabIndex = 123;
-			Lb_tuido24.Text = "50";
-			Lb_tuido24.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido23.AllowDrop = true;
-			Lb_tuido23.BackColor = Color.Transparent;
-			Lb_tuido23.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido23.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido23.Location = new Point(314, 440);
-			Lb_tuido23.Margin = new Padding(2);
-			Lb_tuido23.Name = "Lb_tuido23";
-			Lb_tuido23.Size = new Size(32, 32);
-			Lb_tuido23.TabIndex = 122;
-			Lb_tuido23.Text = "50";
-			Lb_tuido23.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido22.AllowDrop = true;
-			Lb_tuido22.BackColor = Color.Transparent;
-			Lb_tuido22.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido22.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido22.Location = new Point(278, 440);
-			Lb_tuido22.Margin = new Padding(2);
-			Lb_tuido22.Name = "Lb_tuido22";
-			Lb_tuido22.Size = new Size(32, 32);
-			Lb_tuido22.TabIndex = 121;
-			Lb_tuido22.Text = "50";
-			Lb_tuido22.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido21.AllowDrop = true;
-			Lb_tuido21.BackColor = Color.Transparent;
-			Lb_tuido21.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido21.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido21.Location = new Point(242, 440);
-			Lb_tuido21.Margin = new Padding(2);
-			Lb_tuido21.Name = "Lb_tuido21";
-			Lb_tuido21.Size = new Size(32, 32);
-			Lb_tuido21.TabIndex = 120;
-			Lb_tuido21.Text = "50";
-			Lb_tuido21.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido20.AllowDrop = true;
-			Lb_tuido20.BackColor = Color.Transparent;
-			Lb_tuido20.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido20.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido20.Location = new Point(386, 404);
-			Lb_tuido20.Margin = new Padding(2);
-			Lb_tuido20.Name = "Lb_tuido20";
-			Lb_tuido20.Size = new Size(32, 32);
-			Lb_tuido20.TabIndex = 119;
-			Lb_tuido20.Text = "50";
-			Lb_tuido20.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido19.AllowDrop = true;
-			Lb_tuido19.BackColor = Color.Transparent;
-			Lb_tuido19.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido19.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido19.Location = new Point(350, 404);
-			Lb_tuido19.Margin = new Padding(2);
-			Lb_tuido19.Name = "Lb_tuido19";
-			Lb_tuido19.Size = new Size(32, 32);
-			Lb_tuido19.TabIndex = 118;
-			Lb_tuido19.Text = "50";
-			Lb_tuido19.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido18.AllowDrop = true;
-			Lb_tuido18.BackColor = Color.Transparent;
-			Lb_tuido18.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido18.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido18.Location = new Point(314, 404);
-			Lb_tuido18.Margin = new Padding(2);
-			Lb_tuido18.Name = "Lb_tuido18";
-			Lb_tuido18.Size = new Size(32, 32);
-			Lb_tuido18.TabIndex = 117;
-			Lb_tuido18.Text = "50";
-			Lb_tuido18.TextAlign = ContentAlignment.BottomLeft;
+			void InitTuiSlots(Label[] labels, string namePrefix, ContextMenuStrip menu, bool allowDrop, int tabIndexBase, int yBase)
+			{
+				for (int i = 0; i < labels.Length; i++)
+				{
+					Label lb = labels[i];
+					int n = i + 1;
+					lb.AllowDrop = allowDrop;
+					lb.BackColor = Color.Transparent;
+					lb.ContextMenuStrip = menu;
+					lb.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
+					lb.Location = new Point(242 + i % 5 * 36, yBase + i / 5 * 36);
+					lb.Margin = new Padding(2);
+					lb.Name = $"{namePrefix}{n}";
+					lb.Size = new Size(32, 32);
+					lb.TabIndex = tabIndexBase + n;
+					lb.Text = "50";
+					lb.TextAlign = ContentAlignment.BottomLeft;
+				}
+			}
+			InitTuiSlots(new[] { Lb_tuido1, Lb_tuido2, Lb_tuido3, Lb_tuido4, Lb_tuido5, Lb_tuido6, Lb_tuido7, Lb_tuido8, Lb_tuido9, Lb_tuido10, Lb_tuido11, Lb_tuido12, Lb_tuido13, Lb_tuido14, Lb_tuido15, Lb_tuido16, Lb_tuido17, Lb_tuido18, Lb_tuido19, Lb_tuido20, Lb_tuido21, Lb_tuido22, Lb_tuido23, Lb_tuido24, Lb_tuido25 }, "Lb_tuido", ContextMenuStrip_ToTuido, true, 99, 296);
+			InitTuiSlots(new[] { Lb_tuideo1, Lb_tuideo2, Lb_tuideo3, Lb_tuideo4, Lb_tuideo5, Lb_tuideo6, Lb_tuideo7, Lb_tuideo8, Lb_tuideo9, Lb_tuideo10, Lb_tuideo11, Lb_tuideo12, Lb_tuideo13, Lb_tuideo14, Lb_tuideo15, Lb_tuideo16, Lb_tuideo17, Lb_tuideo18, Lb_tuideo19, Lb_tuideo20, Lb_tuideo21, Lb_tuideo22, Lb_tuideo23, Lb_tuideo24, Lb_tuideo25 }, "Lb_tuideo", ContextMenuStrip_ToTuideo, false, 124, 84);
 			ProgressBarEx_CharExp.BackColorStyle = ProgressBarEx.ColorStyle.Gradient;
 			ProgressBarEx_CharExp.BackGradientMode = LinearGradientMode.Vertical;
 			ProgressBarEx_CharExp.BackSigmaFocus = 30;
@@ -4878,28 +4458,6 @@ namespace Simple_Bot
 			ProgressBarEx_CharExp.TabIndex = 2;
 			ProgressBarEx_CharExp.Text = "ProgressBarEx3";
 			ProgressBarEx_CharExp.Value = 683500375;
-			Lb_tuido17.AllowDrop = true;
-			Lb_tuido17.BackColor = Color.Transparent;
-			Lb_tuido17.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido17.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido17.Location = new Point(278, 404);
-			Lb_tuido17.Margin = new Padding(2);
-			Lb_tuido17.Name = "Lb_tuido17";
-			Lb_tuido17.Size = new Size(32, 32);
-			Lb_tuido17.TabIndex = 116;
-			Lb_tuido17.Text = "50";
-			Lb_tuido17.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido16.AllowDrop = true;
-			Lb_tuido16.BackColor = Color.Transparent;
-			Lb_tuido16.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido16.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido16.Location = new Point(242, 404);
-			Lb_tuido16.Margin = new Padding(2);
-			Lb_tuido16.Name = "Lb_tuido16";
-			Lb_tuido16.Size = new Size(32, 32);
-			Lb_tuido16.TabIndex = 115;
-			Lb_tuido16.Text = "50";
-			Lb_tuido16.TextAlign = ContentAlignment.BottomLeft;
 			ProgressBarEx_CharSp.BackColorStyle = ProgressBarEx.ColorStyle.Gradient;
 			ProgressBarEx_CharSp.BackGradientMode = LinearGradientMode.Vertical;
 			ProgressBarEx_CharSp.BackSigmaFocus = 30;
@@ -4920,171 +4478,6 @@ namespace Simple_Bot
 			ProgressBarEx_CharSp.TabIndex = 1;
 			ProgressBarEx_CharSp.Text = "ProgressBarEx2";
 			ProgressBarEx_CharSp.Value = 50;
-			Lb_tuido15.AllowDrop = true;
-			Lb_tuido15.BackColor = Color.Transparent;
-			Lb_tuido15.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido15.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido15.Location = new Point(386, 368);
-			Lb_tuido15.Margin = new Padding(2);
-			Lb_tuido15.Name = "Lb_tuido15";
-			Lb_tuido15.Size = new Size(32, 32);
-			Lb_tuido15.TabIndex = 114;
-			Lb_tuido15.Text = "50";
-			Lb_tuido15.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido14.AllowDrop = true;
-			Lb_tuido14.BackColor = Color.Transparent;
-			Lb_tuido14.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido14.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido14.Location = new Point(350, 368);
-			Lb_tuido14.Margin = new Padding(2);
-			Lb_tuido14.Name = "Lb_tuido14";
-			Lb_tuido14.Size = new Size(32, 32);
-			Lb_tuido14.TabIndex = 113;
-			Lb_tuido14.Text = "50";
-			Lb_tuido14.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido1.AllowDrop = true;
-			Lb_tuido1.BackColor = Color.Transparent;
-			Lb_tuido1.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido1.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido1.Location = new Point(242, 296);
-			Lb_tuido1.Margin = new Padding(2);
-			Lb_tuido1.Name = "Lb_tuido1";
-			Lb_tuido1.Size = new Size(32, 32);
-			Lb_tuido1.TabIndex = 100;
-			Lb_tuido1.Text = "50";
-			Lb_tuido1.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido13.AllowDrop = true;
-			Lb_tuido13.BackColor = Color.Transparent;
-			Lb_tuido13.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido13.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido13.Location = new Point(314, 368);
-			Lb_tuido13.Margin = new Padding(2);
-			Lb_tuido13.Name = "Lb_tuido13";
-			Lb_tuido13.Size = new Size(32, 32);
-			Lb_tuido13.TabIndex = 112;
-			Lb_tuido13.Text = "50";
-			Lb_tuido13.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido2.AllowDrop = true;
-			Lb_tuido2.BackColor = Color.Transparent;
-			Lb_tuido2.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido2.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido2.Location = new Point(278, 296);
-			Lb_tuido2.Margin = new Padding(2);
-			Lb_tuido2.Name = "Lb_tuido2";
-			Lb_tuido2.Size = new Size(32, 32);
-			Lb_tuido2.TabIndex = 101;
-			Lb_tuido2.Text = "50";
-			Lb_tuido2.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido12.AllowDrop = true;
-			Lb_tuido12.BackColor = Color.Transparent;
-			Lb_tuido12.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido12.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido12.Location = new Point(278, 368);
-			Lb_tuido12.Margin = new Padding(2);
-			Lb_tuido12.Name = "Lb_tuido12";
-			Lb_tuido12.Size = new Size(32, 32);
-			Lb_tuido12.TabIndex = 111;
-			Lb_tuido12.Text = "50";
-			Lb_tuido12.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido3.AllowDrop = true;
-			Lb_tuido3.BackColor = Color.Transparent;
-			Lb_tuido3.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido3.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido3.Location = new Point(314, 296);
-			Lb_tuido3.Margin = new Padding(2);
-			Lb_tuido3.Name = "Lb_tuido3";
-			Lb_tuido3.Size = new Size(32, 32);
-			Lb_tuido3.TabIndex = 102;
-			Lb_tuido3.Text = "50";
-			Lb_tuido3.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido11.AllowDrop = true;
-			Lb_tuido11.BackColor = Color.Transparent;
-			Lb_tuido11.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido11.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido11.Location = new Point(242, 368);
-			Lb_tuido11.Margin = new Padding(2);
-			Lb_tuido11.Name = "Lb_tuido11";
-			Lb_tuido11.Size = new Size(32, 32);
-			Lb_tuido11.TabIndex = 110;
-			Lb_tuido11.Text = "50";
-			Lb_tuido11.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido4.AllowDrop = true;
-			Lb_tuido4.BackColor = Color.Transparent;
-			Lb_tuido4.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido4.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido4.Location = new Point(350, 296);
-			Lb_tuido4.Margin = new Padding(2);
-			Lb_tuido4.Name = "Lb_tuido4";
-			Lb_tuido4.Size = new Size(32, 32);
-			Lb_tuido4.TabIndex = 103;
-			Lb_tuido4.Text = "50";
-			Lb_tuido4.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido10.AllowDrop = true;
-			Lb_tuido10.BackColor = Color.Transparent;
-			Lb_tuido10.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido10.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido10.Location = new Point(386, 332);
-			Lb_tuido10.Margin = new Padding(2);
-			Lb_tuido10.Name = "Lb_tuido10";
-			Lb_tuido10.Size = new Size(32, 32);
-			Lb_tuido10.TabIndex = 109;
-			Lb_tuido10.Text = "50";
-			Lb_tuido10.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido5.AllowDrop = true;
-			Lb_tuido5.BackColor = Color.Transparent;
-			Lb_tuido5.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido5.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido5.Location = new Point(386, 296);
-			Lb_tuido5.Margin = new Padding(2);
-			Lb_tuido5.Name = "Lb_tuido5";
-			Lb_tuido5.Size = new Size(32, 32);
-			Lb_tuido5.TabIndex = 104;
-			Lb_tuido5.Text = "50";
-			Lb_tuido5.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido9.AllowDrop = true;
-			Lb_tuido9.BackColor = Color.Transparent;
-			Lb_tuido9.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido9.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido9.Location = new Point(350, 332);
-			Lb_tuido9.Margin = new Padding(2);
-			Lb_tuido9.Name = "Lb_tuido9";
-			Lb_tuido9.Size = new Size(32, 32);
-			Lb_tuido9.TabIndex = 108;
-			Lb_tuido9.Text = "50";
-			Lb_tuido9.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido6.AllowDrop = true;
-			Lb_tuido6.BackColor = Color.Transparent;
-			Lb_tuido6.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido6.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido6.Location = new Point(242, 332);
-			Lb_tuido6.Margin = new Padding(2);
-			Lb_tuido6.Name = "Lb_tuido6";
-			Lb_tuido6.Size = new Size(32, 32);
-			Lb_tuido6.TabIndex = 105;
-			Lb_tuido6.Text = "50";
-			Lb_tuido6.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido8.AllowDrop = true;
-			Lb_tuido8.BackColor = Color.Transparent;
-			Lb_tuido8.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido8.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido8.Location = new Point(314, 332);
-			Lb_tuido8.Margin = new Padding(2);
-			Lb_tuido8.Name = "Lb_tuido8";
-			Lb_tuido8.Size = new Size(32, 32);
-			Lb_tuido8.TabIndex = 107;
-			Lb_tuido8.Text = "50";
-			Lb_tuido8.TextAlign = ContentAlignment.BottomLeft;
-			Lb_tuido7.AllowDrop = true;
-			Lb_tuido7.BackColor = Color.Transparent;
-			Lb_tuido7.ContextMenuStrip = ContextMenuStrip_ToTuido;
-			Lb_tuido7.Font = new Font("Tahoma", 9f, FontStyle.Regular, GraphicsUnit.Point, 0);
-			Lb_tuido7.Location = new Point(278, 332);
-			Lb_tuido7.Margin = new Padding(2);
-			Lb_tuido7.Name = "Lb_tuido7";
-			Lb_tuido7.Size = new Size(32, 32);
-			Lb_tuido7.TabIndex = 106;
-			Lb_tuido7.Text = "50";
-			Lb_tuido7.TextAlign = ContentAlignment.BottomLeft;
 			PictureBox_Pet_photo.Location = new Point(481, 109);
 			PictureBox_Pet_photo.Name = "PictureBox_Pet_photo";
 			PictureBox_Pet_photo.Size = new Size(134, 148);
@@ -5097,6 +4490,7 @@ namespace Simple_Bot
 			PictureBox_avatar.Size = new Size(110, 120);
 			PictureBox_avatar.TabIndex = 191;
 			PictureBox_avatar.TabStop = false;
+			// ---- TabPage: Chiến đấu (Attack) ----
 			TabPage_Attack.Controls.Add(Button_BattleInfo);
 			TabPage_Attack.Controls.Add(TabControl2);
 			TabPage_Attack.Location = new Point(4, 30);
@@ -5541,6 +4935,7 @@ namespace Simple_Bot
 			TextBox_ValueSPFlee.TabIndex = 122;
 			TextBox_ValueSPFlee.Text = "30";
 			TextBox_ValueSPFlee.TextAlign = HorizontalAlignment.Right;
+			// ---- TabPage: Nhiệm vụ (Quest) ----
 			TabPage_Quest.Controls.Add(Button2);
 			TabPage_Quest.Controls.Add(Button_Func);
 			TabPage_Quest.Controls.Add(Button_Quest_Refresh);
@@ -5631,6 +5026,7 @@ namespace Simple_Bot
 			RtbQuest.Size = new Size(242, 296);
 			RtbQuest.TabIndex = 63;
 			RtbQuest.Text = "";
+			// ---- TabPage: Dịch chuyển (Warp) ----
 			TabPage_Warp.Controls.Add(TextBox_idWarp);
 			TabPage_Warp.Controls.Add(TreeView1);
 			TabPage_Warp.Controls.Add(Button_warp);
@@ -5664,6 +5060,7 @@ namespace Simple_Bot
 			Button_warp.TabIndex = 13;
 			Button_warp.Text = "Dịch chuyển";
 			Button_warp.UseVisualStyleBackColor = true;
+			// ---- TabPage: Người chơi (Players) ----
 			TabPage_Players.Controls.Add(Label_PlayerCount);
 			TabPage_Players.Location = new Point(4, 30);
 			TabPage_Players.Name = "TabPage_Players";
@@ -5681,6 +5078,7 @@ namespace Simple_Bot
 			Label_PlayerCount.Text = "0";
 			Label_PlayerCount.TextAlign = ContentAlignment.MiddleRight;
 			Label_PlayerCount.Visible = false;
+			// ---- TabPage: Cài đặt (Settings) ----
 			TabPage_Setting.Controls.Add(TabControl1);
 			TabPage_Setting.Location = new Point(4, 30);
 			TabPage_Setting.Name = "TabPage_Setting";
@@ -5978,6 +5376,33 @@ namespace Simple_Bot
 			GroupBox3.TabIndex = 95;
 			GroupBox3.TabStop = false;
 			GroupBox3.Text = "Thanh lưu";
+			void InitSettingCheckBoxes(CheckBox[] boxes, string namePrefix, string[] texts, Point[] locations, Size size, int tabIndexBase)
+			{
+				for (int i = 0; i < boxes.Length; i++)
+				{
+					CheckBox cb = boxes[i];
+					cb.FlatStyle = FlatStyle.System;
+					cb.Location = locations[i];
+					cb.Margin = new Padding(10, 2, 2, 2);
+					cb.Name = $"{namePrefix}{i + 1}";
+					cb.Size = size;
+					cb.TabIndex = tabIndexBase + i + 1;
+					cb.Text = texts[i];
+					cb.UseVisualStyleBackColor = true;
+				}
+			}
+			InitSettingCheckBoxes(
+				new[] { CheckBox_TL_mem1, CheckBox_TL_mem2, CheckBox_TL_mem3, CheckBox_TL_mem4 },
+				"CheckBox_TL_mem",
+				new[] { "Thành viên 1", "Thành viên 2", "Thành viên 3", "Thành viên 4" },
+				new[] { new Point(13, 20), new Point(13, 44), new Point(13, 69), new Point(13, 94) },
+				new Size(106, 20), 14);
+			InitSettingCheckBoxes(
+				new[] { CheckBox_TL_pet1, CheckBox_TL_pet2 },
+				"CheckBox_TL_pet",
+				new[] { "Võ tướng 1 lần", "Võ tướng 2 lần" },
+				new[] { new Point(13, 119), new Point(13, 144) },
+				new Size(114, 20), 64);
 			Label25.Location = new Point(229, 22);
 			Label25.Margin = new Padding(0, 1, 0, 1);
 			Label25.Name = "Label25";
@@ -6002,14 +5427,6 @@ namespace Simple_Bot
 			TextBox_TL_char_hp_value.Text = "80";
 			TextBox_TL_char_hp_value.TextAlign = HorizontalAlignment.Right;
 			TextBox_TL_char_hp_value.Visible = false;
-			CheckBox_TL_mem1.FlatStyle = FlatStyle.System;
-			CheckBox_TL_mem1.Location = new Point(13, 20);
-			CheckBox_TL_mem1.Margin = new Padding(10, 2, 2, 2);
-			CheckBox_TL_mem1.Name = "CheckBox_TL_mem1";
-			CheckBox_TL_mem1.Size = new Size(106, 20);
-			CheckBox_TL_mem1.TabIndex = 15;
-			CheckBox_TL_mem1.Text = "Thành viên 1";
-			CheckBox_TL_mem1.UseVisualStyleBackColor = true;
 			Label34.AutoSize = true;
 			Label34.Location = new Point(389, 146);
 			Label34.Margin = new Padding(0, 1, 0, 1);
@@ -6048,14 +5465,6 @@ namespace Simple_Bot
 			Label35.Size = new Size(16, 13);
 			Label35.TabIndex = 68;
 			Label35.Text = "%";
-			CheckBox_TL_mem2.FlatStyle = FlatStyle.System;
-			CheckBox_TL_mem2.Location = new Point(13, 44);
-			CheckBox_TL_mem2.Margin = new Padding(10, 2, 2, 2);
-			CheckBox_TL_mem2.Name = "CheckBox_TL_mem2";
-			CheckBox_TL_mem2.Size = new Size(106, 20);
-			CheckBox_TL_mem2.TabIndex = 16;
-			CheckBox_TL_mem2.Text = "Thành viên 2";
-			CheckBox_TL_mem2.UseVisualStyleBackColor = true;
 			Label36.Location = new Point(229, 146);
 			Label36.Margin = new Padding(0, 1, 0, 1);
 			Label36.Name = "Label36";
@@ -6080,22 +5489,6 @@ namespace Simple_Bot
 			TextBox_TL_pet_hp_value.TabIndex = 67;
 			TextBox_TL_pet_hp_value.Text = "80";
 			TextBox_TL_pet_hp_value.TextAlign = HorizontalAlignment.Right;
-			CheckBox_TL_mem3.FlatStyle = FlatStyle.System;
-			CheckBox_TL_mem3.Location = new Point(13, 69);
-			CheckBox_TL_mem3.Margin = new Padding(10, 2, 2, 2);
-			CheckBox_TL_mem3.Name = "CheckBox_TL_mem3";
-			CheckBox_TL_mem3.Size = new Size(106, 20);
-			CheckBox_TL_mem3.TabIndex = 17;
-			CheckBox_TL_mem3.Text = "Thành viên 3";
-			CheckBox_TL_mem3.UseVisualStyleBackColor = true;
-			CheckBox_TL_pet2.FlatStyle = FlatStyle.System;
-			CheckBox_TL_pet2.Location = new Point(13, 144);
-			CheckBox_TL_pet2.Margin = new Padding(10, 2, 2, 2);
-			CheckBox_TL_pet2.Name = "CheckBox_TL_pet2";
-			CheckBox_TL_pet2.Size = new Size(114, 20);
-			CheckBox_TL_pet2.TabIndex = 66;
-			CheckBox_TL_pet2.Text = "Võ tướng 2 lần";
-			CheckBox_TL_pet2.UseVisualStyleBackColor = true;
 			Label23.AutoSize = true;
 			Label23.Location = new Point(389, 48);
 			Label23.Margin = new Padding(0, 1, 0, 1);
@@ -6104,22 +5497,6 @@ namespace Simple_Bot
 			Label23.TabIndex = 12;
 			Label23.Text = "%";
 			Label23.Visible = false;
-			CheckBox_TL_pet1.FlatStyle = FlatStyle.System;
-			CheckBox_TL_pet1.Location = new Point(13, 119);
-			CheckBox_TL_pet1.Margin = new Padding(10, 2, 2, 2);
-			CheckBox_TL_pet1.Name = "CheckBox_TL_pet1";
-			CheckBox_TL_pet1.Size = new Size(114, 20);
-			CheckBox_TL_pet1.TabIndex = 65;
-			CheckBox_TL_pet1.Text = "Võ tướng 1 lần";
-			CheckBox_TL_pet1.UseVisualStyleBackColor = true;
-			CheckBox_TL_mem4.FlatStyle = FlatStyle.System;
-			CheckBox_TL_mem4.Location = new Point(13, 94);
-			CheckBox_TL_mem4.Margin = new Padding(10, 2, 2, 2);
-			CheckBox_TL_mem4.Name = "CheckBox_TL_mem4";
-			CheckBox_TL_mem4.Size = new Size(106, 20);
-			CheckBox_TL_mem4.TabIndex = 18;
-			CheckBox_TL_mem4.Text = "Thành viên 4";
-			CheckBox_TL_mem4.UseVisualStyleBackColor = true;
 			GroupBox2.Controls.Add(CheckBox_AutoEat);
 			GroupBox2.Controls.Add(Label43);
 			GroupBox2.Controls.Add(TextBox_Eat_pet_sp_value);
@@ -7152,6 +6529,7 @@ namespace Simple_Bot
 			CheckBox_Pickup.Text = "Tự động nhặt đồ";
 			CheckBox_Pickup.UseVisualStyleBackColor = true;
 			CheckBox_Pickup.Visible = false;
+			// ---- TabPage: Bày bán (Shop) ----
 			TabPage_Shop.Controls.Add(Button_ShopAdd);
 			TabPage_Shop.Controls.Add(Button_Shop_Start);
 			TabPage_Shop.Controls.Add(Label40);
@@ -7245,6 +6623,7 @@ namespace Simple_Bot
 			ComboBox_ShopType.Name = "ComboBox_ShopType";
 			ComboBox_ShopType.Size = new Size(97, 21);
 			ComboBox_ShopType.TabIndex = 34;
+			// ---- TabPage: Bản đồ (Map) ----
 			TabPage_Map.Controls.Add(PictureBox1);
 			TabPage_Map.Location = new Point(4, 30);
 			TabPage_Map.Name = "TabPage_Map";
@@ -7253,6 +6632,7 @@ namespace Simple_Bot
 			TabPage_Map.TabIndex = 7;
 			TabPage_Map.Text = "Bản đồ";
 			TabPage_Map.UseVisualStyleBackColor = true;
+			// ==================== Shared components: misc (mini-map toolstrip) ====================
 			miniToolStrip.AccessibleName = "New item selection";
 			miniToolStrip.AccessibleRole = AccessibleRole.ButtonDropDown;
 			miniToolStrip.AutoParentBackColor = false;
@@ -7270,6 +6650,7 @@ namespace Simple_Bot
 			miniToolStrip.Renderer = vs2010ToolStripRenderer2;
 			miniToolStrip.Size = new Size(248, 26);
 			miniToolStrip.TabIndex = 0;
+			// ==================== Form-level properties ====================
 			base.AutoScaleMode = AutoScaleMode.Inherit;
 			BackColor = Color.FromArgb(240, 240, 240);
 			base.ClientSize = new Size(670, 647);
@@ -7283,6 +6664,7 @@ namespace Simple_Bot
 			base.MinimizeBox = false;
 			base.Name = "frmClient";
 			Text = "frmClient";
+			// ==================== Cleanup: EndInit / ResumeLayout ====================
 			((ISupportInitialize)DataSet1).EndInit();
 			((ISupportInitialize)DataTable1).EndInit();
 			((ISupportInitialize)DataTable2).EndInit();

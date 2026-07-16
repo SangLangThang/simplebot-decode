@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.CompilerServices;
@@ -11,8 +10,6 @@ namespace Simple_Bot
 		public delegate void load1FileDelegate(string[] FileNames);
 
 		public delegate void load1File_botDelegate(string FileName, string _Name);
-
-		public delegate void UpdateMainGridDelegate(TcpClient _s);
 
 		[CompilerGenerated]
 		internal sealed class LoadConfigClosure
@@ -83,10 +80,5 @@ namespace Simple_Bot
 		public const int WM_HOTKEY = 786;
 
 		public int team;
-
-		// Local bind address for the proxy TcpListener (CheckBox_Proxy_CheckedChanged), default "127.0.0.1".
-		private string _proxyBindAddress;
-
-		public TcpListener server1;
 	}
 }

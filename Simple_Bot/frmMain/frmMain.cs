@@ -22,8 +22,6 @@ namespace Simple_Bot
 			status = "";
 			loaded = 0;
 			team = 0;
-			_proxyBindAddress = "127.0.0.1";
-			server1 = null;
 			InitializeComponent();
 		}
 
